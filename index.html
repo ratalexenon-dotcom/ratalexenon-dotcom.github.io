@@ -148,10 +148,27 @@
      `--fs-s` 는 :root 에 없어 가장 가까운 `--fs-note`(11px), 999px 대신 `--rad-chip` 을 쓴다.
      `.k-chip` 은 selftest CLICK_SEL 에 든 **누르는** 부품이라 cursor 를 준다.
      `.short`(모자람)는 kit.js 가 붙이는데 규칙이 없으면 충분/모자람이 똑같이 보인다. */
-  .k-chip{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:var(--rad-chip);
-    border:1px solid var(--c-line);color:var(--c-text);font-size:var(--fs-note);
+  /* ★ 2026-09-05 「크게」 — 칩 높이 28, 아이콘 20, 글자 보조 단(12), 숫자는 굵게. */
+  .k-chip{display:inline-flex;align-items:center;gap:var(--sp-1);padding:3px 10px 3px 6px;min-height:28px;border-radius:var(--rad-chip);
+    border:1px solid var(--c-line);background:var(--c-press);color:var(--c-text);font-size:var(--fs-sub);
     white-space:nowrap;cursor:pointer;}
+  .k-chip b{font-weight:700;font-variant-numeric:tabular-nums;}
   .k-chip.short{border-color:var(--red);color:var(--red);}
+  /* 재료 카드 — 대장간 머리·창고·사냥 보고처럼 **재료가 주인공**인 자리(칩은 조리법 줄 안 인라인용).
+     상점 카드(.shopcard)와 같은 문법: 위 이름 · 가운데 큰 아이콘 · 아래 수량. 5종이라 5열. */
+  .matgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--sp-2);}
+  .matcard{display:flex;flex-direction:column;align-items:center;gap:2px;padding:var(--sp-2) var(--sp-1);
+    border-radius:var(--rad-card);border:1px solid var(--c-line);background:var(--c-panel);cursor:pointer;min-width:0;
+    box-shadow:inset 0 1px 0 var(--rim);}
+  .matcard:active{filter:brightness(1.2);}
+  .matcard .mc-ic{width:44px;height:44px;border-radius:var(--rad-btn);background:var(--c-press);border:1px solid var(--c-line);
+    display:flex;align-items:center;justify-content:center;color:var(--c-text);}
+  .matcard .mc-ic .ic{vertical-align:0;}
+  .matcard .mc-nm{font-size:var(--fs-sub);font-weight:700;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .matcard .mc-n{font-size:var(--fs-num);font-weight:700;font-variant-numeric:tabular-nums;color:var(--c-goldtxt);line-height:1.1;}
+  .matcard .mc-need{font-size:var(--fs-note);color:var(--c-sub);}
+  .matcard.short{border-color:var(--c-warn);} .matcard.short .mc-n{color:var(--c-warn);}
+  .matcard.zero .mc-n{color:var(--c-sub);}
   .chip{display:inline-block;font-size:10px;padding:1px 6px;border-radius:999px;background:var(--well);
     border:1px solid var(--line);color:var(--dim);margin-right:4px;}
   .chip.on{background:var(--gold);color:var(--gold-ink);border-color:var(--gold-bd);font-weight:700;}
@@ -528,7 +545,8 @@
   .cx-card .ln{font-size:var(--fs-note);color:var(--c-sub);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .cx-card .st{font-size:var(--fs-note);color:var(--c-goldtxt);}
   .cx-card.dim{opacity:.5;}
-  .cx-card.unk{background:var(--c-band);border-style:dashed;color:var(--c-sub);cursor:default;}
+  /* 4c-6 수정 웨이브 E②(2026-09-05) — cursor:default 를 뺐다. 「?」 카드도 누르면 토스트로 답한다(T1b M2). */
+  .cx-card.unk{background:var(--c-band);border-style:dashed;color:var(--c-sub);}
   /* 정수 카드의 종 얼굴 — 실루엣 칸과 같은 지름 40 (4c-6 T1b · M1) */
   .cx-card img{width:40px;height:40px;flex:0 0 auto;border-radius:50%;object-fit:cover;background:var(--c-press);}
   .cx-card .sil{width:40px;height:40px;border-radius:50%;background:var(--c-press);display:flex;align-items:center;
@@ -729,15 +747,18 @@
     color:var(--c-sub);pointer-events:none;opacity:.75;}
   .cd-gear{position:absolute;top:var(--sp-2);display:flex;flex-direction:column;gap:var(--sp-2);}
   .cd-gear.l{left:var(--sp-2);} .cd-gear.r{right:var(--sp-2);}
-  .cd-slot{position:relative;width:56px;height:56px;border-radius:var(--rad-card);
+  /* ★ 2026-09-05 디렉터 「초상·아이콘·아이템칸은 크게」 — 56 → 72, 아이콘 24 → 36, +n 은 숫자 단(17). */
+  .cd-slot{position:relative;width:72px;height:72px;border-radius:var(--rad-card);
     border:1px dashed var(--c-line);background:var(--c-panel);color:var(--c-sub);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
-    cursor:pointer;user-select:none;}
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+    cursor:pointer;user-select:none;box-shadow:inset 0 1px 0 var(--rim),0 2px 6px var(--shade);}
   .cd-slot.on{border-style:solid;border-color:var(--c-gold);color:var(--c-text);background:var(--c-press);}
   .cd-slot:active{filter:brightness(1.25);}
   .cd-slot .nm{font-size:var(--fs-note);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .cd-slot .cd-plus{position:absolute;right:2px;bottom:2px;font-size:var(--fs-note);font-weight:700;
-    color:var(--c-goldtxt);}
+  /* +n 은 **오른쪽 위** — 우하단에 두면 슬롯 이름 끝 글자(무「기」·반「지」)를 덮는다(QA). 오른쪽 위의
+     「!」(cd-bang)은 빈 칸에만 뜨고 +n 은 찬 칸에만 뜨니 자리가 안 겹친다. */
+  .cd-slot .cd-plus{position:absolute;right:4px;top:3px;font-size:var(--fs-num);font-weight:700;
+    color:var(--c-goldtxt);text-shadow:0 0 3px #000,0 0 6px #000;line-height:1;}
   .cd-bang{position:absolute;top:-4px;right:-4px;width:16px;height:16px;border-radius:var(--rad-chip);
     background:var(--c-warn);color:var(--c-text);font-size:var(--fs-note);font-weight:700;
     display:flex;align-items:center;justify-content:center;}
@@ -919,6 +940,12 @@
   .icell.un img{filter:brightness(0);}
   .icap{font-size:9px;color:var(--dim);text-align:center;margin-top:2px;line-height:1.1;
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  /* ★ 2026-09-05 「크게」 — 창고(조각·기호품) 셀. 4열(≈84px)에 그림 34 · 수량 13 · 이름 11. 옛 5열 66px 은 그림 22 였다 */
+  .icell.big .em{font-size:34px;}
+  .icell.big img{width:78%;height:78%;}
+  .icell.big .qty{font-size:var(--fs-sub);right:4px;bottom:2px;}
+  .icell.big .gr{font-size:var(--fs-note);left:4px;top:2px;}
+  .icap.big{font-size:var(--fs-note);margin-top:3px;}
 
   /* ── 빈 칸 ⊕ (부대·정수·장비) */
   .plusdot{width:26px;height:26px;border-radius:99px;border:1.5px dashed #5b6577;color:#7d879a;
@@ -1052,6 +1079,55 @@
   /* ⑤ 2열 격자 목록 — 세로 한 줄 목록(육성 8명 중 2.5명·상점 6칸 중 2칸)을 접는다 */
   .list.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;}
   .list.cols2 .item,.list.cols2 .crow{margin:0;min-width:0;}
+
+  /* ⑥ ★ 상점 카드 (2026-09-05 · 사용자 참고 화면「운빨존많겜」상점) — 3열 세로 카드.
+     위 이름 → 가운데 큰 아이콘 + 수량 → 아래 가격 띠(전폭). 할인은 왼쪽 위 리본, 남은 수는 칩.
+     옛 2열 `.item` 줄은 이름이 「뽑…」「낡은…」으로 잘렸다 — 카드는 이름을 두 줄까지 허용한다.
+     치수: 카드 폭 ≈ 117(390 폰 3열) · 아이콘 48 · 가격 띠 36 · 누르는 높이 ≥ 150. 토큰만 쓴다. */
+  .shopgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-2);}
+  .shopgrid.c2{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .shopcard{position:relative;display:flex;flex-direction:column;align-items:stretch;min-width:0;
+    background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--rad-card);overflow:hidden;
+    cursor:pointer;box-shadow:inset 0 1px 0 var(--rim);}
+  .shopcard:active{filter:brightness(1.15);}
+  .shopcard.out{opacity:.45;}
+  .shopcard .sc-nm{font-size:var(--fs-body);font-weight:700;text-align:center;padding:var(--sp-2) var(--sp-2) var(--sp-1);
+    line-height:1.2;min-height:calc(var(--fs-body) * 2.4 + var(--sp-2) + var(--sp-1));
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+    word-break:keep-all;overflow-wrap:anywhere;}
+  .shopcard .sc-ic{position:relative;margin:0 var(--sp-2);height:72px;border-radius:var(--rad-btn);
+    background:var(--c-press);border:1px solid var(--c-line);display:flex;align-items:center;justify-content:center;
+    font-size:40px;line-height:1;}
+  .shopcard .sc-ic .ic{vertical-align:0;}
+  .shopcard .sc-ic .sc-n{position:absolute;right:5px;bottom:2px;font-size:var(--fs-num);font-weight:700;color:#fff;
+    text-shadow:0 0 3px #000,0 0 6px #000,1px 1px 0 #000;font-variant-numeric:tabular-nums;}
+  /* 설명은 두 줄까지 — 한 줄 말줄임은 3열 폭에서 6~8자만 남아 정보가 0 이었다(QA) */
+  .shopcard .sc-sub{font-size:var(--fs-note);color:var(--c-sub);text-align:center;padding:var(--sp-1) var(--sp-2) 0;
+    line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+    word-break:keep-all;overflow-wrap:anywhere;}
+  .shopcard .sc-pr .lack{font-size:var(--fs-note);font-weight:700;margin-left:2px;}
+  .shopcard .sc-st{align-self:center;margin:var(--sp-1) 0 0;font-size:var(--fs-note);padding:1px 8px;border-radius:var(--rad-chip);
+    background:var(--c-press);border:1px solid var(--c-line);color:var(--c-sub);white-space:nowrap;}
+  .shopcard .sc-st.on{background:var(--c-ok);border-color:var(--c-ok);color:#fff;font-weight:700;}
+  .shopcard .sc-pr{margin-top:var(--sp-2);height:36px;display:flex;align-items:center;justify-content:center;gap:var(--sp-1);
+    background:linear-gradient(var(--gold-hi),var(--gold-lo));color:var(--gold-ink);font-size:var(--fs-num);font-weight:700;
+    font-variant-numeric:tabular-nums;border-top:1px solid var(--gold-bd);}
+  .shopcard .sc-pr.dia{background:linear-gradient(#a9e6f4,#5fb3c8);color:#0d2b33;border-top-color:#cdeff7;}
+  .shopcard .sc-pr.free{background:var(--c-ok);color:#fff;border-top-color:#6fd08a;}
+  .shopcard .sc-pr .was{font-size:var(--fs-note);font-weight:400;text-decoration:line-through;opacity:.7;margin-left:2px;}
+  /* 리본은 **아이콘 칸의 왼쪽 위**에 앉는다 — 카드 꼭대기에 두면 짧은 이름(「다이아」)을 덮었다(캡처 확인) */
+  .shopcard .sc-ic .sc-rb{position:absolute;top:-1px;left:-1px;z-index:1;background:var(--c-warn);color:#fff;
+    font-size:var(--fs-note);font-weight:700;padding:2px 8px;border-radius:var(--rad-btn) 0 var(--rad-btn) 0;
+    box-shadow:0 1px 2px var(--shade);}
+  .shopcard .sc-pr.poor{filter:saturate(0) brightness(.75);}
+  /* 섹션 머리판 + 남은 시간 칩 — 참고 화면의 「일일 상품 / 11시간 58분」 */
+  .shophead{display:flex;flex-direction:column;align-items:center;gap:var(--sp-1);margin:var(--sp-4) 0 var(--sp-2);}
+  .shophead .plate{background:var(--c-band);border:1px solid var(--c-line);border-radius:var(--rad-btn);
+    padding:6px 22px;font-size:var(--fs-body);font-weight:700;color:var(--c-goldtxt);letter-spacing:-.2px;}
+  .shophead .timer{font-size:var(--fs-sub);color:var(--c-text);background:var(--c-press);border:1px solid var(--c-line);
+    border-radius:var(--rad-chip);padding:3px 12px;font-variant-numeric:tabular-nums;}
+  .shophead .note{font-size:var(--fs-note);color:var(--c-sub);text-align:center;}
+  .shophead:first-child{margin-top:0;}
 
 </style>
   <script type="module" crossorigin src="/game.js"></script>
