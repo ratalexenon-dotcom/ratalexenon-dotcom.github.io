@@ -529,10 +529,53 @@
   .cx-card .st{font-size:var(--fs-note);color:var(--c-goldtxt);}
   .cx-card.dim{opacity:.5;}
   .cx-card.unk{background:var(--c-band);border-style:dashed;color:var(--c-sub);cursor:default;}
+  /* 정수 카드의 종 얼굴 — 실루엣 칸과 같은 지름 40 (4c-6 T1b · M1) */
+  .cx-card img{width:40px;height:40px;flex:0 0 auto;border-radius:50%;object-fit:cover;background:var(--c-press);}
   .cx-card .sil{width:40px;height:40px;border-radius:50%;background:var(--c-press);display:flex;align-items:center;
     justify-content:center;font-size:var(--fs-num);font-weight:700;color:var(--c-sub);}
   .cx-card .new{position:absolute;top:2px;right:2px;height:16px;padding:0 5px;border-radius:var(--rad-chip);
     background:var(--c-ok);color:var(--c-text);font-size:var(--fs-note);font-weight:700;display:flex;align-items:center;}
+  /* ★★ 명예의 전당 화면 (2026-09-05 · 4c-6 T2 · 목업 D3). 장치 0 — 내 최고 카드 고정 + 직업별 1등 줄(쪽 8). 세로 스크롤 없음 */
+  .hl{flex:1;min-height:0;display:flex;flex-direction:column;padding:var(--sp-2) var(--sp-3) 0;}
+  .hl-head{flex:0 0 auto;margin-bottom:var(--sp-2);}
+  .hl-head b{display:block;font-size:var(--fs-title);font-weight:800;color:var(--c-goldtxt);}
+  .hl-head .sub{display:block;font-size:var(--fs-sub);color:var(--c-sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hl-body{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;}
+  .hl-body .k-grid{gap:6px;}
+  /* 초상 40 — 세로로 긴 초상화 캔버스를 둥근 40 칸에 맞춰 자른다(얼굴은 위쪽이다) */
+  .hl .fc,.hl-srow .fc{flex:0 0 40px;width:40px;height:40px;border-radius:50%;overflow:hidden;background:var(--c-press);
+    display:flex;align-items:flex-start;justify-content:center;color:var(--c-sub);}
+  .hl .fc canvas,.hl-srow .fc canvas{display:block;}
+  .hl .fc svg,.hl-srow .fc svg{margin-top:0;}
+  /* 내 최고 카드 — 금테. 오른쪽은 순위 숫자 대신 「내가 잡은 칸 m/n」 */
+  .hl-mine{flex:0 0 auto;display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-2);margin-bottom:var(--sp-2);
+    border-radius:var(--rad-card);border:1px solid var(--c-gold);background:var(--c-press);color:var(--c-text);cursor:pointer;}
+  .hl-mine:active{filter:brightness(1.25);}
+  .hl-mine.none{border-color:var(--c-line);border-style:dashed;cursor:default;}
+  .hl-mine .fc{border:2px solid var(--c-gold);width:44px;height:44px;flex-basis:44px;}
+  .hl-mine.none .fc{border-color:var(--c-line);align-items:center;}
+  .hl-mine .mid{flex:1 1 0;min-width:0;}
+  .hl-mine .nm{display:block;font-size:var(--fs-body);font-weight:800;color:var(--c-goldtxt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hl-mine .ds{font-size:var(--fs-note);color:var(--c-sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hl-mine .rt{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
+  .hl-mine .rt .tag{font-size:var(--fs-note);color:var(--c-sub);}
+  .hl-mine .rt b{font-size:var(--fs-num);font-weight:800;color:var(--c-goldtxt);}
+  /* 직업별 1등 한 줄 — 초상 · 직업 · 이름(굵게) · 영주 『』 Lv · 전투력. 내가 1등이면 금테 */
+  .hl-row{display:flex;align-items:center;gap:var(--sp-2);height:48px;padding:0 var(--sp-2);
+    border-radius:var(--rad-card);border:1px solid var(--c-line);background:var(--c-panel);color:var(--c-text);cursor:pointer;}
+  .hl-row:active{filter:brightness(1.25);}
+  .hl-row.mine{border-color:var(--c-gold);background:var(--c-press);}
+  .hl-row.mine .fc{box-shadow:0 0 0 2px var(--c-gold);}
+  /* 직업 칸 — 가장 긴 이름이 네 글자(수호기사·원소술사·드루이드)라 52 (실측: 44 면 「수호…」로 잘렸다) */
+  .hl-row .cls{flex:0 0 52px;font-size:var(--fs-sub);color:var(--c-sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hl-row .mid{flex:1 1 0;min-width:0;}
+  .hl-row .nm{display:block;font-size:var(--fs-body);font-weight:700;color:var(--c-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hl-row.mine .nm{color:var(--c-goldtxt);}
+  .hl-row .ds{font-size:var(--fs-note);color:var(--c-sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .hl-row .pw{flex:0 0 auto;font-size:var(--fs-num);font-weight:800;color:var(--c-goldtxt);}
+  /* 순위 시트의 줄 — `.k-srow` 위에 초상 칸과 1등 표시만 더한다 */
+  .hl-srow.top{border-color:var(--c-gold);}
+  .hl-srow .nm .sub{font-size:var(--fs-note);color:var(--c-sub);}
   /* ⚠️ 시트 본문의 줄은 `.k-srow` 다 — `.k-row`(kit.charRow) 를 안 쓴다. 그쪽은 `.item` 과
      함께 달려 모양을 이미 얻고 있어서, 같은 이름에 규칙을 새로 주면 시설 시트의 사람 줄까지
      이번 계획이 모르는 사이에 바뀐다. 새 이름으로 갈라 둔다. */
@@ -585,6 +628,8 @@
   .k-ghead.dim{opacity:.45;}
   .k-ghead .title{font-size:var(--fs-body);font-weight:700;color:var(--c-goldtxt);}
   .k-ghead .count{font-size:var(--fs-sub);color:var(--c-sub);}
+  /* 묶음 머리의 곁말 — 「왜 여기 없나」 한 마디 (4c-6 T1b · M4). 길면 잘린다(줄은 하나다) */
+  .k-ghead .note{min-width:0;font-size:var(--fs-note);color:var(--c-sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .k-ghead::after{content:"";flex:1;height:1px;background:var(--c-line);}
   .k-cards{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:var(--sp-2);}
   .k-card{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;
