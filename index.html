@@ -305,6 +305,11 @@
   #guide{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;background:linear-gradient(#0009,#000e);
     border-top:2px solid var(--gold);z-index:40;display:none;}
   #guide.on{display:block;}
+  /* ★ 튜토리얼 순서(2026-09-05) — `.up` 은 말풍선을 **재화띠 바로 밑**에 붙인다. 홈(포탈)에서
+     「아래 단추 하나」를 가리키는 장이 그 단추(.home-hero-cta, bottom 14px)를 제 몸으로 덮었다(실측 390x844).
+     ⚠️ `#frame.tabs #guide` 가 bottom 을 다시 정하므로 그보다 특정도가 같거나 높게 적는다. */
+  #frame.tabs #guide.up, #guide.up{bottom:auto;top:calc(var(--h-top) + env(safe-area-inset-top));
+    border-top:0;border-bottom:2px solid var(--gold);background:linear-gradient(#000e,#0009);}
   #guide .gn{color:var(--gold2);font-weight:800;font-size:14px;margin-bottom:5px;}
   /* ⚠️ 오른쪽 초상화(.ga)가 얹혀 있다 — 비켜 두지 않으면 긴 대사가 얼굴 밑으로 감긴다
      🔴 mph-qa 중③(2026-09-03 · 6705a5b) — 대사 칸이 화면의 24% 를 먹어 마당 가격표를 가려
@@ -1049,6 +1054,10 @@
   .rec.no{opacity:.5;}
   .rec .ri2{width:38px;height:38px;border-radius:7px;background:var(--well);display:flex;align-items:center;
     justify-content:center;font-size:19px;flex:0 0 auto;}
+  /* ★ 아이템 그림(asset/items · 2026-09-05) — 어디에 들어가도 **잘리지 않고 매끈하게**. 초상용 `.fc img`(cover·pixelated)와 갈라 둔다 */
+  img.itemimg{display:block;object-fit:contain;image-rendering:auto;flex:0 0 auto;pointer-events:none;}
+  .item .fc img.itemimg,.cd-cell .fc img.itemimg{object-fit:contain;image-rendering:auto;}
+  .cx-card img.itemimg{border-radius:0;object-fit:contain;background:transparent;}
   .rec .mid{flex:1;min-width:0;}
   .matchip{display:inline-flex;align-items:center;gap:3px;font-size:10px;padding:1px 7px;border-radius:99px;
     background:var(--well);border:1px solid var(--line);cursor:pointer;margin:2px 3px 0 0;}
