@@ -1,0 +1,46 @@
+{
+  "_": "B안 빛·입자 시트 스펙 (2026-09-06 · 무료 재료 시험). Kenney Particle Pack(CC0) 흰색 텍스처를 합성해 구운 시트 — 색은 런타임 틴트. 굽기: tools/fx/bake-vfx-b.mjs (레시피 내장). 런타임 선택: game.html?fx=b (기본은 battle3d.fx.js FX_SET)",
+  "sheet": { "file": "asset/fx/impact_b.png", "frame": 128, "cols": 8, "rows": 7, "pixel": 0, "smooth": true, "layer": 1, "blend": "normal-alpha", "note": "부드러운 글로우라 LinearFilter · 블룸(layer 1)이 코어를 번지게 한다. 종류별 blend:'add' 는 어두운 바닥 전용 — 밝은 바닥에서 사라진다" },
+  "unitH": 78,
+  "kinds": {
+    "slash":  { "row": 0, "frames": 8, "fps": 30, "loop": false, "anchor": "target-center", "scale": 1.5, "flipX": "caster-side", "shake": { "px": 3, "ms": 80 }, "hitstop": 60, "trail": null, "hitFrame": 2 },
+    "thrust": { "row": 1, "frames": 8, "fps": 30, "loop": false, "anchor": "caster-hand", "rotateTo": "target", "scale": 1.3, "shake": { "px": 2, "ms": 60 }, "hitstop": 50, "trail": null, "hitFrame": 3 },
+    "burst":  { "row": 2, "frames": 8, "fps": 24, "loop": false, "anchor": "target-center", "scale": 1.5, "scaleAoe": 2.0, "shake": { "px": 5, "ms": 140 }, "hitstop": 90, "trail": null, "hitFrame": 2 },
+    "pillar": { "row": 3, "frames": 8, "fps": 20, "loop": false, "anchor": "target-foot", "scale": 2.4, "shake": { "px": 2, "ms": 60 }, "hitstop": 40, "trail": null, "hitFrame": 2 },
+    "bolt":   { "row": 4, "frames": 8, "fps": 24, "loop": true, "anchor": "caster-hand", "rotateTo": "target", "travel": { "from": "caster-hand", "to": "target-center", "speed": 9, "onHit": "burst@0.6" }, "scale": 0.9, "shake": { "px": 2, "ms": 50 }, "hitstop": 40, "trail": { "len": 0.5, "fade": 120 } },
+    "aura":   { "row": 5, "frames": 8, "fps": 10, "loop": true, "anchor": "caster-foot", "scale": 1.3, "shake": null, "hitstop": 0, "trail": null, "dur": "skill.dur|1500" },
+    "heal":   { "row": 6, "frames": 8, "fps": 16, "loop": false, "anchor": "target-foot", "scale": 1.6, "shake": null, "hitstop": 0, "trail": null }
+  },
+  "anchors": {
+    "caster-hand": "시전자 빌보드 중심에서 (+0.25H 표적 쪽, -0.15H 위)",
+    "target-center": "표적 빌보드 중심(키의 0.5H)",
+    "target-foot": "표적 발(링 중심) — 프레임 아래 3px 가 바닥",
+    "caster-foot": "시전자 발(링 중심)"
+  },
+  "units": { "scale": "사람 키 H(78px) 배수 — 프레임 128px 전체가 scale×H 가 되게", "shake.px": "카메라만 · HUD·이름표 고정", "hitstop": "ms · 시각 전용(렌더 보간 정지) · 시뮬 틱 건드리지 말 것 · 80ms 초과 금지", "speed": "H/초" },
+  "colors": {
+    "fire":    { "name": "불",   "hex": "#ff8a1e" },
+    "water":   { "name": "물",   "hex": "#3fb6ff" },
+    "thunder": { "name": "번개", "hex": "#ffe23a" },
+    "poison":  { "name": "독",   "hex": "#7be03a" },
+    "light":   { "name": "빛",   "hex": "#fff2b0" },
+    "dark":    { "name": "암",   "hex": "#b455e6" },
+    "none":    { "name": "무속성(물리)", "hex": "#e8eef8" }
+  },
+  "rule": {
+    "kind": "heal|healOverTime|cleanse|dispel → heal · !dmg → aura · aoe → burst · magic+{curse,sleep,silence,petrify,paralyze} → pillar · magic → bolt · phys+status(≠stun) → thrust · phys → slash",
+    "color": "status: burn→fire · freeze→water · paralyze→thunder · poison|bind→poison · curse|sleep|silence|petrify→dark · stun→none ; status 없음: heal|aura→light · magic→dark · phys→none",
+    "override": "ACTIVES[id].fx = { kind?, color? } 가 있으면 규칙보다 우선 (예외 목록은 스펙 md)"
+  },
+  "overrides": {
+    "vanish":   { "color": "dark",  "why": "그림자숨기 — 은신 오라" },
+    "prop_1":   { "color": "water", "why": "냉기치유" },
+    "prop_16":  { "color": "water", "why": "냉기브레스" },
+    "prop_45":  { "color": "water", "why": "늪물치유" },
+    "prop_73":  { "color": "water", "why": "빙벽붕괴" },
+    "prop_80":  { "color": "poison", "why": "포자결계" },
+    "prop_90":  { "color": "fire",  "why": "용암점막" },
+    "prop_99":  { "color": "light", "why": "홀림빛" },
+    "prop_102": { "color": "fire",  "why": "미혹의불" }
+  }
+}
