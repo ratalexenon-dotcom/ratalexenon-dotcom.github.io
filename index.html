@@ -21,6 +21,13 @@
     --tap:44px; --h-top:44px; --h-tab:56px; --h-seg:36px;
     /* 주 단추 금 그라데이션 */
     --gold-hi:#f0c15a; --gold-lo:#c48a24; --gold-bd:#f7dc9a; --gold-ink:#221606;
+    /* ★ 피부 B(금장 액자, 2026-09-07 결재 #2) — 금의 어두운 두 단. 이 밖의 새 색은 없다 */
+    --c-gold-dim:#6b5a2a; --c-gold-well:#3a2c14;
+    --c-panel-hi:#221a2e;   /* 피부 B 그라데이션 윗단 — 스펙 B-2 */
+    /* ★ 웹툰 크림 — 2026-09-06 결재 ② · 2026-09-07 #13 툴팁·말풍선 통일. 「짧은 말」(인물 방 대사 .rm-bubble ·
+       툴팁 #tip · 집사 말풍선 #guide)은 크롬이 아니라 **만화 컷**이라 어두운 판 위에 밝은 종이로 뜬다.
+       종이 · 잉크 · 테(갈색) 셋뿐이고 이 밖의 새 색은 없다 — 그림자 투명도는 color-mix 로 만든다 */
+    --c-paper:#fff8ea; --c-paper-ink:#2b1d10; --c-paper-line:#3a2718;
     /* 림라이트 — 툰 화풍과 크롬을 잇는 선 */
     --rim:rgba(255,255,255,.09); --rim-strong:rgba(255,255,255,.2); --shade:rgba(0,0,0,.28);
     /* ── 옛 이름 = 새 토큰의 별칭 (옛 화면이 그대로 돌게) — 값을 따로 갖지 않는다 ── */
@@ -31,7 +38,7 @@
     --r:var(--rad-card);
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
-  html,body{margin:0;padding:0;height:100%;background:#07080c;overflow:hidden;
+  html,body{margin:0;padding:0;height:100%;background:#07080c;overflow:hidden; /* color-ok */
     font-family:system-ui,-apple-system,"Malgun Gothic","맑은 고딕",sans-serif;color:var(--ink);}
   #app{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;}
   /* ★ 폰에서 꽉 차게 (2026-08-21) — 전에는 540×960 을 통째로 축소해 얹었다.
@@ -67,10 +74,10 @@
   .cur .plus{color:var(--c-ok);font-weight:700;margin-left:2px;}
 
   .body{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;padding:12px;}
-  .body::-webkit-scrollbar{width:6px;} .body::-webkit-scrollbar-thumb{background:#39405a;border-radius:3px;}
+  .body::-webkit-scrollbar{width:6px;} .body::-webkit-scrollbar-thumb{background:#39405a;border-radius:3px;} /* color-ok */
 
-  h2.t{margin:0 0 10px;font-size:19px;letter-spacing:-.4px;}
-  h3.t{margin:14px 0 8px;font-size:15px;color:var(--gold2);}
+  h2.t{margin:0 0 10px;font-size:19px;letter-spacing:-.4px;} /* fs-ok */
+  h3.t{margin:14px 0 8px;font-size:15px;color:var(--gold2);} /* fs-ok */
   .sub{color:var(--dim);font-size:12px;line-height:1.5;}
 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;
@@ -81,14 +88,14 @@
   .btn:active{transform:translateY(1px);filter:brightness(1.15);}
   .btn.gold{background:linear-gradient(var(--gold-hi),var(--gold-lo));border-color:var(--gold-bd);color:var(--gold-ink);
     box-shadow:inset 0 1px 0 var(--rim-strong),0 1px 3px var(--shade);}
-  .btn.green{background:linear-gradient(#63d183,#3d9557);border-color:#2c6b3e;color:#08210f;}
-  .btn.blue{background:linear-gradient(#6a9be8,#3a63ad);border-color:#294a86;color:#f2f7ff;}
+  .btn.green{background:linear-gradient(#63d183,#3d9557);border-color:#2c6b3e;color:#08210f;} /* color-ok */
+  .btn.blue{background:linear-gradient(#6a9be8,#3a63ad);border-color:#294a86;color:#f2f7ff;} /* color-ok */
   .btn.ghost{background:#00000030;}
   /* ★ 4c-5(2026-09-04) — 되돌릴 수 없는 조작의 확인 단추(`kit.confirmSheet danger`). 경고색 토큰 하나로 —
      금 단추(할 일)와 한눈에 갈린다. ⚠️ **v2 시트 안으로만** 좁힌다(리뷰 I2 · 컨트롤러 ruling): 옛 `ask()`(v1)도
      kind `danger` 를 쓰는데 상점 결제·자리 바꾸기처럼 되돌릴 수 있는 조작까지 그 kind 라, 전역으로 두면
      그것들이 다 빨개진다. v1 단추는 이전 모습(보통 단추) 그대로다. */
-  .k-sheet2 .btn.danger{background:linear-gradient(var(--c-warn),#a8262b);border-color:var(--c-warn);color:#fff;
+  .k-sheet2 .btn.danger{background:linear-gradient(var(--c-warn),color-mix(in srgb, var(--c-warn) 70%, black));border-color:var(--c-warn);color:#fff;
     box-shadow:inset 0 1px 0 var(--rim-strong),0 1px 3px var(--shade);}
   /* ★★ 2026-08-23 사용자 지시 — 「글자가 들어간 버튼도 **글자 크기에 맞춰서** 해놔」
      `.wide` 는 원래 `width:100%` 였다. 그게 팝업마다 가로로 꽉 찬 슬래브 버튼을 쌓아
@@ -103,7 +110,7 @@
 
   .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:12px;margin-bottom:10px;
     box-shadow:inset 0 1px 0 var(--rim);}
-  .kv{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:3px 0;}
+  .kv{display:flex;justify-content:space-between;gap:10px;font-size:13px;padding:3px 0;} /* fs-ok */
   .kv span:first-child{color:var(--dim);flex:0 0 auto;white-space:nowrap;}
   /* ⚠️ overflow-wrap:anywhere 로 뒀더니 **이름 한가운데서** 줄이 바뀌었다(「크레지/린」).
      구분자(·) 앞뒤 공백에서만 접히게 keep-all + break-word 로 바꾼다. */
@@ -115,18 +122,18 @@
      390px 폰에서 3열이 컨테이너를 넘쳐 오른쪽이 잘렸다 → minmax(0,1fr) 로 바닥을 연다. */
   #menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
   .tile{position:relative;aspect-ratio:1/1;border-radius:14px;border:1px solid var(--line);
-    background:linear-gradient(160deg,#2b3146,#1a1e2b);display:flex;flex-direction:column;
+    background:linear-gradient(160deg,#2b3146,#1a1e2b);display:flex;flex-direction:column; /* color-ok */
     align-items:center;justify-content:center;gap:6px;cursor:pointer;overflow:hidden;}
   .tile:active{filter:brightness(1.2);}
   .tile canvas{width:64px;height:64px;image-rendering:pixelated;}
-  .tile .nm{font-size:15px;font-weight:800;letter-spacing:-.3px;max-width:100%;
+  .tile .nm{font-size:15px;font-weight:800;letter-spacing:-.3px;max-width:100%; /* fs-ok */
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .tile .ds{font-size:10px;color:var(--dim);max-width:100%;
+  .tile .ds{font-size:10px;color:var(--dim);max-width:100%; /* fs-ok */
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .tile .badge{position:absolute;top:6px;right:6px;background:var(--red);color:#fff;
-    border-radius:999px;font-size:10px;font-weight:800;padding:1px 6px;}
+    border-radius:999px;font-size:10px;font-weight:800;padding:1px 6px;} /* fs-ok */
   .tile.big{grid-column:span 3;aspect-ratio:auto;padding:16px;flex-direction:row;justify-content:flex-start;gap:14px;
-    background:linear-gradient(100deg,#4a3a1c,#2a2415);border-color:#6d5320;}
+    background:linear-gradient(100deg,#4a3a1c,#2a2415);border-color:#6d5320;} /* color-ok */
   .tile.big .nm{font-size:20px;} .tile.big .txt{display:flex;flex-direction:column;align-items:flex-start;}
 
   /* 목록 */
@@ -142,8 +149,18 @@
   .item .nm{font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .item .ds{font-size:11px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .item .rt{text-align:right;font-size:12px;flex:0 0 auto;}
-  .star{color:var(--gold2);letter-spacing:-1px;}
-  .star .off{color:#4a5064;}
+  /* 🔴 2026-09-07 QA6 ⑮ 후속(사용자 실측) — 별이 **글자에서 그림(SVG)으로** 바뀌었다.
+     옛 판은 온별 `★`(U+2605)·반별 `☆`(U+2606) 두 글자를 섞어 썼는데 **폰트 기준선이 달라**
+     「꽉 찬 별 셋 옆의 빈 별 하나만 떠 보인다」가 났다(글자 두 종류의 세로 정렬은 CSS 로 못 맞춘다).
+     이제 한 가지 그림만 쓰고 반쪽은 **왼쪽 절반만 내보내** 만든다 — 기준선이 있을 수 없다.
+     ⚠️ 크기는 `1em`(= 둘러싼 글자 크기)이다. 자리마다 px 를 박지 마라 — 캐릭 상세(--fs-title)와
+        카드(12px)가 이미 다르고, 그 차이를 글자 크기 하나로 물려받는 것이 이 규칙의 요점이다.
+     ⚠️ `.off`(옅은 자리) 이름은 그대로 뒀다 — `#scr-char` 의 `.cd-stars .off` 같은 옛 덧칠이 산다. */
+  .star{display:inline-flex;align-items:center;gap:1px;line-height:1;color:var(--gold2);vertical-align:middle;}
+  .star .s{position:relative;display:block;flex:0 0 auto;width:1em;height:1em;line-height:1;text-align:center;}
+  .star .s > i{position:absolute;left:0;top:0;width:1em;height:1em;overflow:hidden;line-height:0;font-style:normal;}
+  .star .s > i.h{width:.5em;}          /* 반쪽 — 같은 그림의 왼쪽 절반만 */
+  .star .off{color:#4a5064;} /* color-ok */
   /* kit.js matChip() 이 찍는 재료칩 — 여태 규칙이 없어 맨몸으로 그려졌다(2026-09-03 · fix round 5).
      `--fs-s` 는 :root 에 없어 가장 가까운 `--fs-note`(11px), 999px 대신 `--rad-chip` 을 쓴다.
      `.k-chip` 은 selftest CLICK_SEL 에 든 **누르는** 부품이라 cursor 를 준다.
@@ -169,16 +186,18 @@
   .matcard .mc-need{font-size:var(--fs-note);color:var(--c-sub);}
   .matcard.short{border-color:var(--c-warn);} .matcard.short .mc-n{color:var(--c-warn);}
   .matcard.zero .mc-n{color:var(--c-sub);}
-  .chip{display:inline-block;font-size:10px;padding:1px 6px;border-radius:999px;background:var(--well);
+  .chip{display:inline-block;font-size:10px;padding:1px 6px;border-radius:999px;background:var(--well); /* fs-ok */
     border:1px solid var(--line);color:var(--dim);margin-right:4px;}
   .chip.on{background:var(--gold);color:var(--gold-ink);border-color:var(--gold-bd);font-weight:700;}
+  /* 대행 — 앉을 수는 있지만 실력이 깎이는 후보(A-13 · `PROXY_K`). 고를 수 있으니 **죽이지 않고 표시만** 한다 */
+  .chip.warn{border-color:var(--c-warn);color:var(--c-warn);}
   /* 전설 확정 — 이름이 붙기 전(+5 미만)에도 이 칩 하나로 알아본다 */
-  .chip.lg{background:linear-gradient(160deg,#ffe9b0,#d9a53c);color:#3a2a06;
-    border-color:#7a5410;font-weight:800;box-shadow:0 0 8px #e0a93f66;}
+  .chip.lg{background:linear-gradient(160deg,#ffe9b0,#d9a53c);color:#3a2a06; /* color-ok */
+    border-color:#7a5410;font-weight:800;box-shadow:0 0 8px #e0a93f66;} /* color-ok */
   /* 칩이 안 들어가는 좁은 자리(캐릭터 창 장비칸)용 — 같은 금색으로 아이콘 칸 모서리에 ★ */
   .lgmark{position:absolute;top:-5px;left:-5px;width:15px;height:15px;border-radius:99px;
-    background:linear-gradient(160deg,#ffe9b0,#d9a53c);color:#3a2a06;border:1px solid #7a5410;
-    font-size:9px;line-height:13px;text-align:center;font-weight:900;box-shadow:0 0 6px #e0a93f88;
+    background:linear-gradient(160deg,#ffe9b0,#d9a53c);color:#3a2a06;border:1px solid #7a5410; /* color-ok */
+    font-size:9px;line-height:13px;text-align:center;font-weight:900;box-shadow:0 0 6px #e0a93f88; /* fs-ok */
     pointer-events:none;z-index:1;}
 
   /* 도감 격자 */
@@ -187,9 +206,9 @@
     display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;position:relative;}
   .cell img{width:80%;height:80%;object-fit:contain;image-rendering:pixelated;}
   .cell.un img{filter:brightness(0) opacity(.45);}
-  .cell .no{position:absolute;top:2px;left:4px;font-size:9px;color:var(--dim);}
-  .cell .nm2{position:absolute;bottom:0;left:0;right:0;font-size:9px;text-align:center;
-    background:#000a;padding:1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .cell .no{position:absolute;top:2px;left:4px;font-size:9px;color:var(--dim);} /* fs-ok */
+  .cell .nm2{position:absolute;bottom:0;left:0;right:0;font-size:9px;text-align:center; /* fs-ok */
+    background:#000a;padding:1px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} /* color-ok */
 
   /* ★ 스테이지 격자 — 12칸이 두 줄로 다 들어온다 (스크롤 0) */
   #stggrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;}
@@ -197,13 +216,13 @@
     padding:6px 4px 5px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;}
   .stg:active{filter:brightness(1.2);}
   .stg.lock{opacity:.42;}
-  .stg.done{border-color:#2c6b3e;}
+  .stg.done{border-color:#2c6b3e;} /* color-ok */
   .stg .no2{font-size:11px;font-weight:800;white-space:nowrap;}
   .stg .fc2{width:46px;height:46px;border-radius:8px;background:var(--well);border:1px solid var(--line);
     display:flex;align-items:center;justify-content:center;overflow:hidden;}
   .stg .fc2 img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;}
-  .stg .ds2{font-size:10px;color:var(--dim);white-space:nowrap;}
-  .stg .ok2{position:absolute;top:3px;left:4px;font-size:9px;color:var(--green);font-weight:800;}
+  .stg .ds2{font-size:10px;color:var(--dim);white-space:nowrap;} /* fs-ok */
+  .stg .ok2{position:absolute;top:3px;left:4px;font-size:9px;color:var(--green);font-weight:800;} /* fs-ok */
   .stg .go2{position:absolute;top:-4px;right:-4px;width:16px;height:16px;border-radius:999px;
     background:var(--gold);color:var(--gold-ink);font-size:11px;font-weight:900;
     display:flex;align-items:center;justify-content:center;}
@@ -213,19 +232,19 @@
     padding:6px 4px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;}
   .escell:active{filter:brightness(1.25);}
   .escell.empty{border-style:dashed;opacity:.6;justify-content:center;min-height:96px;}
-  .escell .plus{font-size:20px;color:#5b6577;}
-  .escell .lb2{font-size:10px;color:var(--dim);}
-  .escell .esface{width:34px;height:34px;border-radius:7px;overflow:hidden;background:#151926;
+  .escell .plus{font-size:20px;color:#5b6577;} /* color-ok */
+  .escell .lb2{font-size:10px;color:var(--dim);} /* fs-ok */
+  .escell .esface{width:34px;height:34px;border-radius:7px;overflow:hidden;background:#151926; /* color-ok */
     display:flex;align-items:center;justify-content:center;}
   .escell .esface img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;}
-  .escell .esname{font-size:10px;font-weight:800;white-space:nowrap;overflow:hidden;
+  .escell .esname{font-size:10px;font-weight:800;white-space:nowrap;overflow:hidden; /* fs-ok */
     text-overflow:ellipsis;max-width:100%;}
-  .escell .esstar{font-size:10px;color:var(--gold2);letter-spacing:-1px;line-height:1;}
-  .escell .esup{font-size:9px;color:var(--green);text-align:center;line-height:1.25;}
+  .escell .esstar{font-size:10px;color:var(--gold2);letter-spacing:-1px;line-height:1;} /* fs-ok */
+  .escell .esup{font-size:9px;color:var(--green);text-align:center;line-height:1.25;} /* fs-ok */
   .escell .esicons{display:grid;grid-template-columns:auto 1fr;gap:1px 3px;margin-top:2px;width:100%;
     align-items:center;}
-  .escell .ei{font-size:10px;text-align:center;}
-  .escell .eit{font-size:9px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .escell .ei{font-size:10px;text-align:center;} /* fs-ok */
+  .escell .eit{font-size:9px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} /* fs-ok */
 
   /* ============================================================
      ★ 캐릭터 창 「전투」 탭 — **3열이 같은 아래 선에서 끝난다** (2026-08-21 사용자 지시)
@@ -258,16 +277,16 @@
   .cmgear .gslot{flex:1;min-height:0;border-radius:8px;border:1px solid var(--line);background:var(--well);
     display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
     padding:3px 2px;cursor:pointer;}
-  .cmgear .gslot.on{border-color:#6d5320;background:#1d1a12;}
+  .cmgear .gslot.on{border-color:#6d5320;background:#1d1a12;} /* color-ok */
   .cmgear .gslot:active{filter:brightness(1.3);}
   .cmgear .gi{font-size:14px;line-height:1;}
-  .cmgear .gn{font-size:9px;color:var(--dim);max-width:100%;white-space:nowrap;
+  .cmgear .gn{font-size:9px;color:var(--dim);max-width:100%;white-space:nowrap; /* fs-ok */
     overflow:hidden;text-overflow:ellipsis;}
   .cmgear .gslot.on .gn{color:var(--gold2);}
 
   /* 하단 고정 바 */
   .foot{flex:0 0 auto;padding:10px 12px calc(10px + env(safe-area-inset-bottom));
-    border-top:1px solid var(--line);background:#151926;display:flex;gap:8px;}
+    border-top:1px solid var(--line);background:#151926;display:flex;gap:8px;} /* color-ok */
 
   /* ★★ 하단 탭바 (2026-09-02 · 스펙 §2-2·§3-6) — 56 + 안전영역. 화면(.scr)은 그만큼 위에서 끝난다 */
   #tabbar{position:absolute;left:0;right:0;bottom:0;height:calc(var(--h-tab) + env(safe-area-inset-bottom));
@@ -279,6 +298,10 @@
     color:var(--c-sub);font-size:var(--fs-note);cursor:pointer;position:relative;min-height:var(--tap);}
   #tabbar .tb .ic{display:block;color:inherit;}
   #tabbar .tb.on{color:var(--c-gold);}
+  /* 🔴 QA5 B-12(2026-09-07) — 아직 안 만든 칸(투기장). 누르기 **전에** 보이게 흐리게 둔다 —
+     다섯 칸이 똑같이 생겨 신규 플레이어가 한 칸을 눌러 보고서야 「준비 중」을 알았다. */
+  #tabbar .tb.soon{opacity:.45;}
+  #tabbar .tb.soon .lb:after{content:" 🔒";font-size:.85em;}
   #tabbar .tb .bd{position:absolute;top:6px;left:calc(50% + 6px);min-width:18px;height:18px;padding:0 5px;border-radius:var(--rad-chip);
     background:var(--c-warn);color:#fff;font-size:var(--fs-note);font-weight:700;display:flex;align-items:center;justify-content:center;}
 
@@ -290,7 +313,7 @@
   .ex3d-title .sub{font-size:var(--fs-note);}
   .ex3d-modes{flex:0 0 100%;display:flex;gap:var(--sp-1);height:var(--h-seg);}
   .ex3d-modes .seg{flex:1;display:flex;align-items:center;justify-content:center;font-size:var(--fs-sub);border-radius:var(--rad-btn);background:var(--c-press);border:1px solid var(--c-line);color:var(--c-sub);}
-  .ex3d-modes .seg.on{background:#3a2c14;color:var(--c-goldtxt);border-color:var(--c-gold);}
+  .ex3d-modes .seg.on{background:var(--c-gold-well);color:var(--c-goldtxt);border-color:var(--c-gold);}
   .ex3d-modes .seg.lock{opacity:.55;}
   #ex3d canvas#bcv3{position:absolute;inset:0;width:100%;height:100%;}
 
@@ -302,19 +325,36 @@
         채 **이 상자 밖으로 흘러 탭바 밑으로 들어간다**(실측: 360x780 대사1 힌트끝 795 vs 탭바 724).
         상한은 **한 곳에서만** 건다 — `.gt` 의 `max-height`(아래) 하나다. 이 상자는 내용만큼
         커지고(위로 자란다) 아무것도 안 자른다. 이름줄·힌트줄이 잘리던 것도 여기서 온 것이다. */
-  #guide{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;background:linear-gradient(#0009,#000e);
-    border-top:2px solid var(--gold);z-index:40;display:none;}
+  /* 🔴 QA5 B-2(2026-09-07) — 바탕이 `#0009→#000e`(60~93%) 라 **뒤 글자가 비쳤다**: 캐릭 상세의
+     능력치 여섯 자리·홈의 「⚔ 1-1 탐험」 단추가 대사 위로 겹쳐 읽혀 둘 다 안 읽혔다(실측 캡처).
+     안내는 읽히는 게 전부다 — 바탕을 **불투명**으로 둔다(위쪽만 살짝 옅어 상자가 떠 보이게). */
+  /* ★ 웹툰 크림(2026-09-07 B-1 #13) — 인물 방 말풍선(room2d .rm-bubble)과 같은 종이·잉크·갈색 테.
+     옛 남색 유리(#12161e 그라데이션 + 금테)는 「크롬」이었고 이건 「말」이다 — 짧은 말 셋(#tip·#guide·.rm-bubble)이
+     한 피부를 쓴다. 불투명(QA5 B-2)은 종이색이 그대로 지킨다. 만화 두께 그림자는 `.rm-bubble` 과 같은 `0 4px 0`. */
+  #guide{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;background:var(--c-paper);color:var(--c-paper-ink);
+    border-top:2.5px solid var(--c-paper-line);
+    box-shadow:0 4px 0 color-mix(in srgb, var(--c-paper-line) 67%, transparent),0 8px 18px var(--shade);z-index:40;display:none;}
   #guide.on{display:block;overflow:visible;}
   /* ★ 튜토리얼 순서(2026-09-05) — `.up` 은 말풍선을 **재화띠 바로 밑**에 붙인다. 홈(포탈)에서
-     「아래 단추 하나」를 가리키는 장이 그 단추(.home-hero-cta, bottom 14px)를 제 몸으로 덮었다(실측 390x844).
+     「아래 단추 하나」를 가리키는 장이 그 단추를 제 몸으로 덮었다(실측 390x844).
+     ⚠️ 2026-09-08 — 그 단추(`.home-hero-cta`)는 **없어졌다**(사용자 결재). 지금 첫날이 가리키는 곳은
+        **탭바의 탐험 탭**이고 그건 판의 맨 아래라 `.up` 이 더 필요한 자리다 — 규칙은 그대로 산다.
      ⚠️ `#frame.tabs #guide` 가 bottom 을 다시 정하므로 그보다 특정도가 같거나 높게 적는다. */
   /* ★ 2026-09-06 사용자 「어느 경우에든 집사 사진이 대화창 위에」 — .up 일 때도 집사(.ga 140px)가 상자 **위**에
      서도록 상자를 집사 키만큼 내린다(재화띠 밑 + 140px). 옛 판은 상자를 띠 바로 밑에 붙이고 집사를 상자 밑에
      매달았는데(top:100%) 상반신이 잘려 어색했다(캡처 `_기획/화면체계_집사안내창_목업_20260906/`).
      .up 은 대상이 판 아래 절반일 때만 켜지므로(tutorial.js) 상자가 140px 내려와도 가리키는 곳을 안 덮는다. */
-  #frame.tabs #guide.up, #guide.up{bottom:auto;top:calc(var(--h-top) + env(safe-area-inset-top) + 140px);
-    border-top:0;border-bottom:2px solid var(--gold);background:linear-gradient(#000e,#0009);}
-  #guide .gn{color:var(--gold2);font-weight:800;font-size:14px;margin-bottom:5px;}
+  /* 🔴 QA5 B-1 2차(2026-09-07) — 흉상이 상자 위쪽 32px 에 걸치게 내려앉았으므로(`.ga` 참조),
+     상자가 흉상에게 내줘야 할 높이도 그만큼 준다: 116 − 32 = **84**. 흉상의 **화면 위 자리는
+     그대로**고(실측 `.ga` top 52px 유지) 상자만 32px 올라간다 = 가리키는 곳을 덜 덮는다.
+     ⚠️ `.ga` 의 걸침(32px)과 이 값은 한 몸이다 — 하나를 바꾸면 둘 다 바꾼다. */
+  #frame.tabs #guide.up, #guide.up{bottom:auto;top:calc(var(--h-top) + env(safe-area-inset-top) + 84px);
+    border-top:0;border-bottom:2.5px solid var(--c-paper-line);background:var(--c-paper);}
+  /* 🔴 QA5 B-1 2차(2026-09-07 팀장 결재 「더 줄이지 말고 자리를 옮겨라」) — 이름줄은 흉상이
+     내려앉은 32px 띠 안에 있다. 여기만 초상 폭(124px)+여백을 비켜 준다 — `.gt`(대사)는 그 아래라
+     여백 0 그대로다(옛 4c-5 의 「초상 폭+16」 규칙은 초상이 **상자 안**에 있을 때 얘기다).
+     ⚠️ 흉상이 **왼쪽**이므로 여백도 왼쪽이다(`.ga` 주석 참조) — 둘의 방향은 늘 같이 바꾼다. */
+  #guide .gn{color:var(--c-paper-line);font-weight:800;font-size:var(--fs-body);margin-bottom:5px;padding-left:132px;}
   /* ⚠️ 오른쪽 초상화(.ga)가 얹혀 있다 — 비켜 두지 않으면 긴 대사가 얼굴 밑으로 감긴다
      🔴 mph-qa 중③(2026-09-03 · 6705a5b) — 대사 칸이 화면의 24% 를 먹어 마당 가격표를 가려
         `-webkit-line-clamp:2` 로 잘랐다. 「두 줄에 안 담기는 대사는 잘못 쓰인 것」이라 적어 두고
@@ -324,23 +364,63 @@
         것보다 나쁘다(튜토리얼이 뜻을 잃는다). clamp 를 풀고 상한만 둔다.
         48vh 는 실측 최대(360x780 대사6 = 336px · 43vh)보다 넉넉하다 — 지금 일곱 마디는
         **한 마디도 안 넘친다.** 넘침 규칙은 대사가 더 길어질 날의 안전망이다. */
-  #guide .gt{font-size:14px;line-height:1.6;padding-right:0;
+  #guide .gt{font-size:var(--fs-body);line-height:1.6;padding-right:0;color:var(--c-paper-ink);
     max-height:48vh;overflow-y:auto;}  /* scroll-ok — 넘칠 때만 도는 안전망(위 주석) */
+  /* 대사 속 강조(<b>탐험</b>)는 밝은 종이 위라 금색이 안 읽힌다 — 테와 같은 갈색으로 */
+  #guide .gt b{color:var(--c-paper-line);}
   /* 🔴 4c-5(2026-09-04) — padding-right 80px. 오른쪽 끝에 붙는 힌트인데 집사 흉상(.ga, 오른쪽
      12px · 폭 64px)이 그 자리에 겹쳐 「▼ 눌러서 계속」이 얼굴 밑에 숨었다. .gt 와 같은 여백을 준다.
      ⚠️ 80 은 12(right) + 64(폭) + 4(틈) 다 — .ga 의 폭이 바뀌면 여기도 같이 바꾼다.
         폭은 `app.js nextLine()` 의 `charShot(GUIDE_CH, 64, 'head')` 가 **인라인으로** 정한다
         (인라인이 이 규칙을 이긴다). 그 인자가 96 이던 동안 이 여백은 16px 모자랐다. */
-  #guide .gh{text-align:right;color:var(--dim);font-size:11px;margin-top:4px;padding-right:0;}
+  #guide .gh{text-align:right;color:var(--c-paper-line);font-size:var(--fs-note);margin-top:4px;padding-right:0;}
   /* 집사는 3D 흉상(charshot 캔버스)이다 — 도트 보간 금지 설정을 걸지 않는다
      🔴 88 → 64 (같은 이유 — 얼굴이 대사보다 크면 띠가 얼굴 높이에 끌려 올라간다) */
   /* ★ 2026-09-05 밤 — 집사는 배경을 딴 2D 인물(asset/npc/butler_muk.png 알파). **상자 밖**이다: 흉상이 상자
      윗변 위에서 시작하고(bottom:100%) 상자 안에는 글만 들어간다(사용자 「박스 위에서 흉상이 시작되게 · 박스 안에는
      글만」). 그래서 .gt/.gh 의 오른쪽 여백은 0 — 4c-5 T2 의 「초상 폭+16」 규칙은 초상이 상자 안에 있을 때 얘기다.
      위 배치(.up)에서도 상자 **위**에 선다 — 상자가 그만큼 내려온다(위 .up 규칙 · 2026-09-06). 키만 140 으로 줄인다. */
-  #guide .ga{position:absolute;right:8px;bottom:100%;width:auto;height:168px;opacity:1;
+  /* 🔴 QA5 B-1(2026-09-07) — 168px 흉상이 상자 위 오른쪽에 서서 **화면 오른쪽 1/3을 상시로
+     가렸다**: 뽑기 결과 셋째 칸의 전투력·별, 캐릭 상세의 반지칸, 상단 토스트 글자까지 덮었다
+     (실브라우저 실측). 「집사는 대화창 위」(2026-09-06 사용자 확정)는 그대로 두고 **키만** 줄인다
+     — 168→124(가리는 넓이 ≈ 절반). `.up` 은 상자를 흉상 키만큼 내리므로 위 `top:…116px` 과
+     한 몸이다: 여기 키를 바꾸면 거기도 같이 바꿔야 한다.
+     ⚠️ 값 치른 아트다 — 더 줄이거나 자리를 옮기는 것은 디렉터 결재 사항(반영대장에 물음 남김). */
+  /* 🔴 QA5 B-1 2차(2026-09-07 · 팀장 결재) — **키는 124px 에서 더 안 줄인다**(값 치른 아트라
+     계속 깎으면 값이 깎인다). 대신 **자리를 내린다**: `bottom:100%`(전부 상자 위) → 상자 위쪽
+     32px 에 걸치게 해서 콘텐츠를 침범하는 높이를 124→92px 로 줄인다. 뽑기 결과 셋째 칸의
+     보조직업 칩·별에 닿던 것이 이만큼이면 떨어진다(실측).
+     그리고 **왼쪽 끝으로 옮긴다**(팀장 결재 「왼쪽/아래로」). 오른쪽이 문제였던 이유는 이 게임의
+     카드·모달이 **오른쪽에 값을 몰아 두기** 때문이다: 카드의 전투력·별·보조직업 칩도, 모달의 주
+     단추(뽑기 결과 「확인」)도 전부 오른쪽 끝이다. 실측(430×729) — 옮기기 전 흉상 l=590·rt=714 가
+     「확인」(l=614·rt=673)을 덮었고, 옮긴 뒤 rt=416 이라 **카드·단추 어느 것과도 안 겹친다**
+     (카드 바닥 t=445 < 흉상 top 474 · 단추 l=614 > 흉상 rt=416).
+     ⚠️ 그림은 `butler_faceLeft.png`(얼굴이 왼쪽을 본다) — 왼쪽에 서면 제 대사를 등지는 셈이라
+        엄밀히는 오른쪽 보는 판이 맞다. 실물로는 시선이 거의 정면이라 어색하지 않아 그대로 뒀다.
+        뒤집기가 필요하면 `transform:scaleX(-1)` 한 줄이지만 가슴의 사자 문장·쟁반 든 손이 같이
+        뒤집힌다 — **디렉터 결재 사항**으로 남긴다(반영대장).
+     ⚠️ 32 는 `#guide` 위 여백(10) + `.gn` 이름줄(≈22) 이다 — 걸치는 띠가 **이름줄까지**라
+        위 `.gn` 의 `padding-left` 하나로 글이 안 감긴다. 이 값을 키우면 대사줄(`.gt`)까지
+        걸려 거기도 여백을 줘야 한다(= 대사 칸이 좁아진다). 둘은 한 몸이다. */
+  #guide .ga{position:absolute;left:4px;bottom:calc(100% - 32px);width:auto;height:124px;opacity:1;
     filter:drop-shadow(0 3px 4px rgba(0,0,0,.75));pointer-events:none;}
-  #guide.up .ga{height:140px;}
+  #guide.up .ga{height:108px;}
+  /* 🔴 2026-09-07 QA6 ⑯ — 흉상은 말풍선의 **자식**이라 z 로는 못 비킨다: 상자 위로 92px 튀어나온
+     왼쪽 아래 124×124 가 그 밑의 글을 덮는다. 키는 더 안 줄인다(값 치른 아트 · QA5 B-1 2차 결재)
+     — 대신 **글을 밀어낸다.** `#frame.guiding` 은 말풍선이 떠 있는 동안만 붙는다(app.js markGuiding).
+     ⚠️ 132 = left(4) + 흉상 폭(124) + 틈(4). `.ga` 의 left·height 를 바꾸면 여기도 같이 바꾼다.
+     ⚠️ 바닥에 붙는 글만 비킨다 — 위쪽 내용은 흉상에 안 닿는다. */
+  #frame.guiding .k-sheet .k-sh-b{padding-left:132px;}
+  #frame.guiding .guide-shy{padding-left:132px;}
+  /* 말풍선이 **위**로 올라간 장(`#guide.up`)에서는 흉상이 판 왼쪽 위에 선다 — 그때 덮이는 것은
+     캐릭 상세의 이름·성격 줄이다(390×844 실측 `_화면/세로/튜토리얼/p1_grow_stat`).
+     ⚠️ `#guide` 가 `.scr` 보다 DOM 뒤라 형제 선택자로는 못 고른다 — 표는 `tutorial.js setUp()`
+        이 판(`#frame.guide-up`)에 붙인다. */
+     ⚠️ 132 을 다 주면 이름이 통째로 밀려 사라진다(실측) — 흉상과 겹치지 않을 만큼만(100) 민다.
+        더 밀지 않는 대신 이름이 `…` 로 줄게 한다(아래 `.nmrow b`). 흉상 자리를 옮기는 것은
+        디렉터 결재 사항으로 남긴다(`.ga` 주석 · 값 치른 아트). */
+  #frame.guiding.guide-up .cd-headwrap{padding-left:100px;}
+  #frame.guiding.guide-up .cd-head .mid .nmrow b{display:block;min-width:0;flex:0 1 auto;}
 
   /* ★★ 튜토리얼 손잡기 마스크 (2026-09-05 P1 Task 2 · 커리큘럼 §1-1)
      「지금 눌러야 할 곳」 **한 곳만** 뚫고 나머지를 덮는다. 구멍은 `clip-path` 의 evenodd 로
@@ -365,12 +445,11 @@
   @keyframes tutshake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 
   /* 팝업 */
-  #modal{position:absolute;inset:0;background:#000b;display:none;align-items:center;justify-content:center;z-index:60;padding:20px;}
+  #modal{position:absolute;inset:0;display:none;align-items:center;justify-content:center;padding:20px;}
   #modal.on{display:flex;}
   /* ⚠️ 2026-08-23 — `width:100%` 였다. 내용이 두 줄이어도 상자가 440 을 꽉 채워서
      「빈 칸을 늘려 화면을 채우는」 것처럼 보였다. 이제 **내용이 폭을 정한다.** */
-  #modal .box{width:auto;min-width:min(320px,90vw);max-width:440px;max-height:80%;overflow:auto;background:var(--bg2);
-    border:1px solid var(--line);border-radius:14px;padding:16px;}
+  #modal .box{width:auto;min-width:min(320px,90vw);max-height:80%;overflow:auto;}
   /* ★★ 2026-09-02 — 이 셋은 원래 위(캐스케이드 앞자리)에 있어서 위 일반 규칙에 졌다.
      같은 선택자 뒤 규칙이 이긴다 — 여기 일반 규칙 바로 뒤로 옮긴다(텍스트는 그대로). */
   #modal{padding:4px;}
@@ -380,32 +459,51 @@
 
   /* ★ 설명 말풍선 — 이름을 누르면 뜬다 (2026-08-21 사용자 지시)
      「팝업으로 반투명한 말풍선에 글씨있는 그런 느낌」 */
-  .tipdot{border-bottom:1px dashed #6b7686;cursor:pointer;}
-  #tip{position:absolute;z-index:75;max-width:250px;padding:9px 12px;border-radius:10px;
-    background:#0d1018e8;border:1px solid #4a5570;box-shadow:0 6px 22px #000a;
-    backdrop-filter:blur(3px);font-size:12px;line-height:1.55;color:#e8eef7;
-    animation:tipin .14s ease;pointer-events:none;}
-  #tip b{color:#e0a93f;display:block;margin-bottom:3px;font-size:13px;}
-  #tip:after{content:"";position:absolute;left:var(--ax,50%);bottom:-6px;margin-left:-6px;
-    border:6px solid transparent;border-top-color:#4a5570;border-bottom:0;}
-  @keyframes tipin{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+  /* ★ 웹툰 크림(2026-09-07 B-1 #13) — 「반투명 남색 유리」였던 것을 인물 방 말풍선(.rm-bubble)·집사 말풍선(#guide)과
+     같은 종이·잉크·갈색 테로. 꼬리는 45° 정사각 18(테 두 변) — 툴팁은 앵커 **위**에 뜨므로 꼬리가 **아래**다
+     (`app.js showTip` 이 위가 좁아 아래로 뒤집으면 `.below` 를 붙이고 꼬리가 위로 간다).
+     `--ax` = 앵커 가운데의 툴팁 안 x(px) — 꼬리와 팝 애니의 원점이 같이 따라간다. */
+  .tipdot{border-bottom:1px dashed var(--c-sub);cursor:pointer;}
+  #tip{position:absolute;z-index:75;max-width:250px;padding:10px 14px;border-radius:18px;
+    background:var(--c-paper);color:var(--c-paper-ink);border:2.5px solid var(--c-paper-line);
+    box-shadow:0 4px 0 color-mix(in srgb, var(--c-paper-line) 67%, transparent),0 8px 18px var(--shade);
+    font-size:var(--fs-sub);line-height:1.5;font-weight:700;
+    transform-origin:var(--ax,50%) 100%;animation:tipin .22s cubic-bezier(.2,1.6,.4,1) both;pointer-events:none;}
+  #tip > b{color:var(--c-paper-line);display:block;margin-bottom:3px;font-size:var(--fs-sub);font-weight:800;}
+  #tip span b{color:var(--c-paper-line);}   /* 본문 속 강조 — 제목처럼 줄을 바꾸지 않는다 */
+  #tip:after{content:"";position:absolute;left:var(--ax,50%);bottom:-11px;margin-left:-9px;width:18px;height:18px;
+    background:var(--c-paper);border-right:2.5px solid var(--c-paper-line);border-bottom:2.5px solid var(--c-paper-line);
+    border-bottom-right-radius:3px;transform:rotate(45deg);}
+  #tip.below{transform-origin:var(--ax,50%) 0;}
+  #tip.below:after{bottom:auto;top:-11px;border-right:0;border-bottom:0;border-bottom-right-radius:0;
+    border-left:2.5px solid var(--c-paper-line);border-top:2.5px solid var(--c-paper-line);border-top-left-radius:3px;}
+  @keyframes tipin{0%{opacity:0;transform:scale(.85);}60%{transform:scale(1.04);}100%{opacity:1;transform:none;}}
 
-  /* 토스트 */
-  #toast{position:absolute;left:0;right:0;top:64px;display:flex;flex-direction:column;align-items:center;
-    gap:6px;z-index:70;pointer-events:none;}
-  #toast div{background:#000d;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px;
+  /* 토스트
+     🔴 QA5 B-7(2026-09-07) — `top:64px` 였다. 누른 단추는 화면 **맨 아래 띠**(출발·소탕)인데
+        거절 문구는 460px 위에 떴다 — 챕터 제목을 가리면서, 두 번은 「아무 반응이 없다」로 읽혔다
+        (신규유저 QA 실측). 토스트는 **누른 손 근처**에 뜬다: 탭바 위, 하단 띠 바로 위.
+     ⚠️ 집사 말풍선(#guide, 아래에서 자란다)과 자리가 겹치면 그 위에 얹힌다 — z70 > z40 이라
+        가려지지 않는다. 말풍선이 떠 있는 동안에도 거절 문구는 읽혀야 한다.
+     🔴 QA7 #4(2026-09-13) — 그 약속이 **튜토리얼 중**엔 깨져 있었다: `#guide.tut` 는 z85 라
+        z70 짜리 토스트가 그 밑에 깔린다(1-1 첫 클리어 지급 토스트가 안 읽힌 실측). 토스트는
+        늘 이겨야 하는 쪽이라 `#guide.tut` 보다도 위로 올린다. */
+  #toast{position:absolute;left:0;right:0;bottom:76px;display:flex;flex-direction:column-reverse;align-items:center;
+    gap:6px;z-index:86;pointer-events:none;}
+  #frame.tabs #toast{bottom:calc(var(--h-tab) + env(safe-area-inset-bottom) + 76px);}
+  #toast div{background:#000d;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:13px; /* color-ok fs-ok */
     animation:tin .25s ease;}
-  @keyframes tin{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:none;}}
+  @keyframes tin{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
 
   /* 전투 화면 */
   /* 그리기 좌표계가 540×960 고정이라 늘리면 찌그러진다 → 비율 유지 */
-  #bcv{width:100%;height:100%;display:block;background:#0b0e15;object-fit:contain;}
+  #bcv{width:100%;height:100%;display:block;background:#0b0e15;object-fit:contain;} /* color-ok */
   /* ⚠️ min-height:0 이 없으면 flex 아이템이 캔버스의 **고유 높이**(폭 844 기준 369px) 밑으로
      안 줄어들어 폰(390 높이)에서 프레임을 뚫는다 — 하단 칩이 화면 밖으로 잘리던 원인(실측). */
   #bwrap{position:relative;flex:1;min-height:0;}
   /* ★ 단추는 **아래 가운데** — 좌우 구석은 아군·적 패널(2026-09-02 확대)이 끝까지 쓴다 */
   #bhud{position:absolute;left:0;right:0;bottom:0;padding:8px 10px;display:flex;gap:14px;align-items:center;
-    justify-content:center;pointer-events:none;background:linear-gradient(#0000,#000c);}
+    justify-content:center;pointer-events:none;background:linear-gradient(#0000,#000c);} /* color-ok */
   #bhud .btn{pointer-events:auto;}
   #bhud .sp{flex:0 0 120px;}
   /* ★★ 2026-09-02 — 위(캐스케이드 앞자리)에 있어서 위 일반 #bhud 규칙에 졌다. 뒤로 옮긴다(텍스트 그대로). */
@@ -413,40 +511,40 @@
 
   /* 타이틀 */
   #titleui{position:absolute;left:0;right:0;bottom:0;padding:28px;text-align:center;z-index:5;}
-  #titleui .tap{font-size:16px;color:#fff;text-shadow:0 2px 8px #000;animation:blink 1.4s infinite;}
+  #titleui .tap{font-size:16px;color:#fff;text-shadow:0 2px 8px #000;animation:blink 1.4s infinite;} /* fs-ok */
   @keyframes blink{0%,100%{opacity:.35;}50%{opacity:1;}}
 
   /* ★ 전설 주사위 이벤트 — 「영감 → 주사위 → 확정」 (설계 §10-1-보강2)
      ⚠️ 카지노풍 슬롯머신이 아니다. 대장장이의 영감이 먼저고 주사위는 그 뒤의 관문이다. */
   #lgev{position:absolute;inset:0;z-index:78;display:flex;flex-direction:column;
     align-items:center;justify-content:center;gap:14px;text-align:center;padding:0 16px;
-    background:radial-gradient(ellipse at 50% 42%,#3a2c0ccc,#000000ee 62%);
+    background:radial-gradient(ellipse at 50% 42%,#3a2c0ccc,#000000ee 62%); /* color-ok */
     animation:lgfade .18s ease;}
-  #lgev .anvil{font-size:52px;line-height:1;filter:drop-shadow(0 0 14px #e0a93f);
+  #lgev .anvil{font-size:52px;line-height:1;filter:drop-shadow(0 0 14px #e0a93f); /* fs-ok */
     animation:lgspark .55s ease infinite alternate;}
   /* 영감의 파문 — 모루 위에 겹쳐 퍼진다(장식이라 흐름에서 뺐다) */
   #lgev .ring{position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-78px 0 0 -48px;
-    border-radius:50%;border:2px solid #ffd77a;animation:lgring 1.1s ease-out infinite;}
+    border-radius:50%;border:2px solid #ffd77a;animation:lgring 1.1s ease-out infinite;} /* color-ok */
   #lgev .die{width:88px;height:88px;border-radius:16px;display:flex;align-items:center;justify-content:center;
-    font-size:44px;font-weight:700;color:#1a1206;background:linear-gradient(160deg,#ffe9b0,#d9a53c);
-    border:2px solid #7a5410;box-shadow:0 8px 26px #000b, inset 0 2px 0 #fff8;}
+    font-size:44px;font-weight:700;color:#1a1206;background:linear-gradient(160deg,#ffe9b0,#d9a53c); /* color-ok fs-ok */
+    border:2px solid #7a5410;box-shadow:0 8px 26px #000b, inset 0 2px 0 #fff8;} /* color-ok */
   #lgev .die.roll{animation:lgtumble .12s linear infinite;}
-  #lgev .die.lose{background:linear-gradient(160deg,#8d94a3,#4c5361);color:#1b1f27;border-color:#333a46;box-shadow:0 6px 18px #0009;}
-  #lgev .cap{font-size:16px;color:#ffe2a3;text-shadow:0 2px 8px #000;letter-spacing:.5px;}
-  #lgev .cap.dim{color:#98a1b2;}
-  #lgev .nm{font-size:20px;font-weight:700;color:#ffd77a;text-shadow:0 0 16px #e0a93f88;animation:lgpop .3s ease;}
-  #lgev .tap{font-size:11px;color:#7f8798;}
+  #lgev .die.lose{background:linear-gradient(160deg,#8d94a3,#4c5361);color:#1b1f27;border-color:#333a46;box-shadow:0 6px 18px #0009;} /* color-ok */
+  #lgev .cap{font-size:16px;color:#ffe2a3;text-shadow:0 2px 8px #000;letter-spacing:.5px;} /* color-ok fs-ok */
+  #lgev .cap.dim{color:#98a1b2;} /* color-ok */
+  #lgev .nm{font-size:20px;font-weight:700;color:#ffd77a;text-shadow:0 0 16px #e0a93f88;animation:lgpop .3s ease;} /* color-ok */
+  #lgev .tap{font-size:11px;color:#7f8798;} /* color-ok */
   @keyframes lgfade{from{opacity:0;}to{opacity:1;}}
   @keyframes lgspark{from{transform:scale(1) rotate(-6deg);}to{transform:scale(1.1) rotate(6deg);}}
   @keyframes lgring{from{transform:scale(.4);opacity:.9;}to{transform:scale(1.7);opacity:0;}}
   @keyframes lgtumble{0%{transform:rotate(-9deg) scale(.96);}50%{transform:rotate(8deg) scale(1.04);}100%{transform:rotate(-9deg) scale(.96);}}
   @keyframes lgpop{from{transform:scale(.7);opacity:0;}to{transform:none;opacity:1;}}
   input[type=text]{width:100%;padding:12px;border-radius:var(--r);border:1px solid var(--line);
-    background:var(--well);color:var(--ink);font-size:16px;font-family:inherit;}
+    background:var(--well);color:var(--ink);font-size:16px;font-family:inherit;} /* fs-ok */
   .bar{height:7px;border-radius:99px;background:var(--well);border:1px solid var(--line);overflow:hidden;}
   .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));}
-  .bar.hp i{background:linear-gradient(90deg,#3d9557,#63d183);}
-  .bar.exp i{background:linear-gradient(90deg,#3a63ad,#6a9be8);}
+  .bar.hp i{background:linear-gradient(90deg,#3d9557,#63d183);} /* color-ok */
+  .bar.exp i{background:linear-gradient(90deg,#3a63ad,#6a9be8);} /* color-ok */
   .bar.thin{height:4px;}
   .bar.slim{height:5px;width:110px;flex:0 0 auto;}
 
@@ -460,8 +558,6 @@
      ============================================================ */
 
   /* ── 넓은 팝업 — 「어차피 팝업으로 띄울거 가로로 더 넓어도 되는거 아닌가」 */
-  #modal .box.wide{max-width:900px;}
-  #modal .box.xwide{max-width:960px;max-height:92%;}
   #modal .box.pad0{padding:12px;}
 
   /* ★★ 화면 규격(2026-08-24) — 4단 뼈대 · 시트 · 격자 */
@@ -471,12 +567,11 @@
      세로 스크롤 금지는 §2 규격상 `.k-body` 안쪽 얘기지 `.box` 자체의 안전망을 걷으란 뜻이 아니다.
      → overflow 는 손대지 않는다(261행의 auto 가 계속 산다). display:flex 만 남긴다. */
   #modal .box{display:flex;flex-direction:column;}
-  .k-title{display:flex;align-items:center;gap:8px;padding-bottom:10px;border-bottom:1px solid var(--line);}
-  .k-title b{font-size:19px;letter-spacing:-.4px;flex:1;}
-  .k-back,.k-x{background:none;border:0;color:var(--fg2);font-size:19px;cursor:pointer;padding:0 4px;}
-  .k-status{display:flex;flex-wrap:wrap;gap:4px 12px;padding:8px 0;font-size:12px;color:var(--fg2);
+  /* ★ 2026-09-07(B-1) — 옛 `.k-title`(19px 제목줄)은 없다. 팝업 머리도 시트와 같은 `.k2-head`(kit.panelHead) 다. */
+  .k-back,.k-x{background:none;border:0;color:var(--c-sub);cursor:pointer;padding:0 4px;}
+  .k-status{display:flex;flex-wrap:wrap;gap:4px 12px;padding:8px 0;font-size:var(--fs-sub);color:var(--c-sub);
     border-bottom:1px solid var(--line);}
-  .k-body{padding:10px 0;overflow:hidden;}          /* ⚠️ 세로 스크롤 금지 — 넘치면 grid() 로 나눈다 */
+  .k-body{overflow:hidden;}          /* ⚠️ 세로 스크롤 금지 — 넘치면 grid() 로 나눈다 */
   /* ⚠️ 규격 §2가 금지한 세로 스크롤의 예외. 2026-08-25 사용자 결재: 도감은 훑어보는
      화면이라 쪽 넘김이 목적을 해친다. 스크롤바는 숨기고 밀어서 넘긴다. */
   #modal .box.k-scroll-popup{overflow:hidden;}
@@ -487,14 +582,21 @@
      읽힌다(캐릭터창 실측). 바닥을 살짝 바래게 해서 「아래가 더 있다」를 말한다. */
   .k-body.k-body-scroll{-webkit-mask-image:linear-gradient(#000 calc(100% - 16px),transparent);
     mask-image:linear-gradient(#000 calc(100% - 16px),transparent);}
-  .k-actions{display:flex;gap:8px;justify-content:flex-end;padding-top:10px;border-top:1px solid var(--line);}
+  .k-actions{display:flex;gap:8px;justify-content:flex-end;}
   /* ⚠️ 수정 라운드 1(리뷰 지적 c) — 시트에 진짜 닫는 길(바깥 탭·✕)이 생겼다. 그 전엔 「닫기」가
      행동버튼 자리 하나를 먹어서, 세 번째 선택지가 12px 밑줄 글자로 밀려났다(가장 나쁜 예:
      strainGate 의 「그래도 보낸다」). 이제 각 시트는 진짜 버튼 2개만 갖는다. */
-  .k-sh-bg{position:absolute;inset:0;z-index:69;background:transparent;}
-  .k-sheet{position:absolute;left:0;right:0;bottom:0;z-index:70;background:var(--bg2);
-    border-top:1px solid var(--line);border-radius:14px 14px 0 0;padding:14px 16px 16px;
-    box-shadow:0 -8px 26px #000a;animation:shup .16s ease;}
+  .k-sh-bg{position:absolute;inset:0;z-index:69;}
+  /* 🔴 QA5 C-9(2026-09-07) — 시트 v1 의 아래 여백이 **16px 고정**이라, 탭바 없는 화면(타이틀의
+     「저장 관리」→「정말 지웁니까」)에서 시트가 프레임 맨 밑에 붙고 그 행동 버튼(「지운다」·「아니오」)이
+     폰 홈 인디케이터 자리에 깔렸다(390×844 실측 · 실브라우저로 재현). v2 의 행동 줄은 처음부터
+     `calc(--sp-3 + env(safe-area-inset-bottom))` 였다 — 같은 자로 맞춘다.
+     ⚠️ 되돌릴 수 없는 조작(계정 삭제)의 확인 버튼이라 「닿기만 하면 된다」가 아니라 **확실히** 떠야 한다. */
+  .k-sheet{position:absolute;left:0;right:0;bottom:0;z-index:70;background:var(--c-panel);
+    border-top:1px solid var(--line);border-radius:var(--rad-sheet) var(--rad-sheet) 0 0;
+    padding:14px 16px calc(16px + env(safe-area-inset-bottom));
+    max-height:calc(100% - var(--h-top) - 24px);overflow-y:auto;   /* scroll-ok — 넘칠 때만 도는 안전망(버튼이 화면 밖으로 밀리지 않게) */
+    box-shadow:0 -8px 26px rgba(0,0,0,.67);animation:shup .16s ease;}
   /* 🔴 2026-09-03(계획 4b Task 4) — 시트 v1 도 **탭바 위**에 앉는다. v2 는 처음부터 그랬는데
      v1 에만 이 줄이 없어서, 탭이 있는 화면에서 시트가 탭바를 덮고 제 행동 버튼(「닫기」)이
      탭 이름(「영주」) 위에 겹쳐 찍혔다(캐릭 상세 스킬 시트 실측 캡처). 같은 자로 맞춘다. */
@@ -502,23 +604,242 @@
   @keyframes shup{from{transform:translateY(14px);opacity:0;}to{transform:none;opacity:1;}}
 
   /* ★★ 바닥 시트 v2 · 하단 띠 · 접힘 띠 (2026-09-02 · 스펙 §3-6) */
-  .k-sheet2{padding:0;max-height:calc(100% - var(--h-top) - 24px);display:flex;flex-direction:column;
-    border-radius:var(--rad-sheet) var(--rad-sheet) 0 0;background:var(--c-panel);border-top:1px solid var(--c-gold);
-    transition:transform .16s ease;}
+  /* ★ 2026-09-08 자리 검사 — 위 여백 24 → 8. 본문이 23px 모자라 잘리고 있었는데, **내용을 깎기 전에**
+     안 쓰는 여백부터 돌려준다(재화띠는 그대로 보인다). 이 한 줄이 시트 본문에 16px 을 준다. */
+  .k-sheet2{padding:0;max-height:calc(100% - var(--h-top) - 8px);display:flex;flex-direction:column;
+    border-radius:var(--rad-sheet) var(--rad-sheet) 0 0;transition:transform .16s ease;}
   #frame.tabs .k-sheet2{bottom:calc(var(--h-tab) + env(safe-area-inset-bottom));}
-  .k2-head{height:72px;flex:0 0 72px;display:flex;align-items:center;gap:var(--sp-2);padding:0 var(--sp-3);border-bottom:1px solid var(--c-line);}
-  .k2-ico{width:56px;height:56px;border-radius:var(--rad-card);background:var(--c-press);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:0 0 auto;}
-  /* 제목 + 그 아래 부제 한 줄(`head`) — 둘이 한 칸을 세로로 나눠 쓴다(kit.sheetPanel 머리말) */
-  .k2-title{flex:1 1 0;min-width:0;}
-  .k2-title b{display:block;font-size:var(--fs-title);color:var(--c-goldtxt);
-    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .k2-head .k-x{margin-left:auto;min-width:var(--tap);min-height:var(--tap);}
+  /* `.k2-head`·`.k2-ico`·`.k2-title` 는 아래 「피부 B 공통」 블록에 있다(2026-09-07 — 팝업과 시트가 같은 머리를 쓴다) */
   .k2-tabs{height:var(--h-seg);flex:0 0 var(--h-seg);display:flex;gap:var(--sp-1);padding:0 var(--sp-3);align-items:center;border-bottom:1px solid var(--c-line);}
   .k2-tab{flex:1;text-align:center;font-size:var(--fs-sub);padding:6px 0;border-radius:var(--rad-btn);background:var(--c-press);color:var(--c-sub);border:1px solid var(--c-line);cursor:pointer;}
-  .k2-tab.on{background:#3a2c14;color:var(--c-goldtxt);border-color:var(--c-gold);}
-  .k2-body{flex:1;min-height:0;overflow:hidden;padding:var(--sp-3);}
-  .k2-actions{flex:0 0 auto;display:flex;gap:var(--sp-2);justify-content:flex-end;padding:var(--sp-2) var(--sp-3) calc(var(--sp-3) + env(safe-area-inset-bottom));border-top:1px solid var(--c-line);}
-  .k2-actions .btn{min-height:var(--tap);}
+  .k2-tab.on{background:var(--c-gold-well);color:var(--c-goldtxt);border-color:var(--c-gold);}
+  .k2-body{flex:1;min-height:0;overflow:hidden;}
+  .k2-actions{flex:0 0 auto;display:flex;gap:var(--sp-2);justify-content:flex-end;}
+  /* ★★ 피부 B — 팝업·시트 공통 (스펙 2026-09-07 B-2 · 목업 B_금장액자.png). 토큰만 쓴다.
+     팝업(#modal .box)과 바닥 시트(.k-sheet2)가 **같은 클래스 `.k-skin`** 을 입는다 — 피부가 두 벌이 되지 않게.
+     ⚠️ 머리 72(`.k2-head`)는 kit.panelHead 가 만든다. 마름모(`.k-corner`)는 머리 밑선 양끝(시트 2 · 팝업은 행동띠 위까지 4). */
+  /* ⚠️ position 은 여기서 안 건드린다 — 시트는 absolute(.k-sheet), 팝업 상자만 아래서 relative(마름모 기준) */
+  .k-skin,#modal .box.k-skin,.k-sheet.k-skin{background:linear-gradient(180deg,var(--c-panel-hi),var(--c-panel) 30%);color:var(--c-text);
+    box-shadow:inset 0 0 0 1px var(--c-gold-dim),inset 0 0 0 4px var(--c-panel),inset 0 0 0 5px var(--c-line),0 -12px 40px rgba(0,0,0,.8);}
+  #modal{z-index:60;background:rgba(0,0,0,.55);}   /* z60 유지 — 튜토리얼 마스크 65 아래(test-view:868). 시트 위 확인은 confirmSheet 가 맡는다 */
+  #modal .box{position:relative;border:2px solid var(--c-gold);border-radius:var(--rad-card);padding:6px;max-width:440px;}
+  /* ★ 2026-09-08 — `xwide` 의 세로 한도를 92%→100% 로 풀었다(실측 +25px).
+     8% 를 남겨 두는 것은 **그림 여백이 아니라 잘려 나가는 줄**이었다: 도감 상세 상자가
+     293px 로 묶여 본문이 134px 뿐이었고 거기에 312px 이 들어 있었다.
+     ⚠️ `#modal` 이 이미 padding 8 을 두고 탭바 높이만큼 올라와 있다 — 100% 여도 화면에 안 붙는다.
+     ⚠️ 한도를 푸는 것뿐이라 **내용이 짧은 팝업은 크기가 그대로**다(상자는 내용 크기로 선다). */
+  #modal .box.wide{max-width:900px;} #modal .box.xwide{max-width:960px;max-height:100%;}
+  /* ★ 2026-09-08 — 행동띠에 얹힌 쪽 단추는 **가로를 아낀다.** 띠에는 행동 단추도 같이 서는데
+     쪽 단추가 기본 여백(16)을 쓰면 셋이 안 들어가 **단추 글자가 두 줄로 접힌다**(「자물쇠 걸 / 기」·
+     캡처 실측). 접히는 것은 안 넘치니 자리 검사도 조용하다 — 그래서 여기서 줄인다. */
+  .k-actions>.k-page .btn,.k2-actions>.k-page .btn{padding-left:10px;padding-right:10px;}
+  .k-actions>.k-page,.k2-actions>.k-page{gap:8px;}
+  .k-sh-bg{background:rgba(0,0,0,.55);}
+  .k-sheet{border-radius:var(--rad-sheet) var(--rad-sheet) 0 0;}
+  .k-sheet.k-sheet2{border-top:2px solid var(--c-gold);}
+  .k2-head{height:72px;flex:0 0 72px;display:flex;align-items:center;gap:var(--sp-2);margin:6px 6px 0;padding:0 var(--sp-2);
+    border-bottom:1px solid var(--c-gold);position:relative;}
+  .k2-head::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--c-line);}
+  .k2-ico{width:56px;height:56px;border-radius:var(--rad-card);display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+    background:radial-gradient(circle at 50% 35%,var(--c-gold-well),var(--c-press) 70%);color:var(--c-goldtxt);border:1px solid var(--c-gold);
+    box-shadow:inset 0 0 0 2px var(--c-panel),inset 0 0 0 3px var(--c-gold-dim);}
+  .k2-title{flex:1 1 0;min-width:0;}
+  .k2-title b{display:block;font-size:var(--fs-title);font-weight:700;color:var(--c-goldtxt);line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .k2-sub{font-size:var(--fs-sub);color:var(--c-sub);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .k2-head .k-x,.k2-head .k-back{min-width:var(--tap);min-height:var(--tap);background:none;border:0;color:var(--c-sub);display:flex;align-items:center;justify-content:center;cursor:pointer;}
+  .k-corner{position:absolute;width:10px;height:10px;background:var(--c-gold);transform:rotate(45deg);z-index:2;pointer-events:none;}
+  .k-corner.tl{left:10px;top:73px;} .k-corner.tr{right:10px;top:73px;}
+  .k-corner.bl{left:10px;bottom:52px;} .k-corner.br{right:10px;bottom:52px;}
+  /* 본문 카드 — ⚠️ `.k-card` 는 사람 카드(kit.charCard · 아래 ⑤)가 이미 쓰는 이름이라 여기서는 `.k-panel` 이다 */
+  .k-panel{background:var(--c-press);border:1px solid var(--c-gold-dim);border-radius:var(--rad-card);box-shadow:inset 0 1px 0 var(--rim);padding:var(--sp-2);}
+  .k-chip2{display:inline-flex;align-items:center;gap:var(--sp-1);min-height:24px;padding:2px 8px;border-radius:var(--rad-chip);
+    background:var(--c-gold-well);border:1px solid var(--c-gold);color:var(--c-goldtxt);font-size:var(--fs-note);white-space:nowrap;}
+  /* ★ 피부 B 본문 부품 (스펙 2026-09-07 B-3 · 결재 1안) — 정수 설명 공용 본문 `ui/essence.body.js` 가 쓴다. 토큰만.
+     `.k-chip2.off` = 아직 안 온 단계(별 줄) · `.k-tile3` = 숫자 타일 64(위 11 이름 · 가운데 17 숫자 · 아래 11 단위) */
+  .k-chip2.off{background:var(--c-press);border-color:var(--c-line);color:var(--c-sub);}
+  /* `.up` = 성격 유인 + · `.ok` = 끝난 것(연구 완료). 색은 같지만 **뜻이 달라** 이름을 나눠 둔다 —
+     하나로 쓰면 다음 사람이 「완료」에 `.up` 을 적고, 그 뒤 유인 색만 바꾸려다 완료까지 바꾼다 */
+  .k-chip2.up, .k-chip2.ok{background:var(--c-press);border-color:var(--c-ok);color:var(--c-ok);}
+  /* `.down` = 성격 유인 − · `.warn` = 값이 깎이는 이유(대행 ×0.3). 색은 같지만 **뜻이 달라**
+     이름을 나눠 둔다(`.up`/`.ok` 와 같은 규율) — 하나로 쓰면 다음 사람이 한쪽을 고치다 둘을 바꾼다 */
+  .k-chip2.down, .k-chip2.warn{background:var(--c-press);border-color:var(--c-warn);color:var(--c-warn);}
+  /* ⚠️ `.k-tile3`(옛 정수 능력치 타일 64)은 B-6 에서 **정수 설명에서** 빠졌다 — 능력치는 이제
+     `.ess-stats` 칩 한 줄이다. 규칙은 2026-09-08(계획 B Task 5)에 **시설 효과 타일**로 되살아났다:
+     시설 시트가 「이 시설이 지금 무엇을 얼마나 하고 있나」를 숫자 셋으로 말하는 자리다.
+     기본 3열, 타일이 둘뿐인 시설(청소실·대장간)은 `.two`(2열) — **빈 타일을 만들어 채우지 않는다.** */
+  .k-tile3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-2);margin-bottom:4px;}
+  .k-tile3.two{grid-template-columns:repeat(2,1fr);}
+  .k-tile{height:64px;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+    border-radius:var(--rad-card);background:var(--c-press);border:1px solid var(--c-gold-dim);box-shadow:inset 0 1px 0 var(--rim);}
+  .k-tile .t{display:flex;align-items:center;gap:3px;font-size:var(--fs-note);color:var(--c-sub);max-width:96%;overflow:hidden;white-space:nowrap;}
+  .k-tile .v{font-size:var(--fs-num);font-weight:800;line-height:1;color:var(--c-goldtxt);font-variant-numeric:tabular-nums;}
+  .k-tile .u{font-size:var(--fs-note);color:var(--c-sub);max-width:96%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .k-tile.warn{border-color:var(--c-warn);} .k-tile.warn .v{color:var(--c-warn);}
+  .k-tile.ok .v{color:var(--c-ok);}
+  /* ── 연구소 격자 (A-12 화면 · 계획 B Task 8a) — **4갈래(행) × 3단(열)**.
+     순서가 갈래 안에서만 있으니(`researchCheck` 의 `order`) **왼쪽이 앞 단**이고, 갈래를 넘나드는
+     선은 없다 — 트리 선을 그릴 것이 없어 격자만으로 규칙이 보인다(글로 설명하지 않는다).
+     ⚠️ 시트 본문은 `overflow:hidden` 이라 **네 줄이 다 들어와야 한다** — 칸 높이를 키우지 마라. */
+  .k-grid34{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:4px;}
+  /* 4열 — 전설 탭(A-18-5). 직군 일곱 + 공통 관문 하나 = **여덟 칸이 두 줄에 딱 맞는다**.
+     ⚠️ 3열로 두면 세 줄이 되어 마지막 줄이 본문 밖으로 나간다(실측). 칸이 좁아진 만큼
+        칸 안에는 **직군 이름 · 재료 이름(「의 정수」를 뗀 것) · 칩 하나**만 넣는다. */
+  .k-grid44{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:4px;}
+  /* 두 칸을 먹는 칸 — 증표처럼 값 둘을 한 줄에 적어야 하는 자리(한 칸 103px 로는 칩이 잘린다) */
+  .k-grid44 .k-node.wide2{grid-column:span 2;}
+  .k-node{min-width:0;padding:2px 6px;border-radius:var(--rad-card);background:var(--c-press);
+    border:1px solid var(--c-line);display:flex;flex-direction:column;gap:1px;overflow:hidden;}
+  .k-node .nm{font-size:var(--fs-note);font-weight:800;color:var(--c-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .k-node .ds{font-size:var(--fs-note);color:var(--c-sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .k-node .ft{display:flex;align-items:center;gap:3px;overflow:hidden;}
+  /* 칸 안의 칩은 한 치수 작다 — 24 짜리 기본 칩을 네 줄 쌓으면 격자가 시트 밖으로 나간다 */
+  .k-node .ft .k-chip2{min-height:15px;padding:0 4px;}
+  .k-node .ft .bar{flex:1 1 auto;min-width:24px;}
+  .k-node.done{border-color:var(--c-gold);}
+  .k-node.run{border-color:var(--c-ok);}
+  /* 잠긴 칸은 **지우지 않고 흐린다** — 무엇이 남았는지가 보여야 다음에 뭘 할지 정한다 */
+  .k-node.lock{opacity:.6;}
+  /* ── 정수 제단 (A-17 화면 · 계획 B Task 8b) — 재료 칸 셋 · 고르는 격자 카드 · 결과 한 장.
+     ⚠️ 시트 본문은 `overflow:hidden` 이다 — 담당 카드 + 칸 셋 + 값 줄 + 결과 + 레벨업 + 청소가
+        다 들어와야 한다. 결과 그림을 키우려면 **먼저 찍어 봐라**(96 이 지금 예산이다). */
+  .k-altar .k-slots{margin-top:var(--sp-2);}
+  .k-altar .k-slot{flex:1 1 0;height:64px;gap:2px;}
+  .k-altar .k-slot.on{border-color:var(--c-gold);}
+  .k-essface{border-radius:var(--rad-card);overflow:hidden;flex:0 0 auto;}
+  .k-essface img,.k-essface canvas{width:100%;height:100%;object-fit:cover;display:block;}
+  .k-esscard{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0;}
+  .k-esscard .nm{font-size:var(--fs-note);color:var(--c-text);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .k-esscard .ds{font-size:var(--fs-note);color:var(--c-sub);}
+  /* 결과 — **값을 치른 뒤 남는 한 장**이라 크게 세운다(금테로 「이게 나온 것」을 못 박는다) */
+  .k-altarout{display:flex;align-items:center;gap:var(--sp-3);margin-bottom:6px;padding:var(--sp-2);
+    border-radius:var(--rad-card);background:var(--c-press);border:1px solid var(--c-gold);}
+  .k-altarout .mid{flex:1 1 0;min-width:0;}
+  .k-altarout .nm{font-size:var(--fs-sub);font-weight:800;color:var(--c-goldtxt);}
+  /* 시설 시트 본문 줄 — 담당 카드(`.k-mgr`)·술·레벨업·청소(`.k-facrow`). 왼쪽 그림 · 가운데 글 · 오른쪽 단추
+     🔴 이름이 `.k-line` 이 **아닌** 이유 — 그 이름은 이미 아래 `:914` 가 다른 뜻으로 쓴다(확인창의
+        「설명 한 줄」). 같은 특이도면 뒤가 이겨서 그쪽 `padding:3px 0` 이 먹혔고, 시설 시트의
+        레벨업·청소 줄이 **좌우 여백 0** 으로 그려졌다(아이콘이 테두리에 물려 잘렸다 · 리뷰 I-1).
+        남의 이름에 규칙을 얹지 마라 — 자식 규칙(`img`·`canvas`)까지 그쪽에 새어 나간다. */
+  .k-panel.k-mgr,.k-panel.k-facrow{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:6px;min-height:var(--tap);padding:var(--sp-2);}
+  .k-mgr .mid,.k-facrow .mid{flex:1 1 0;min-width:0;}
+  .k-mgr .nm,.k-facrow .nm{font-size:var(--fs-body);color:var(--c-text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .k-mgr .ds,.k-facrow .ds{font-size:var(--fs-note);color:var(--c-sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  /* 공사 게이지(A-11 화면) — **제목에 붙이면 밑줄로 읽힌다.** 위아래로 떼어 「막대」로 보이게 한다 */
+  .k-facrow .mid .bar{margin:4px 0 3px;}
+  /* 공사 중 줄 — 게이지를 **줄 아래쪽에 띄운다**(2026-09-08 자리 검사). 흐름에 두면 줄이 58px 이 되어
+     본문이 넘쳤다. 띄우면 44px 한 줄에 제목·남은 시간·게이지·즉시완료가 다 든다. */
+  .k-facrow.prog{position:relative;}
+  .k-facrow.prog .mid .bar{position:absolute;left:8px;right:8px;bottom:5px;margin:0;}
+  .k-mgr .fc{flex:0 0 auto;display:flex;align-items:center;}
+  .k-mgr .fc img,.k-mgr .fc canvas{width:40px;height:40px;border-radius:50%;object-fit:cover;}
+  .k-mgr .rt{flex:0 0 auto;text-align:right;}
+  .k-mgr .rt b{font-size:var(--fs-sub);color:var(--c-goldtxt);font-variant-numeric:tabular-nums;display:inline-flex;align-items:center;gap:2px;}
+  .k-mgr .rt b.warn{color:var(--c-warn);}
+  .k-mgr .rt .u{font-size:var(--fs-note);color:var(--c-sub);}
+  /* 마지막 줄은 아래 여백을 안 쓴다 — 그 8px 이 훈련장 시트에서 청소 줄을 행동띠 밖으로 밀어냈다(실측) */
+  .k2-body .k-facrow:last-child,.k2-body .k-mgr:last-child{margin-bottom:0;}
+  .k-facrow .rt{flex:0 0 auto;font-size:var(--fs-sub);color:var(--c-goldtxt);}
+  .k-facrow img,.k-facrow canvas{width:34px;height:34px;border-radius:50%;object-fit:cover;flex:0 0 auto;}
+  /* 오염 막대 8 — 70 이상은 경고색(그 값이 「지금 닦아라」의 문턱이다 · A-10) */
+  .k-dirtbar{height:8px;border-radius:var(--rad-chip);background:var(--c-panel);border:1px solid var(--c-line);overflow:hidden;}
+  .k-dirtbar i{display:block;height:100%;background:var(--c-gold);}
+  .k-dirtbar.warn i{background:var(--c-warn);}
+  /* 훈련장 몸통 — 구획 잔글씨 · 초상 줄(`.k-slots`) · 초상 한 칸 · 세션 게이지
+     ⚠️ 전부 `.k-gym` 안으로 **범위를 좁혔다** — `.k-face` 는 이미 `explore3d.js` 의 36px 몬스터
+        초상 상자가 쓰는 이름이라, 무범위로 얹으면 그 안 그림이 44px 원이 되어 모서리가 잘린다(리뷰 M-5). */
+  /* ⚠️ 높이가 빠듯하다 — 시트 본문은 `overflow:hidden` 이고 이 판은 세로 스크롤을 안 만든다.
+     ★ 2026-09-08(수정 4) — **초상을 44 로 되돌렸다.** 32 는 담당 카드 얼굴(40)보다 작아
+     「초상·아이콘은 크게」라는 이 판의 관례와 정면으로 부딪힌다. 자리는 「안 오는 사람」 줄에서
+     초상을 빼서 냈다(수와 기호만 적는다 · `fac.body.js`) — 그 사람들은 개별로 볼 값이 없다. */
+  .k-gym{display:flex;flex-direction:column;gap:var(--sp-1);margin-bottom:var(--sp-1);}
+  .k-gym .k-sub{font-size:var(--fs-note);color:var(--c-sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .k-gym .k-slots{margin-top:0;gap:var(--sp-1);overflow:hidden;}
+  .k-gym .k-face{flex:0 0 auto;width:56px;min-width:0;display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.15;}
+  .k-gym .k-face img,.k-gym .k-face canvas{width:44px;height:44px;border-radius:50%;object-fit:cover;}
+  .k-gym .k-face .nm{font-size:var(--fs-note);color:var(--c-text);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  /* ⚠️ 남은 시간(「60분 남음」)은 칸보다 넓다 — 가두지 않으면 옆 초상 밑으로 흘러 두 글자가 붙어 보인다 */
+  .k-gym .k-face .tt{font-size:var(--fs-note);color:var(--c-goldtxt);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .k-gym .k-face .k-chip2{min-height:16px;padding:0 4px;font-size:var(--fs-note);}
+  .k-gym .k-gauge{width:44px;height:4px;border-radius:var(--rad-chip);background:var(--c-panel);border:1px solid var(--c-line);overflow:hidden;}
+  /* 「외 n명」 — 초상 넷을 넘으면 수로만 잇는다(줄이 시트 폭을 밀지 않게) */
+  .k-gym .k-more{align-self:center;white-space:nowrap;}
+  .k-gym .k-gauge i{display:block;height:100%;background:var(--c-gold);}
+  /* 정수 설명 — 그림 96(`.ess-pic`) · 머리 구체 52(`.ess-orb` · 「구체 안 몬스터」 00_미반영 671) · 이름 밑 첫 줄(`.ess-head` 보유·겹침 칩) */
+  .ess-pic{width:96px;height:96px;padding:0;overflow:hidden;flex:0 0 auto;display:flex;align-items:center;justify-content:center;}
+  .ess-pic img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;}
+  .ess-pic.ess-orb{width:52px;height:52px;border-radius:50%;}
+  .ess-head{display:flex;align-items:center;gap:var(--sp-1);margin-top:2px;white-space:nowrap;overflow:hidden;}
+  /* 자물쇠 표식 — **칩이 아니라 그림 하나**다(2026-09-08). 이 줄은 한 줄 예산이라 칩 상자를
+     두르면 꼬리글이 잘린다. `flex:0 0 auto` 로 줄어들지 않게만 잡는다. */
+  .ess-lockmark{display:flex;align-items:center;flex:0 0 auto;color:var(--c-goldtxt);}
+  /* ★ 스킬 칸 2열 + 스킬 칸 부품 (스펙 2026-09-07 B-5 · 시안 B「56 · 금 2중 테」 · `ui/skilltile.js`).
+     액자는 `.k2-ico` 와 같은 결(금 1px 테 + 안쪽 판색 2px·금흐림 1px 이중선) — 그림이 안을 채우므로 이중선은 ::after 로 위에 얹는다.
+     아이콘은 128² 그림을 56 으로(폰 2× 에서 112 물리픽셀). 누르는 것 44 이상 — 칸 전체가 눌린다 */
+  .k-skill{display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px 4px;min-height:var(--tap);cursor:pointer;min-width:0;}
+  .k-skill.dim{opacity:.55;}
+  .k-skill .ic{position:relative;width:56px;height:56px;border-radius:10px;overflow:hidden;display:block;vertical-align:0;flex:0 0 auto;
+    border:2px solid var(--c-gold);background:var(--c-press);}
+  .k-skill .ic img{display:block;width:100%;height:100%;object-fit:cover;}
+  .k-skill .ic::after{content:"";position:absolute;inset:0;border-radius:8px;pointer-events:none;
+    box-shadow:inset 0 0 0 2px var(--c-panel),inset 0 0 0 3px var(--c-gold-dim);}
+  .k-skill .nm{font-size:var(--fs-body);font-weight:700;color:var(--c-text);text-align:center;line-height:1.15;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .k-skill .st{font-size:var(--fs-note);color:var(--c-sub);line-height:1.1;}
+  /* 툴팁 큰 판 — 스킬 설명(이름 14 굵게 · 타입 칩 · 설명 · 계수 칩). 크림 종이 위라 칩은 갈색 선 하나로 */
+  #tip.wide{max-width:300px;pointer-events:none;}
+  #tip.wide > b{font-size:var(--fs-body);}
+  #tip .tip-chips{display:flex;flex-wrap:wrap;gap:4px;margin:3px 0;}
+  #tip .tip-desc{font-weight:600;margin:2px 0;}
+  #tip .k-chip2{background:transparent;border-color:var(--c-paper-line);color:var(--c-paper-line);min-height:20px;padding:1px 6px;}
+  /* ★★ 정수 팝업 v2 — 스킬 줄 (스펙 2026-09-07 B-6 · 사용자 재배치 지시 · `ui/skilltile.js skillRow`)
+     `[세로 알약 ACTIVE|PASSIVE 24×72] [스킬 칸 56 아이콘 + 이름] [설명 3줄 clamp + 계수 칩]` 한 줄.
+     ⚠️ 「최소화할 건 최소화, 키울 건 키우자」 — 종류(액티브/패시브)는 **글자 넷이면 되는 것**이라
+        세로 알약 24px 로 눕히고, 그렇게 아낀 폭을 **설명 원문**이 가져간다(옛 2열 칸은 설명이 아예 없어
+        탭하기 전엔 무슨 스킬인지 몰랐다). 알약은 장식이 아니라 **줄의 머리표**다.
+     ⚠️ 줄 안의 스킬 칸은 액자(`.k-panel`)를 벗는다 — 줄 자체가 한 덩이라 판이 이중이 된다. */
+  .ess-row{display:flex;align-items:center;gap:var(--sp-2);margin-top:var(--sp-2);min-width:0;}
+  .ess-row.dim{opacity:.55;}
+  .ess-pill{writing-mode:vertical-rl;text-orientation:mixed;font-size:var(--fs-note);width:24px;height:72px;
+    background:var(--c-gold-well);border:1px solid var(--c-gold);border-radius:var(--rad-chip);color:var(--c-goldtxt);
+    display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-weight:700;letter-spacing:1px;}
+  .ess-row .k-skill{flex:0 0 auto;width:72px;padding:0;background:none;border:0;box-shadow:none;}
+  .ess-row .k-skill.dim{opacity:1;}   /* 흐리기는 줄(`.ess-row.dim`)이 한 번만 건다 — 겹쳐 걸면 아이콘이 안 보인다 */
+  .ess-desc{flex:1 1 auto;min-width:0;}
+  .ess-desc .ds{font-size:var(--fs-sub);color:var(--c-sub);line-height:1.35;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+  .ess-desc .cf{display:flex;flex-wrap:wrap;gap:var(--sp-1);margin-top:var(--sp-1);}
+  /* 스탯·겹침 — 칩 한 줄씩(타일 2장 폐지). 「능력치 지능 +4 · 지혜 +2 / 성격 냉정한 +36 · 충직한 −41」 */
+  .ess-stats,.ess-stack{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-1);margin-top:var(--sp-2);}
+  .ess-lbl{font-size:var(--fs-note);}
+  /* 획득처 줄 — 맨 밑 한 줄(44). 탭하면 획득처 팝업(스테이지 · 드랍 확률). flavor 도 그 안이다 */
+  .ess-src{display:flex;align-items:center;gap:var(--sp-2);min-height:var(--tap);margin-top:var(--sp-2);
+    padding:0 var(--sp-2);border:1px solid var(--c-gold-dim);border-radius:var(--rad-card);background:var(--c-press);cursor:pointer;}
+  .ess-src .lb{font-size:var(--fs-note);color:var(--c-sub);flex:0 0 auto;}
+  .ess-src b{font-size:var(--fs-body);color:var(--c-goldtxt);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .ess-src > :last-child{margin-left:auto;color:var(--c-sub);flex:0 0 auto;display:flex;}
+  /* 획득처 팝업 본문 — 몹 한 줄 + 스테이지 줄들(번호 칩 · 장 이름 · 깼나 · 기본 확률 %) + 안내 + flavor */
+  .ess-srcmob{display:flex;align-items:baseline;gap:var(--sp-1);margin-bottom:var(--sp-2);}
+  .ess-srcrow{display:flex;align-items:center;gap:var(--sp-2);min-height:32px;border-top:1px solid var(--c-line);}
+  .ess-srcrow.dim{opacity:.5;}
+  .ess-srcrow .nm{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--fs-sub);}
+  .ess-srcrow .st{flex:0 0 auto;}
+  .ess-srcrow .pc{flex:0 0 auto;color:var(--c-goldtxt);font-variant-numeric:tabular-nums;}
+  .ess-srcnote{margin-top:var(--sp-2);} .ess-flavor{margin-top:var(--sp-2);}
+  .ess-own{margin-top:var(--sp-2);display:flex;flex-direction:column;gap:2px;padding:var(--sp-1) var(--sp-2);}
+  /* 캐릭 시트(바닥 시트)는 칸 옮기기·「빼려면」까지 한 화면에 들어야 한다 — 줄 사이를 4 로 조인다(캡처 실측: 8 이면 마지막 줄이 잘렸다) */
+  .k-sheet2 .ess-row,.k-sheet2 .ess-stats,.k-sheet2 .ess-stack,.k-sheet2 .ess-src,.k-sheet2 .ess-own{margin-top:var(--sp-1);}
+  .k-sheet2 .ess-desc .ds{-webkit-line-clamp:2;}   /* 시트는 밑에 칸 옮기기·「빼려면」이 더 선다 — 설명은 2줄까지 */
+  .ess-kv{display:flex;align-items:center;gap:var(--sp-2);min-width:0;} .ess-kv b{white-space:nowrap;}
+  .ess-kv .sub:last-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .k-body,.k2-body{padding:var(--sp-3) 14px;}
+  /* 시트 본문만 위아래를 한 치수 줄인다(팝업은 그대로) — 위 max-height 와 같은 이유, 8px 을 더 준다 */
+  .k2-body{padding-top:var(--sp-2);padding-bottom:var(--sp-2);}
+  /* ★ 맨몸 팝업(kit.popup bare · 2026-09-07 B-1 Task 3) — 머리 없이 본문만. 부대 편성 배치판이 이걸로 뜬다.
+     ✕ 는 상자 우상단에 떠 있고(44), 본문 칸은 `.box.tall` 의 height:100% 사슬을 그대로 잇는다(패딩 0). */
+  .k-x-float{position:absolute;right:6px;top:6px;z-index:3;min-width:var(--tap);min-height:var(--tap);display:flex;align-items:center;justify-content:center;}
+  .k-body.k-bare{flex:1 1 auto;min-height:0;padding:0;display:flex;flex-direction:column;}
+  .k-actions,.k2-actions{border-top:1px solid var(--c-gold);margin:0 6px;padding:var(--sp-2) var(--sp-2) calc(var(--sp-3) + env(safe-area-inset-bottom));}
+  .k-actions .btn,.k2-actions .btn{min-height:var(--tap);} .k-actions .btn.gold,.k2-actions .btn.gold{flex:1;}
+  .tag{font-size:var(--fs-note);}
   .k-band{position:absolute;left:0;right:0;bottom:0;height:64px;background:var(--c-panel);border-top:1px solid var(--c-gold);z-index:44;display:flex;flex-direction:column;}
   #frame.tabs .k-band{bottom:calc(var(--h-tab) + env(safe-area-inset-bottom));}
   .k-band-grip{height:12px;flex:0 0 12px;display:flex;align-items:center;justify-content:center;cursor:pointer;}
@@ -531,17 +852,26 @@
      (2026-09-03 실측: 캡처에 띠가 통째로 안 보였다). 다른 화면에서는 아무 일도 안 한다. */
   .k-fold{flex:0 0 auto;position:relative;z-index:6;background:linear-gradient(180deg,var(--c-press),var(--c-band));border-bottom:1px solid var(--c-gold);}
   .k-fold-line{height:var(--h-top);display:flex;align-items:center;justify-content:space-between;padding:0 var(--sp-3);font-size:var(--fs-sub);color:var(--c-goldtxt);cursor:pointer;min-height:var(--tap);}
+  /* ★ 2026-09-08(계획 B Task 5) — 첫 줄이 **영지 수지**를 말할 때가 있다(스펙 A-9). 숫자 셋이
+     들어가 좁은 폰에서 넘치므로 말줄임을 건다. 색은 기울기가 정한다(쌓이면 경고 · 빠지면 완료). */
+  .k-fold-line{overflow:hidden;white-space:nowrap;}
+  .k-fold-line>span:first-child{flex:1 1 0;min-width:0;overflow:hidden;text-overflow:ellipsis;}
+  .k-fold-line.warn{color:var(--c-warn);}
+  .k-fold-line.ok{color:var(--c-ok);}
   .k-fold-arrow{transition:transform .16s ease;color:var(--c-sub);}
   .k-fold.open .k-fold-arrow{transform:rotate(180deg);}
   .k-fold-cards{display:flex;flex-direction:column;gap:var(--sp-2);padding:0 var(--sp-3);max-height:0;overflow:hidden;transition:max-height .16s ease;}
   .k-fold.open .k-fold-cards{max-height:260px;padding-bottom:var(--sp-3);}
   .k-fold-card{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-2);background:var(--c-panel);border:1px solid var(--c-line);border-radius:var(--rad-card);padding:var(--sp-2) var(--sp-3);min-height:64px;}
   .k-fold-card b{font-size:var(--fs-body);color:var(--c-text);}
-  .k-sh-t{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;margin-bottom:6px;}
+  .k-sh-t{display:flex;align-items:center;gap:8px;font-size:var(--fs-body);font-weight:700;margin-bottom:6px;}
   .k-sh-t b{flex:1;}
-  .k-sh-b{font-size:13px;color:var(--fg2);line-height:1.6;}
+  .k-sh-b{font-size:var(--fs-sub);color:var(--c-sub);line-height:1.6;}
   .k-sh-a{display:flex;gap:8px;justify-content:flex-end;margin-top:12px;}
-  .k-page{display:flex;align-items:center;justify-content:center;gap:14px;padding-top:8px;font-size:13px;color:var(--fg2);}
+  .k-page{display:flex;align-items:center;justify-content:center;gap:14px;padding-top:8px;font-size:var(--fs-sub);color:var(--c-sub);}
+  /* ★ 2026-09-08(책장 넘김 결재) — 쪽 단추가 **행동띠 왼쪽 어깨**에 설 때. 제 줄을 안 먹으니
+     위 여백이 없고, 왼쪽으로 밀어 행동 단추와 갈라 세운다. 단추 크기는 그대로다(작게 안 만든다). */
+  .k-actions>.k-page,.k2-actions>.k-page{margin-right:auto;padding-top:0;}
   .k-grid{display:grid;gap:8px;}
   .k-cell{min-width:0;}
   .k-lock{opacity:.45;filter:grayscale(1);}
@@ -554,7 +884,7 @@
     border-radius:var(--rad-btn);background:var(--c-press);border:1px solid var(--c-line);
     color:var(--c-sub);font-size:var(--fs-sub);cursor:pointer;user-select:none;}
   .k-seg .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .k-seg.on{background:#3a2c14;color:var(--c-goldtxt);border-color:var(--c-gold);}
+  .k-seg.on{background:var(--c-gold-well);color:var(--c-goldtxt);border-color:var(--c-gold);}
   .k-seg:active{filter:brightness(1.25);}
   /* ★★ 슬롯 줄 6 — 대장간·장비 도감 공용 (2026-09-04 · 4c-6 ruling 9). 칸마다 `.k-slot`(묶음 `.k-slotrow`) */
   .k-slotrow{display:flex;gap:var(--sp-1);height:var(--tap);flex:0 0 var(--tap);margin-bottom:var(--sp-2);}
@@ -562,7 +892,7 @@
     border-radius:var(--rad-btn);background:var(--c-press);border:1px solid var(--c-line);
     color:var(--c-sub);cursor:pointer;user-select:none;}
   .k-slot .nm{font-size:var(--fs-note);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .k-slot.on{background:#3a2c14;color:var(--c-goldtxt);border-color:var(--c-gold);}
+  .k-slot.on{background:var(--c-gold-well);color:var(--c-goldtxt);border-color:var(--c-gold);}
   .k-slot:active{filter:brightness(1.25);}
   /* 격자 안의 묶음 머리 — 한 줄을 다 쓴다(kit.grid `{ head }` · 4c-6) */
   .k-cell.wide{grid-column:1/-1;}
@@ -573,6 +903,7 @@
   .cx-head b{display:block;font-size:var(--fs-title);font-weight:800;color:var(--c-goldtxt);}
   .cx-head .sub{display:block;font-size:var(--fs-sub);color:var(--c-sub);margin-bottom:var(--sp-2);}
   .cx-body{flex:1;min-height:0;overflow:hidden;}
+  .cx-credit{flex:0 0 auto;font-size:var(--fs-note);color:var(--c-sub);text-align:right;padding:2px 0 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}   /* 스킬 그림 출처(CC BY) — 도감 맨 아래 한 줄 */
   .cx-card{position:relative;height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
     border-radius:var(--rad-card);border:1px solid var(--c-line);background:var(--c-panel);color:var(--c-text);
     cursor:pointer;overflow:hidden;padding:0 var(--sp-1);}
@@ -648,17 +979,33 @@
   .k-srow .rt{flex:0 0 auto;font-size:var(--fs-sub);font-weight:700;color:var(--c-goldtxt);}
   .k-srow .rt.take{color:var(--c-warn);}
   /* 정수 카드 3열 — 계열 그림 · 이름 · 계열 이름 · ★ · 「×n」/「만들기」 배지 */
-  .k-ecard{position:relative;height:84px;display:flex;flex-direction:column;align-items:center;
+  .k-ecard{position:relative;height:70px;display:flex;flex-direction:column;align-items:center;
     justify-content:center;gap:1px;border-radius:var(--rad-card);border:1px solid var(--c-line);
     background:var(--c-panel);color:var(--c-text);cursor:pointer;overflow:hidden;padding:0 var(--sp-1);}
   .k-ecard:active{filter:brightness(1.25);}
   .k-ecard .nm{font-size:var(--fs-note);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .k-ecard .ln{font-size:var(--fs-note);color:var(--c-sub);}
+  /* ★ 2026-09-08 — 옛 `.ln`(계열 줄 14px)은 **모서리 글자**가 됐다. 카드 84 → 70 이 되어
+     한 쪽에 두 줄이 들고, 60종이 11쪽 → 6쪽이 된다(실측). 왼쪽 위 — 오른쪽 위는 `×n` 배지 자리다. */
+  .k-ecard .ln2{position:absolute;left:3px;top:1px;font-size:var(--fs-note);font-weight:800;color:var(--c-goldtxt);}
   .k-ecard .st{font-size:var(--fs-note);color:var(--c-goldtxt);}
   .k-ecard .bd{position:absolute;top:2px;right:2px;height:16px;padding:0 5px;border-radius:var(--rad-chip);
     background:var(--c-press);border:1px solid var(--c-line);color:var(--c-text);
     font-size:var(--fs-note);display:flex;align-items:center;}
   .k-ecard .bd.make{background:var(--c-gold);border-color:var(--c-gold);color:var(--c-bg);font-weight:700;}
+  /* 전설(유니크) 정수 — **금테 한 겹**이 「이건 다른 것」을 말한다(A-18-5 결재).
+     그림은 재료 정수 것을 물려받으므로(`essArtNo`) 테두리 말고는 몹 정수와 같은 부품을 쓴다.
+     ⚠️ 잠긴 카드·줄(`.lock`)은 **눌리지 않는다** — 못 끼우는 칸에서 「할 수 있는 것처럼」 보이면 안 된다. */
+  .k-ecard .fc{width:34px;height:34px;border-radius:var(--rad-chip);overflow:hidden;background:var(--c-press);}
+  .k-ecard .fc img,.k-ecard .fc canvas{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;}
+  .k-ecard.uniq,.cd-cell.uniq{border-color:var(--c-gold);}
+  .k-essface.uniq,.ess-pic.uniq,.icell.uniq{box-shadow:0 0 0 2px var(--c-gold) inset;}
+  /* 잠긴 전설 줄 — **지우지 않고 흐린다**(잠긴 연구 칸과 같은 규율). 아직 못 가진 목표가 보여야 그걸 향해 간다 */
+  .k-facrow.lock{opacity:.6;}
+  /* 오염 타일이 곧 청소 단추다(2026-09-08) — 누를 수 있다는 것은 **꼬리말**이 말하고, 여기선 손가락 신호만 준다 */
+  .k-tile.tap{cursor:pointer;}
+  .k-tile.tap:active{filter:brightness(1.25);}
+  .k-ecard.lock,.k-srow.lock{opacity:.55;cursor:default;}
+  .k-ecard.lock:active,.k-srow.lock:active{filter:none;}
   /* 시트 제목 밑 부제 한 줄 — 「지금 낀 것」·「1번 · 액티브 칸 · 한번 끼면 못 뺀다」.
      ⚠️ **한 줄이다.** 두 줄이 되면 머리(72)가 넘쳐 탭 줄을 밀어낸다 — 넘치면 …로 자른다. */
   .k-shead{font-size:var(--fs-note);color:var(--c-sub);
@@ -701,12 +1048,22 @@
      (「법사 Lv.1 · 효율 ×0.83」)이 3열 폭에서 「효 / 율 ×0.83」으로 갈라졌다(실측 캡처).
      낱말 사이(빈칸)에서만 끊게 한다 — 「효율」과 숫자는 U+00A0 으로 묶여 있어 같이 내려간다. */
   .k-card .k-cd-sub{font-size:var(--fs-sub);color:var(--c-sub);word-break:keep-all;text-align:center;}
-  .k-card .k-cd-stars{display:flex;gap:1px;}
+  /* 별은 `dom.js stars()` 가 그린다(그 규칙은 `.star`) — 카드는 **크기만** 정한다(그림이 1em 이다). */
+  .k-card .k-cd-stars{display:flex;gap:1px;font-size:12px;}
   /* ⚠️ 최종 리뷰 M1(2026-09-03) — 글자색은 **토큰만** 쓴다(계획 Task 1 Step 3). 이번 가지가
      새로 들인 `#fff` 리터럴 하나를 `--c-text` 로 돌린다. 경고 배경 위 밝은 잉크라 읽힌다.
      ⚠️ 파일 안의 다른 `#fff` 넷(120·260·343·601)은 이번 가지가 만든 것이 아니라 그대로 둔다. */
-  .k-card .bd-tr{position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:var(--rad-chip);
+  .k-card .bd-tr,.k-card .bd-tl{position:absolute;top:2px;width:18px;height:18px;border-radius:var(--rad-chip);
     background:var(--c-warn);color:var(--c-text);font-size:var(--fs-note);font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .k-card .bd-tr{right:2px;}
+  /* 🔴 2026-09-07 QA6 ⑩ — 배지 둘째 자리(왼쪽 위). 「부상」과 「전직 가능」이 겹치면 예전엔
+     하나만 떴다(카드 배지 한 개 규칙). 사유가 성질이 다르면 **자리도 색도** 갈라야 읽힌다. */
+  .k-card .bd-tl{left:2px;}
+  /* 배지 색 = 사유의 성질. 좋은 소식(영감·포인트)은 금색, 나쁜 소식(부상)은 붉은색,
+     주의(지침·불만·방없음)는 기본 경고색. 같은 빨간 원 하나로 셋을 다 말하지 않는다. */
+  .k-card .bd-good{background:var(--c-gold);color:var(--c-bg);}
+  .k-card .bd-bad{background:var(--c-warn);color:var(--c-text);}
+  .k-card .bd-note{background:var(--c-press);border:1px solid var(--c-gold);color:var(--c-goldtxt);}
   .k-card .bd-br{position:absolute;bottom:2px;right:2px;height:24px;max-width:70%;padding:0 6px;
     border-radius:var(--rad-chip);background:var(--c-press);border:1px solid var(--c-line);color:var(--c-text);
     font-size:var(--fs-note);display:flex;align-items:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
@@ -872,65 +1229,65 @@
 
   /* ── 분류 메뉴 두 단 — 1차(카테고리) · 2차(값) · 3차(정렬) */
   .mbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap;margin-bottom:5px;}
-  .mbar>.lb{font-size:10px;color:var(--dim);flex:0 0 auto;letter-spacing:.5px;}
+  .mbar>.lb{font-size:10px;color:var(--dim);flex:0 0 auto;letter-spacing:.5px;} /* fs-ok */
   /* 한 줄에 편 필터의 칸막이 — 「분류 … │ 값 … │ 정렬 …」 */
   .mbar>.sep{flex:0 0 auto;width:1px;height:15px;background:var(--line);margin:0 3px;}
   .mtab{font-size:12px;font-weight:700;padding:4px 11px;border-radius:8px;cursor:pointer;
     border:1px solid var(--line);background:#00000030;color:var(--dim);user-select:none;white-space:nowrap;}
   .mtab.on{background:linear-gradient(var(--gold-hi),var(--gold-lo));border-color:var(--gold-bd);color:var(--gold-ink);}
-  .mtab.blue.on{background:linear-gradient(#6a9be8,#3a63ad);border-color:#294a86;color:#f2f7ff;}
+  .mtab.blue.on{background:linear-gradient(#6a9be8,#3a63ad);border-color:#294a86;color:#f2f7ff;} /* color-ok */
   .mtab.dim{opacity:.38;}
-  .mtab .n{font-size:10px;opacity:.75;margin-left:4px;font-variant-numeric:tabular-nums;}
-  .mtab .ar{font-size:9px;margin-left:3px;}
+  .mtab .n{font-size:10px;opacity:.75;margin-left:4px;font-variant-numeric:tabular-nums;} /* fs-ok */
+  .mtab .ar{font-size:9px;margin-left:3px;} /* fs-ok */
 
   /* ── 컴팩트 목록 한 줄 — 얼굴 / 이름·부제 / 스탯 4칸 / 오른쪽 값 */
   .crow{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);
     border-radius:8px;padding:4px 8px;cursor:pointer;min-height:0;}
   .crow:active{filter:brightness(1.2);}
-  .crow.sel{border-color:var(--gold);background:#241d10;}
+  .crow.sel{border-color:var(--gold);background:#241d10;} /* color-ok */
   .crow.off{opacity:.42;}
   .crow .fc{width:34px;height:34px;border-radius:6px;background:var(--well);border:1px solid var(--line);
     overflow:hidden;flex:0 0 auto;display:flex;align-items:center;justify-content:center;}
   .crow .fc img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;}
   .crow .mid{flex:1 1 0;min-width:0;}
-  .crow .nm{font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.25;}
-  .crow .ds{font-size:10px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.25;}
+  .crow .nm{font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.25;} /* fs-ok */
+  .crow .ds{font-size:10px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.25;} /* fs-ok */
   /* 스탯 띠 — 「가운데 쯤에 스탯을 기재하던지」 */
   /* 목록 한 줄의 셋째 단 — 가로로 늘어지던 경험치 바를 대신한다(2026-08-23) */
-  .minfo{display:flex;align-items:center;gap:5px;margin-top:2px;font-size:10px;color:var(--dim);
+  .minfo{display:flex;align-items:center;gap:5px;margin-top:2px;font-size:10px;color:var(--dim); /* fs-ok */
     font-variant-numeric:tabular-nums;}
   .minfo .gdot{opacity:.28;filter:grayscale(1);font-size:11px;line-height:1;}
   .minfo .gdot.on{opacity:1;filter:none;}
   .minfo .sep2{width:1px;height:9px;background:var(--line);}
   .sbar{display:flex;gap:0;flex:0 0 auto;}
   .sbar .sc{width:34px;text-align:center;line-height:1.1;}
-  .sbar .sk{font-size:8px;color:#6b7686;letter-spacing:.3px;}
+  .sbar .sk{font-size:8px;color:#6b7686;letter-spacing:.3px;} /* color-ok fs-ok */
   .sbar .sv{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;}
   .sbar .sc.hi .sv{color:var(--gold2);}
   .crow .rt{flex:0 0 auto;text-align:right;line-height:1.2;}
-  .crow .rt .pw{font-size:13px;font-weight:800;font-variant-numeric:tabular-nums;}
-  .crow .rt .st{font-size:10px;}
-  .tag{display:inline-block;font-size:9px;padding:0 5px;border-radius:4px;background:var(--well);
+  .crow .rt .pw{font-size:13px;font-weight:800;font-variant-numeric:tabular-nums;} /* fs-ok */
+  .crow .rt .st{font-size:10px;} /* fs-ok */
+  .tag{display:inline-block;font-size:var(--fs-note);padding:0 5px;border-radius:4px;background:var(--well);
     border:1px solid var(--line);color:var(--dim);margin-right:3px;vertical-align:1px;}
   .tag.on{background:var(--gold);color:var(--gold-ink);border-color:var(--gold-bd);font-weight:800;}
-  .tag.red{background:#3a1919;color:#e04b4b;border-color:#6d2020;}
-  .tag.warn{background:#3a2419;color:#e0a93f;border-color:#6d4a20;}
-  .tag.cy{background:#122a33;color:var(--cyan);border-color:#2b5766;}
+  .tag.red{background:#3a1919;color:#e04b4b;border-color:#6d2020;} /* color-ok */
+  .tag.warn{background:#3a2419;color:#e0a93f;border-color:#6d4a20;} /* color-ok */
+  .tag.cy{background:#122a33;color:var(--cyan);border-color:#2b5766;} /* color-ok */
 
   /* ── 챕터 카드 5장 (원정 첫 화면) */
   /* ⚠️ 다섯 장이 **프레임을 꽉 채워야** 「여기가 원정의 전부」로 읽힌다.
      처음엔 카드 높이를 내용에 맡겼더니 위쪽 띠만 쓰고 아래가 통째로 비었다(실측). */
   #chaps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;height:calc(100% - 52px);min-height:380px;}
   .chap{position:relative;border-radius:12px;border:1px solid var(--line);overflow:hidden;cursor:pointer;
-    background:linear-gradient(165deg,#2b3146,#161a26);display:flex;flex-direction:column;}
+    background:linear-gradient(165deg,#2b3146,#161a26);display:flex;flex-direction:column;} /* color-ok */
   .chap:active{filter:brightness(1.2);}
   .chap.lock{opacity:.45;}
   .chap .art{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:var(--well);}
   .chap .art img,.chap .art canvas{width:70%;max-width:150px;height:auto;object-fit:contain;image-rendering:pixelated;}
-  .chap .ttl{font-size:13px;font-weight:800;padding:6px 8px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .chap .tn{font-size:9.5px;color:var(--dim);padding:1px 8px 0;height:24px;line-height:1.25;overflow:hidden;}
-  .chap .pg{padding:5px 8px 7px;font-size:10px;color:var(--dim);}
-  .chap .no{position:absolute;top:5px;left:6px;font-size:10px;font-weight:900;color:var(--gold-ink);
+  .chap .ttl{font-size:13px;font-weight:800;padding:6px 8px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} /* fs-ok */
+  .chap .tn{font-size:9.5px;color:var(--dim);padding:1px 8px 0;height:24px;line-height:1.25;overflow:hidden;} /* fs-ok */
+  .chap .pg{padding:5px 8px 7px;font-size:10px;color:var(--dim);} /* fs-ok */
+  .chap .no{position:absolute;top:5px;left:6px;font-size:10px;font-weight:900;color:var(--gold-ink); /* fs-ok */
     background:var(--gold);border-radius:5px;padding:0 6px;}
   .chap .bossck{position:absolute;top:5px;right:6px;font-size:12px;}
 
@@ -950,17 +1307,17 @@
     padding:4px 3px 3px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;position:relative;}
   .snode:active{filter:brightness(1.25);}
   .snode.lock{opacity:.4;}
-  .snode.done{border-color:#2c6b3e;background:#16241b;}
-  .snode.boss{border-color:#6d2020;background:#241416;}
-  .snode.elite{border-color:#6d5320;}
+  .snode.done{border-color:#2c6b3e;background:#16241b;} /* color-ok */
+  .snode.boss{border-color:#6d2020;background:#241416;} /* color-ok */
+  .snode.elite{border-color:#6d5320;} /* color-ok */
   .snode .n{font-size:11px;font-weight:800;line-height:1;}
   .snode .p{width:42px;height:42px;border-radius:7px;overflow:hidden;background:var(--well);
     display:flex;align-items:center;justify-content:center;}
   .snode .p img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;}
-  .snode .c{font-size:9px;color:var(--dim);line-height:1;}
-  .snode .ok{position:absolute;top:2px;right:4px;font-size:9px;color:var(--green);font-weight:900;}
+  .snode .c{font-size:9px;color:var(--dim);line-height:1;} /* fs-ok */
+  .snode .ok{position:absolute;top:2px;right:4px;font-size:9px;color:var(--green);font-weight:900;} /* fs-ok */
   .snode .go{position:absolute;top:-5px;right:-5px;width:15px;height:15px;border-radius:99px;
-    background:var(--gold);color:var(--gold-ink);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;}
+    background:var(--gold);color:var(--gold-ink);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;} /* fs-ok */
 
   /* ── 아이콘 격자 (창고·도감·정수·재료) */
   .igrid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px;}
@@ -970,24 +1327,27 @@
     display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;}
   .icell:active{filter:brightness(1.3);}
   .icell img{width:84%;height:84%;object-fit:contain;image-rendering:pixelated;}
-  .icell .em{font-size:22px;}
-  .icell .qty{position:absolute;right:2px;bottom:1px;font-size:10px;font-weight:800;color:#fff;
+  .icell .em{font-size:22px;} /* fs-ok */
+  .icell .qty{position:absolute;right:2px;bottom:1px;font-size:10px;font-weight:800;color:#fff; /* fs-ok */
     text-shadow:0 0 3px #000,0 0 3px #000;font-variant-numeric:tabular-nums;}
-  .icell .gr{position:absolute;left:2px;top:1px;font-size:8px;color:var(--gold2);font-weight:800;}
+  .icell .gr{position:absolute;left:2px;top:1px;font-size:8px;color:var(--gold2);font-weight:800;} /* fs-ok */
+  /* 자물쇠 표식 — **오른쪽 위 모서리**(2026-09-08). `position:absolute` 라 칸 높이를 한 픽셀도
+     안 먹는다. 등급(왼쪽 위)·개수(오른쪽 아래)와 안 겹치는 마지막 모서리다. */
+  .icell .lk{position:absolute;right:2px;top:1px;display:flex;color:var(--c-goldtxt);}
   .icell.un{opacity:.35;}
   .icell.un img{filter:brightness(0);}
-  .icap{font-size:9px;color:var(--dim);text-align:center;margin-top:2px;line-height:1.1;
+  .icap{font-size:9px;color:var(--dim);text-align:center;margin-top:2px;line-height:1.1; /* fs-ok */
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   /* ★ 2026-09-05 「크게」 — 창고(조각·기호품) 셀. 4열(≈84px)에 그림 34 · 수량 13 · 이름 11. 옛 5열 66px 은 그림 22 였다 */
-  .icell.big .em{font-size:34px;}
+  .icell.big .em{font-size:34px;} /* fs-ok */
   .icell.big img{width:78%;height:78%;}
   .icell.big .qty{font-size:var(--fs-sub);right:4px;bottom:2px;}
   .icell.big .gr{font-size:var(--fs-note);left:4px;top:2px;}
   .icap.big{font-size:var(--fs-note);margin-top:3px;}
 
   /* ── 빈 칸 ⊕ (부대·정수·장비) */
-  .plusdot{width:26px;height:26px;border-radius:99px;border:1.5px dashed #5b6577;color:#7d879a;
-    display:flex;align-items:center;justify-content:center;font-size:15px;line-height:1;cursor:pointer;}
+  .plusdot{width:26px;height:26px;border-radius:99px;border:1.5px dashed #5b6577;color:#7d879a; /* color-ok */
+    display:flex;align-items:center;justify-content:center;font-size:15px;line-height:1;cursor:pointer;} /* fs-ok */
   .plusdot:active{border-color:var(--gold);color:var(--gold2);}
 
   /* ── 상태창(넓은 팝업) 3단 */
@@ -1011,22 +1371,22 @@
         「넘으면 큰일나는 선」이 아니라 **지금 이 액자가 그 값이라는 사실**일 뿐이다.
         바꿀 땐 `tools/bake-raceface.mjs` 의 `BOX` 도 같이 바꿔라(속 = 이 값 − 테두리 4). */
   .cmportrait.framed{width:96px;height:96px;border:2px solid var(--gold);border-radius:8px;
-    background:linear-gradient(#20293a,#141926);box-shadow:inset 0 0 0 1px #0008,0 2px 6px #0007;}
+    background:linear-gradient(#20293a,#141926);box-shadow:inset 0 0 0 1px #0008,0 2px 6px #0007;} /* color-ok */
   .cmportrait.framed canvas{display:block;}
   .cmportrait .ovstar{position:absolute;left:0;right:0;bottom:0;text-align:center;font-size:12px;
-    background:linear-gradient(#0000,#000c);padding:2px 0 1px;letter-spacing:-1px;}
+    background:linear-gradient(#0000,#000c);padding:2px 0 1px;letter-spacing:-1px;} /* color-ok */
   /* 이름은 사진 아래 한 줄 — 열 폭(186px)을 다 쓰고 넘치면 … (감기지 않는다) */
-  .cmtitle{font-size:19px;font-weight:900;letter-spacing:-.5px;line-height:1.2;color:#fff;margin-top:6px;
+  .cmtitle{font-size:19px;font-weight:900;letter-spacing:-.5px;line-height:1.2;color:#fff;margin-top:6px; /* fs-ok */
     white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .cmid .lv{font-size:13px;font-weight:700;color:var(--gold2);}
-  .cmid .cls{font-size:13px;font-weight:700;color:#cdd8e6;}
+  .cmid .lv{font-size:13px;font-weight:700;color:var(--gold2);} /* fs-ok */
+  .cmid .cls{font-size:13px;font-weight:700;color:#cdd8e6;} /* color-ok fs-ok */
   .cmid .rc{font-size:11px;color:var(--dim);}
   .statrow{display:flex;align-items:center;gap:6px;padding:2px 6px;border-radius:5px;}
   .statrow:nth-child(odd){background:#ffffff08;}
   .statrow .k{font-size:11px;color:var(--dim);font-weight:800;letter-spacing:.5px;width:32px;flex:0 0 auto;}
-  .statrow .v{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;width:34px;text-align:right;}
+  .statrow .v{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;width:34px;text-align:right;} /* fs-ok */
   .statrow .g{flex:1;height:5px;border-radius:99px;background:var(--well);overflow:hidden;}
-  .statrow .g i{display:block;height:100%;background:linear-gradient(90deg,#3a63ad,#6a9be8);}
+  .statrow .g i{display:block;height:100%;background:linear-gradient(90deg,#3a63ad,#6a9be8);} /* color-ok */
   .statrow .pl{font-size:11px;font-weight:900;color:var(--gold-ink);background:var(--gold);border-radius:4px;
     padding:0 6px;cursor:pointer;flex:0 0 auto;}
   .secttl{font-size:11px;font-weight:800;color:var(--gold2);letter-spacing:.5px;margin:0 0 4px;}
@@ -1036,15 +1396,15 @@
   .gearslot{position:relative;display:flex;align-items:center;gap:7px;border-radius:8px;padding:5px 7px;
     border:1px solid var(--line);background:var(--well);cursor:pointer;}
   .gearslot:active{filter:brightness(1.3);}
-  .gearslot.on{border-color:#6d5320;background:#1d1a12;}
-  .gearslot .gi{width:30px;height:30px;border-radius:6px;background:#151926;display:flex;
-    align-items:center;justify-content:center;font-size:16px;flex:0 0 auto;}
+  .gearslot.on{border-color:#6d5320;background:#1d1a12;} /* color-ok */
+  .gearslot .gi{width:30px;height:30px;border-radius:6px;background:#151926;display:flex; /* color-ok */
+    align-items:center;justify-content:center;font-size:16px;flex:0 0 auto;} /* fs-ok */
   .gearslot .gt{flex:1;min-width:0;}
-  .gearslot .gn{font-size:11.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .gearslot .gs{font-size:9.5px;color:var(--green);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .gearslot .gn{font-size:11.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} /* fs-ok */
+  .gearslot .gs{font-size:9.5px;color:var(--green);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} /* fs-ok */
   .gearslot.on .gn{color:var(--gold2);}
-  .gearslot.lg{border-color:#b98a2c;box-shadow:0 0 8px #e0a93f33;}
-  .gearslot.lg .gi{background:linear-gradient(160deg,#ffe9b0,#d9a53c);box-shadow:0 0 8px #e0a93f66;}
+  .gearslot.lg{border-color:#b98a2c;box-shadow:0 0 8px #e0a93f33;} /* color-ok */
+  .gearslot.lg .gi{background:linear-gradient(160deg,#ffe9b0,#d9a53c);box-shadow:0 0 8px #e0a93f66;} /* color-ok */
   .bang{position:absolute;top:-5px;right:-5px;width:16px;height:16px;border-radius:99px;background:var(--red);
     color:#fff;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;}
 
@@ -1054,16 +1414,16 @@
     padding:5px 4px;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;position:relative;}
   .esbox:active{filter:brightness(1.25);}
   .esbox.empty{border-style:dashed;opacity:.7;justify-content:center;min-height:78px;}
-  .esbox .ef{width:30px;height:30px;border-radius:6px;overflow:hidden;background:#151926;}
+  .esbox .ef{width:30px;height:30px;border-radius:6px;overflow:hidden;background:#151926;} /* color-ok */
   .esbox .ef img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;}
-  .esbox .en{font-size:10px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;}
-  .esbox .es{font-size:9px;color:var(--gold2);letter-spacing:-1px;line-height:1;}
-  .esbox .eu{font-size:9px;color:var(--green);text-align:center;line-height:1.2;}
+  .esbox .en{font-size:10px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;} /* fs-ok */
+  .esbox .es{font-size:9px;color:var(--gold2);letter-spacing:-1px;line-height:1;} /* fs-ok */
+  .esbox .eu{font-size:9px;color:var(--green);text-align:center;line-height:1.2;} /* fs-ok */
   .skico{display:flex;gap:4px;justify-content:center;margin-top:3px;}
-  .skb{width:24px;height:24px;border-radius:6px;border:1px solid var(--line);background:#151926;
-    display:flex;align-items:center;justify-content:center;font-size:13px;cursor:pointer;position:relative;}
-  .skb.act{border-color:#6d5320;background:#241d10;}
-  .skb.pas{border-color:#2b5766;background:#10222a;}
+  .skb{width:24px;height:24px;border-radius:6px;border:1px solid var(--line);background:#151926; /* color-ok */
+    display:flex;align-items:center;justify-content:center;font-size:13px;cursor:pointer;position:relative;} /* fs-ok */
+  .skb.act{border-color:#6d5320;background:#241d10;} /* color-ok */
+  .skb.pas{border-color:#2b5766;background:#10222a;} /* color-ok */
   .skb:active{filter:brightness(1.4);}
 
   /* ── 시설 팝업 */
@@ -1073,27 +1433,27 @@
   .tslot{border-radius:9px;border:1px solid var(--line);background:var(--well);padding:5px;
     display:flex;flex-direction:column;align-items:center;gap:3px;min-height:84px;justify-content:center;cursor:pointer;}
   .tslot.empty{border-style:dashed;}
-  .tslot .tf{width:34px;height:34px;border-radius:6px;overflow:hidden;background:#151926;}
+  .tslot .tf{width:34px;height:34px;border-radius:6px;overflow:hidden;background:#151926;} /* color-ok */
   .tslot .tf img{width:100%;height:100%;object-fit:cover;image-rendering:pixelated;}
-  .tslot .tn{font-size:10.5px;font-weight:700;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .tslot .tt{font-size:9px;color:var(--cyan);}
-  .tslot.drop{border-color:var(--gold);background:#241d10;}
+  .tslot .tn{font-size:10.5px;font-weight:700;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} /* fs-ok */
+  .tslot .tt{font-size:9px;color:var(--cyan);} /* fs-ok */
+  .tslot.drop{border-color:var(--gold);background:#241d10;} /* color-ok */
 
   /* ── 대장간 제작 줄 */
   .rec{border:1px solid var(--line);border-radius:9px;background:var(--panel);padding:7px 9px;
     display:flex;gap:9px;align-items:center;}
   .rec.no{opacity:.5;}
   .rec .ri2{width:38px;height:38px;border-radius:7px;background:var(--well);display:flex;align-items:center;
-    justify-content:center;font-size:19px;flex:0 0 auto;}
+    justify-content:center;font-size:19px;flex:0 0 auto;} /* fs-ok */
   /* ★ 아이템 그림(asset/items · 2026-09-05) — 어디에 들어가도 **잘리지 않고 매끈하게**. 초상용 `.fc img`(cover·pixelated)와 갈라 둔다 */
   img.itemimg{display:block;object-fit:contain;image-rendering:auto;flex:0 0 auto;pointer-events:none;}
   .item .fc img.itemimg,.cd-cell .fc img.itemimg{object-fit:contain;image-rendering:auto;}
   .cx-card img.itemimg{border-radius:0;object-fit:contain;background:transparent;}
   .rec .mid{flex:1;min-width:0;}
-  .matchip{display:inline-flex;align-items:center;gap:3px;font-size:10px;padding:1px 7px;border-radius:99px;
+  .matchip{display:inline-flex;align-items:center;gap:3px;font-size:10px;padding:1px 7px;border-radius:99px; /* fs-ok */
     background:var(--well);border:1px solid var(--line);cursor:pointer;margin:2px 3px 0 0;}
-  .matchip.lack{border-color:#6d2020;color:#e88;}
-  .matchip.ok{border-color:#2c6b3e;color:#9fd8b0;}
+  .matchip.lack{border-color:#6d2020;color:#e88;} /* color-ok */
+  .matchip.ok{border-color:#2c6b3e;color:#9fd8b0;} /* color-ok */
 
   /* ★ 트랙 A ⑥ — 보석 소켓 칸. 빈 칸 = 점선 테두리(＋) · 찬 칸 = 실선 테두리 + 색 점. */
   .gemcell{width:34px;height:34px;border-radius:8px;border:1px dashed var(--line);display:flex;align-items:center;justify-content:center;cursor:pointer;}
@@ -1115,7 +1475,7 @@
   /* ③ 촘촘한 필터 줄 — 도감처럼 칩이 16개면 보통 크기로는 두 줄이 된다(모달 절반을 먹었다) */
   .mbar.tight{gap:4px;flex-wrap:nowrap;overflow:hidden;}
   .mbar.tight .mtab{font-size:11px;padding:3px 8px;}
-  .mbar.tight .lb{font-size:9px;}
+  .mbar.tight .lb{font-size:9px;} /* fs-ok */
   /* ④ 커스텀 아이콘(svg) — OS 이모지를 대신한다. 글자 흐름 안에 앉는다 */
   .ic{display:inline-block;vertical-align:-2px;flex:0 0 auto;}
   /* ⑤ 2열 격자 목록 — 세로 한 줄 목록(육성 8명 중 2.5명·상점 6칸 중 2칸)을 접는다 */
@@ -1139,7 +1499,7 @@
     word-break:keep-all;overflow-wrap:anywhere;}
   .shopcard .sc-ic{position:relative;margin:0 var(--sp-2);height:72px;border-radius:var(--rad-btn);
     background:var(--c-press);border:1px solid var(--c-line);display:flex;align-items:center;justify-content:center;
-    font-size:40px;line-height:1;}
+    font-size:40px;line-height:1;} /* fs-ok */
   .shopcard .sc-ic .ic{vertical-align:0;}
   .shopcard .sc-ic .sc-n{position:absolute;right:5px;bottom:2px;font-size:var(--fs-num);font-weight:700;color:#fff;
     text-shadow:0 0 3px #000,0 0 6px #000,1px 1px 0 #000;font-variant-numeric:tabular-nums;}
@@ -1154,8 +1514,8 @@
   .shopcard .sc-pr{margin-top:var(--sp-2);height:36px;display:flex;align-items:center;justify-content:center;gap:var(--sp-1);
     background:linear-gradient(var(--gold-hi),var(--gold-lo));color:var(--gold-ink);font-size:var(--fs-num);font-weight:700;
     font-variant-numeric:tabular-nums;border-top:1px solid var(--gold-bd);}
-  .shopcard .sc-pr.dia{background:linear-gradient(#a9e6f4,#5fb3c8);color:#0d2b33;border-top-color:#cdeff7;}
-  .shopcard .sc-pr.free{background:var(--c-ok);color:#fff;border-top-color:#6fd08a;}
+  .shopcard .sc-pr.dia{background:linear-gradient(#a9e6f4,#5fb3c8);color:#0d2b33;border-top-color:#cdeff7;} /* color-ok */
+  .shopcard .sc-pr.free{background:var(--c-ok);color:#fff;border-top-color:#6fd08a;} /* color-ok */
   .shopcard .sc-pr .was{font-size:var(--fs-note);font-weight:400;text-decoration:line-through;opacity:.7;margin-left:2px;}
   /* 리본은 **아이콘 칸의 왼쪽 위**에 앉는다 — 카드 꼭대기에 두면 짧은 이름(「다이아」)을 덮었다(캡처 확인) */
   .shopcard .sc-ic .sc-rb{position:absolute;top:-1px;left:-1px;z-index:1;background:var(--c-warn);color:#fff;
@@ -1171,10 +1531,11 @@
   .shophead .note{font-size:var(--fs-note);color:var(--c-sub);text-align:center;}
   .shophead:first-child{margin-top:0;}
 
-</style>
+</style>
   <script type="module" crossorigin src="/game.js"></script>
+  <link rel="stylesheet" crossorigin href="/style.css">
 </head>
 <body>
-<div id="app"><div id="frame"></div></div>
+<div id="app"><div id="frame"></div></div>
 </body>
 </html>
