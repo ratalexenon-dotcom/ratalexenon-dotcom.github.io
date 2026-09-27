@@ -1,0 +1,477 @@
+[
+  {
+    "id": "ch3-canopy-001",
+    "bbox": [
+      52,
+      48,
+      77,
+      80
+    ],
+    "pivot": [
+      64,
+      92
+    ],
+    "phase": 0,
+    "amp": 2,
+    "periodSec": 3,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 1,
+    "pixelCount": 192
+  },
+  {
+    "id": "ch3-canopy-002",
+    "bbox": [
+      30,
+      54,
+      63,
+      84
+    ],
+    "pivot": [
+      42,
+      132
+    ],
+    "phase": 0.61803,
+    "amp": 2.25,
+    "periodSec": 3.45,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 2,
+    "pixelCount": 273
+  },
+  {
+    "id": "ch3-canopy-003",
+    "bbox": [
+      907,
+      56,
+      935,
+      81
+    ],
+    "pivot": [
+      917,
+      111
+    ],
+    "phase": 0.23607,
+    "amp": 2.5,
+    "periodSec": 3.9,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 3,
+    "pixelCount": 127
+  },
+  {
+    "id": "ch3-canopy-004",
+    "bbox": [
+      228,
+      68,
+      257,
+      90
+    ],
+    "pivot": [
+      242,
+      112
+    ],
+    "phase": 0.8541,
+    "amp": 2.75,
+    "periodSec": 4.35,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 4,
+    "pixelCount": 198
+  },
+  {
+    "id": "ch3-canopy-005",
+    "bbox": [
+      770,
+      91,
+      787,
+      127
+    ],
+    "pivot": [
+      782,
+      133
+    ],
+    "phase": 0.47214,
+    "amp": 3,
+    "periodSec": 4.8,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 5,
+    "pixelCount": 103
+  },
+  {
+    "id": "ch3-canopy-006",
+    "bbox": [
+      470,
+      92,
+      496,
+      109
+    ],
+    "pivot": [
+      469,
+      132
+    ],
+    "phase": 0.09017,
+    "amp": 2,
+    "periodSec": 5.25,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 6,
+    "pixelCount": 69
+  },
+  {
+    "id": "ch3-canopy-007",
+    "bbox": [
+      679,
+      118,
+      703,
+      132
+    ],
+    "pivot": [
+      690,
+      151
+    ],
+    "phase": 0.7082,
+    "amp": 2.25,
+    "periodSec": 5.7,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 7,
+    "pixelCount": 111
+  },
+  {
+    "id": "ch3-canopy-008",
+    "bbox": [
+      745,
+      121,
+      772,
+      150
+    ],
+    "pivot": [
+      744,
+      161
+    ],
+    "phase": 0.32624,
+    "amp": 2.5,
+    "periodSec": 3,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 8,
+    "pixelCount": 307
+  },
+  {
+    "id": "ch3-canopy-009",
+    "bbox": [
+      978,
+      151,
+      998,
+      162
+    ],
+    "pivot": [
+      993,
+      174
+    ],
+    "phase": 0.94427,
+    "amp": 2.75,
+    "periodSec": 3.45,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 9,
+    "pixelCount": 68
+  },
+  {
+    "id": "ch3-canopy-010",
+    "bbox": [
+      978,
+      195,
+      997,
+      209
+    ],
+    "pivot": [
+      978,
+      232
+    ],
+    "phase": 0.56231,
+    "amp": 3,
+    "periodSec": 3.9,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 10,
+    "pixelCount": 83
+  },
+  {
+    "id": "ch3-canopy-011",
+    "bbox": [
+      33,
+      220,
+      81,
+      263
+    ],
+    "pivot": [
+      44,
+      322
+    ],
+    "phase": 0.18034,
+    "amp": 2,
+    "periodSec": 4.35,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 11,
+    "pixelCount": 440
+  },
+  {
+    "id": "ch3-canopy-012",
+    "bbox": [
+      635,
+      256,
+      681,
+      290
+    ],
+    "pivot": [
+      654,
+      316
+    ],
+    "phase": 0.79837,
+    "amp": 2.25,
+    "periodSec": 4.8,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 12,
+    "pixelCount": 597
+  },
+  {
+    "id": "ch3-canopy-013",
+    "bbox": [
+      846,
+      260,
+      861,
+      283
+    ],
+    "pivot": [
+      850,
+      300
+    ],
+    "phase": 0.41641,
+    "amp": 2.5,
+    "periodSec": 5.25,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 13,
+    "pixelCount": 80
+  },
+  {
+    "id": "ch3-canopy-014",
+    "bbox": [
+      953,
+      260,
+      1007,
+      304
+    ],
+    "pivot": [
+      982,
+      337
+    ],
+    "phase": 0.03444,
+    "amp": 2.75,
+    "periodSec": 5.7,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 14,
+    "pixelCount": 741
+  },
+  {
+    "id": "ch3-canopy-015",
+    "bbox": [
+      705,
+      269,
+      747,
+      299
+    ],
+    "pivot": [
+      722,
+      337
+    ],
+    "phase": 0.65248,
+    "amp": 3,
+    "periodSec": 3,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 15,
+    "pixelCount": 406
+  },
+  {
+    "id": "ch3-canopy-016",
+    "bbox": [
+      765,
+      316,
+      817,
+      352
+    ],
+    "pivot": [
+      799,
+      376
+    ],
+    "phase": 0.27051,
+    "amp": 2,
+    "periodSec": 3.45,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 16,
+    "pixelCount": 346
+  },
+  {
+    "id": "ch3-canopy-017",
+    "bbox": [
+      101,
+      333,
+      113,
+      350
+    ],
+    "pivot": [
+      106,
+      365
+    ],
+    "phase": 0.88854,
+    "amp": 2.25,
+    "periodSec": 3.9,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 17,
+    "pixelCount": 50
+  },
+  {
+    "id": "ch3-canopy-018",
+    "bbox": [
+      617,
+      405,
+      657,
+      445
+    ],
+    "pivot": [
+      635,
+      450
+    ],
+    "phase": 0.50658,
+    "amp": 2.5,
+    "periodSec": 4.35,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 18,
+    "pixelCount": 478
+  },
+  {
+    "id": "ch3-canopy-019",
+    "bbox": [
+      676,
+      433,
+      721,
+      470
+    ],
+    "pivot": [
+      699,
+      489
+    ],
+    "phase": 0.12461,
+    "amp": 2.75,
+    "periodSec": 4.8,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 19,
+    "pixelCount": 562
+  },
+  {
+    "id": "ch3-canopy-020",
+    "bbox": [
+      770,
+      518,
+      792,
+      550
+    ],
+    "pivot": [
+      783,
+      563
+    ],
+    "phase": 0.74265,
+    "amp": 3,
+    "periodSec": 5.25,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 20,
+    "pixelCount": 54
+  },
+  {
+    "id": "ch3-canopy-021",
+    "bbox": [
+      863,
+      573,
+      877,
+      593
+    ],
+    "pivot": [
+      890,
+      612
+    ],
+    "phase": 0.36068,
+    "amp": 2,
+    "periodSec": 5.7,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 21,
+    "pixelCount": 114
+  },
+  {
+    "id": "ch3-canopy-022",
+    "bbox": [
+      980,
+      665,
+      997,
+      679
+    ],
+    "pivot": [
+      994,
+      700
+    ],
+    "phase": 0.97871,
+    "amp": 2.25,
+    "periodSec": 3,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 22,
+    "pixelCount": 73
+  },
+  {
+    "id": "ch3-canopy-023",
+    "bbox": [
+      947,
+      696,
+      970,
+      717
+    ],
+    "pivot": [
+      963,
+      752
+    ],
+    "phase": 0.59675,
+    "amp": 2.5,
+    "periodSec": 3.45,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 23,
+    "pixelCount": 167
+  },
+  {
+    "id": "ch3-canopy-024",
+    "bbox": [
+      776,
+      710,
+      787,
+      722
+    ],
+    "pivot": [
+      783,
+      746
+    ],
+    "phase": 0.21478,
+    "amp": 2.75,
+    "periodSec": 3.9,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 24,
+    "pixelCount": 33
+  },
+  {
+    "id": "ch3-canopy-025",
+    "bbox": [
+      795,
+      730,
+      820,
+      748
+    ],
+    "pivot": [
+      805,
+      772
+    ],
+    "phase": 0.83282,
+    "amp": 3,
+    "periodSec": 4.35,
+    "pivotSource": "visually estimated trunk-ground point",
+    "ownerId": 25,
+    "pixelCount": 108
+  }
+]

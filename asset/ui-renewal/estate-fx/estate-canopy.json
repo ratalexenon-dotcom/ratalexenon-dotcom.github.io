@@ -1,0 +1,2206 @@
+[
+  {
+    "id": "tree-001",
+    "ownerId": 1,
+    "bbox": [
+      6,
+      16,
+      34,
+      59
+    ],
+    "pivot": [
+      19,
+      59
+    ],
+    "phase": 0.61803,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 637,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-002",
+    "ownerId": 2,
+    "bbox": [
+      31,
+      6,
+      65,
+      59
+    ],
+    "pivot": [
+      47,
+      59
+    ],
+    "phase": 0.23607,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 890,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-003",
+    "ownerId": 3,
+    "bbox": [
+      62,
+      10,
+      90,
+      55
+    ],
+    "pivot": [
+      77,
+      55
+    ],
+    "phase": 0.8541,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 455,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-004",
+    "ownerId": 4,
+    "bbox": [
+      94,
+      25,
+      132,
+      71
+    ],
+    "pivot": [
+      113,
+      71
+    ],
+    "phase": 0.47214,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 859,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-005",
+    "ownerId": 5,
+    "bbox": [
+      133,
+      19,
+      172,
+      76
+    ],
+    "pivot": [
+      152,
+      76
+    ],
+    "phase": 0.09017,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 1057,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-006",
+    "ownerId": 6,
+    "bbox": [
+      169,
+      39,
+      207,
+      91
+    ],
+    "pivot": [
+      188,
+      91
+    ],
+    "phase": 0.7082,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 935,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-007",
+    "ownerId": 7,
+    "bbox": [
+      23,
+      152,
+      56,
+      199
+    ],
+    "pivot": [
+      39,
+      199
+    ],
+    "phase": 0.32624,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 726,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-008",
+    "ownerId": 8,
+    "bbox": [
+      52,
+      125,
+      90,
+      180
+    ],
+    "pivot": [
+      72,
+      180
+    ],
+    "phase": 0.94427,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 1095,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-009",
+    "ownerId": 9,
+    "bbox": [
+      76,
+      87,
+      111,
+      158
+    ],
+    "pivot": [
+      94,
+      158
+    ],
+    "phase": 0.56231,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 416,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-010",
+    "ownerId": 10,
+    "bbox": [
+      148,
+      161,
+      171,
+      202
+    ],
+    "pivot": [
+      163,
+      202
+    ],
+    "phase": 0.18034,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 448,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-011",
+    "ownerId": 11,
+    "bbox": [
+      164,
+      165,
+      203,
+      219
+    ],
+    "pivot": [
+      183,
+      219
+    ],
+    "phase": 0.79837,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 330,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-012",
+    "ownerId": 12,
+    "bbox": [
+      199,
+      147,
+      220,
+      206
+    ],
+    "pivot": [
+      211,
+      206
+    ],
+    "phase": 0.41641,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 494,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-013",
+    "ownerId": 13,
+    "bbox": [
+      222,
+      189,
+      263,
+      228
+    ],
+    "pivot": [
+      242,
+      228
+    ],
+    "phase": 0.03444,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 860,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-014",
+    "ownerId": 14,
+    "bbox": [
+      257,
+      153,
+      296,
+      210
+    ],
+    "pivot": [
+      276,
+      210
+    ],
+    "phase": 0.65248,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 725,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-015",
+    "ownerId": 15,
+    "bbox": [
+      290,
+      182,
+      315,
+      204
+    ],
+    "pivot": [
+      298,
+      204
+    ],
+    "phase": 0.27051,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 264,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-016",
+    "ownerId": 16,
+    "bbox": [
+      337,
+      174,
+      368,
+      204
+    ],
+    "pivot": [
+      352,
+      204
+    ],
+    "phase": 0.88854,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 483,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-017",
+    "ownerId": 17,
+    "bbox": [
+      367,
+      171,
+      398,
+      204
+    ],
+    "pivot": [
+      382,
+      204
+    ],
+    "phase": 0.50658,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 343,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-018",
+    "ownerId": 18,
+    "bbox": [
+      401,
+      124,
+      436,
+      180
+    ],
+    "pivot": [
+      416,
+      180
+    ],
+    "phase": 0.12461,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 746,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-019",
+    "ownerId": 19,
+    "bbox": [
+      430,
+      146,
+      471,
+      205
+    ],
+    "pivot": [
+      449,
+      205
+    ],
+    "phase": 0.74265,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 1063,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-020",
+    "ownerId": 20,
+    "bbox": [
+      467,
+      111,
+      509,
+      174
+    ],
+    "pivot": [
+      487,
+      174
+    ],
+    "phase": 0.36068,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 1169,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-021",
+    "ownerId": 21,
+    "bbox": [
+      503,
+      132,
+      536,
+      181
+    ],
+    "pivot": [
+      520,
+      181
+    ],
+    "phase": 0.97871,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 782,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-022",
+    "ownerId": 22,
+    "bbox": [
+      538,
+      93,
+      596,
+      173
+    ],
+    "pivot": [
+      567,
+      173
+    ],
+    "phase": 0.59675,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 1964,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-023",
+    "ownerId": 23,
+    "bbox": [
+      606,
+      135,
+      652,
+      197
+    ],
+    "pivot": [
+      629,
+      197
+    ],
+    "phase": 0.21478,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 1060,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-024",
+    "ownerId": 24,
+    "bbox": [
+      641,
+      176,
+      663,
+      220
+    ],
+    "pivot": [
+      657,
+      220
+    ],
+    "phase": 0.83282,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 343,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-025",
+    "ownerId": 25,
+    "bbox": [
+      673,
+      130,
+      707,
+      181
+    ],
+    "pivot": [
+      690,
+      181
+    ],
+    "phase": 0.45085,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 789,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-026",
+    "ownerId": 26,
+    "bbox": [
+      754,
+      214,
+      764,
+      222
+    ],
+    "pivot": [
+      755,
+      222
+    ],
+    "phase": 0.06888,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 49,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-027",
+    "ownerId": 27,
+    "bbox": [
+      772,
+      149,
+      808,
+      213
+    ],
+    "pivot": [
+      792,
+      213
+    ],
+    "phase": 0.68692,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 638,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-028",
+    "ownerId": 28,
+    "bbox": [
+      810,
+      156,
+      840,
+      212
+    ],
+    "pivot": [
+      824,
+      215
+    ],
+    "phase": 0.30495,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 440,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-029",
+    "ownerId": 29,
+    "bbox": [
+      841,
+      156,
+      880,
+      217
+    ],
+    "pivot": [
+      859,
+      217
+    ],
+    "phase": 0.92299,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 724,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-030",
+    "ownerId": 30,
+    "bbox": [
+      31,
+      291,
+      67,
+      329
+    ],
+    "pivot": [
+      49,
+      329
+    ],
+    "phase": 0.54102,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 604,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-031",
+    "ownerId": 31,
+    "bbox": [
+      53,
+      255,
+      94,
+      295
+    ],
+    "pivot": [
+      73,
+      295
+    ],
+    "phase": 0.15905,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 698,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-032",
+    "ownerId": 32,
+    "bbox": [
+      87,
+      220,
+      123,
+      268
+    ],
+    "pivot": [
+      106,
+      270
+    ],
+    "phase": 0.77709,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 787,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-033",
+    "ownerId": 33,
+    "bbox": [
+      121,
+      201,
+      159,
+      251
+    ],
+    "pivot": [
+      141,
+      251
+    ],
+    "phase": 0.39512,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 998,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-034",
+    "ownerId": 34,
+    "bbox": [
+      10,
+      370,
+      31,
+      391
+    ],
+    "pivot": [
+      15,
+      391
+    ],
+    "phase": 0.01316,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 317,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-035",
+    "ownerId": 35,
+    "bbox": [
+      857,
+      223,
+      891,
+      263
+    ],
+    "pivot": [
+      874,
+      263
+    ],
+    "phase": 0.63119,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 692,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-036",
+    "ownerId": 36,
+    "bbox": [
+      896,
+      220,
+      936,
+      266
+    ],
+    "pivot": [
+      916,
+      266
+    ],
+    "phase": 0.24922,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 810,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-037",
+    "ownerId": 37,
+    "bbox": [
+      934,
+      186,
+      969,
+      236
+    ],
+    "pivot": [
+      948,
+      236
+    ],
+    "phase": 0.86726,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 526,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-038",
+    "ownerId": 38,
+    "bbox": [
+      965,
+      193,
+      1008,
+      258
+    ],
+    "pivot": [
+      986,
+      258
+    ],
+    "phase": 0.48529,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 1094,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-039",
+    "ownerId": 39,
+    "bbox": [
+      1011,
+      215,
+      1048,
+      268
+    ],
+    "pivot": [
+      1029,
+      268
+    ],
+    "phase": 0.10333,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 765,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-040",
+    "ownerId": 40,
+    "bbox": [
+      1046,
+      246,
+      1077,
+      285
+    ],
+    "pivot": [
+      1062,
+      285
+    ],
+    "phase": 0.72136,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 569,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-041",
+    "ownerId": 41,
+    "bbox": [
+      1077,
+      248,
+      1114,
+      280
+    ],
+    "pivot": [
+      1096,
+      280
+    ],
+    "phase": 0.33939,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 599,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-042",
+    "ownerId": 42,
+    "bbox": [
+      1117,
+      232,
+      1160,
+      288
+    ],
+    "pivot": [
+      1138,
+      288
+    ],
+    "phase": 0.95743,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 1047,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-043",
+    "ownerId": 43,
+    "bbox": [
+      1158,
+      253,
+      1190,
+      291
+    ],
+    "pivot": [
+      1174,
+      291
+    ],
+    "phase": 0.57546,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 601,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-044",
+    "ownerId": 44,
+    "bbox": [
+      108,
+      402,
+      151,
+      456
+    ],
+    "pivot": [
+      129,
+      456
+    ],
+    "phase": 0.1935,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 1066,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-045",
+    "ownerId": 45,
+    "bbox": [
+      80,
+      419,
+      117,
+      458
+    ],
+    "pivot": [
+      98,
+      459
+    ],
+    "phase": 0.81153,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 219,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-046",
+    "ownerId": 46,
+    "bbox": [
+      56,
+      384,
+      86,
+      444
+    ],
+    "pivot": [
+      70,
+      444
+    ],
+    "phase": 0.42956,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 623,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-047",
+    "ownerId": 47,
+    "bbox": [
+      260,
+      469,
+      292,
+      529
+    ],
+    "pivot": [
+      275,
+      529
+    ],
+    "phase": 0.0476,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 699,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-048",
+    "ownerId": 48,
+    "bbox": [
+      442,
+      571,
+      468,
+      599
+    ],
+    "pivot": [
+      445,
+      600
+    ],
+    "phase": 0.66563,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 410,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-049",
+    "ownerId": 49,
+    "bbox": [
+      462,
+      561,
+      504,
+      593
+    ],
+    "pivot": [
+      483,
+      593
+    ],
+    "phase": 0.28367,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 634,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-050",
+    "ownerId": 50,
+    "bbox": [
+      521,
+      539,
+      555,
+      603
+    ],
+    "pivot": [
+      534,
+      603
+    ],
+    "phase": 0.9017,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 569,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-051",
+    "ownerId": 51,
+    "bbox": [
+      570,
+      586,
+      603,
+      628
+    ],
+    "pivot": [
+      585,
+      628
+    ],
+    "phase": 0.51973,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 197,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-052",
+    "ownerId": 52,
+    "bbox": [
+      606,
+      612,
+      639,
+      646
+    ],
+    "pivot": [
+      622,
+      646
+    ],
+    "phase": 0.13777,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 484,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-053",
+    "ownerId": 53,
+    "bbox": [
+      655,
+      597,
+      682,
+      661
+    ],
+    "pivot": [
+      666,
+      661
+    ],
+    "phase": 0.7558,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 358,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-054",
+    "ownerId": 54,
+    "bbox": [
+      0,
+      534,
+      27,
+      611
+    ],
+    "pivot": [
+      7,
+      611
+    ],
+    "phase": 0.37384,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 919,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-055",
+    "ownerId": 55,
+    "bbox": [
+      18,
+      509,
+      63,
+      592
+    ],
+    "pivot": [
+      38,
+      592
+    ],
+    "phase": 0.99187,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 1762,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-056",
+    "ownerId": 56,
+    "bbox": [
+      48,
+      544,
+      91,
+      616
+    ],
+    "pivot": [
+      66,
+      616
+    ],
+    "phase": 0.6099,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 1323,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-057",
+    "ownerId": 57,
+    "bbox": [
+      77,
+      535,
+      118,
+      603
+    ],
+    "pivot": [
+      95,
+      603
+    ],
+    "phase": 0.22794,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 1253,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-058",
+    "ownerId": 58,
+    "bbox": [
+      113,
+      559,
+      162,
+      636
+    ],
+    "pivot": [
+      137,
+      636
+    ],
+    "phase": 0.84597,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 1658,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-059",
+    "ownerId": 59,
+    "bbox": [
+      250,
+      638,
+      282,
+      704
+    ],
+    "pivot": [
+      261,
+      704
+    ],
+    "phase": 0.46401,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 425,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-060",
+    "ownerId": 60,
+    "bbox": [
+      273,
+      632,
+      313,
+      709
+    ],
+    "pivot": [
+      288,
+      709
+    ],
+    "phase": 0.08204,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 1069,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-061",
+    "ownerId": 61,
+    "bbox": [
+      302,
+      638,
+      340,
+      715
+    ],
+    "pivot": [
+      323,
+      715
+    ],
+    "phase": 0.70007,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 1059,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-062",
+    "ownerId": 62,
+    "bbox": [
+      337,
+      655,
+      372,
+      704
+    ],
+    "pivot": [
+      354,
+      705
+    ],
+    "phase": 0.31811,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 961,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-063",
+    "ownerId": 63,
+    "bbox": [
+      393,
+      654,
+      449,
+      763
+    ],
+    "pivot": [
+      420,
+      763
+    ],
+    "phase": 0.93614,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 2612,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-064",
+    "ownerId": 64,
+    "bbox": [
+      432,
+      688,
+      488,
+      783
+    ],
+    "pivot": [
+      461,
+      783
+    ],
+    "phase": 0.55418,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 2364,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-065",
+    "ownerId": 65,
+    "bbox": [
+      482,
+      679,
+      538,
+      773
+    ],
+    "pivot": [
+      509,
+      773
+    ],
+    "phase": 0.17221,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 2147,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-066",
+    "ownerId": 66,
+    "bbox": [
+      525,
+      712,
+      570,
+      786
+    ],
+    "pivot": [
+      550,
+      786
+    ],
+    "phase": 0.79024,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 1200,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-067",
+    "ownerId": 67,
+    "bbox": [
+      555,
+      713,
+      613,
+      812
+    ],
+    "pivot": [
+      584,
+      812
+    ],
+    "phase": 0.40828,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 2140,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-068",
+    "ownerId": 68,
+    "bbox": [
+      603,
+      730,
+      648,
+      814
+    ],
+    "pivot": [
+      622,
+      814
+    ],
+    "phase": 0.02631,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 1578,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-069",
+    "ownerId": 69,
+    "bbox": [
+      627,
+      737,
+      677,
+      823
+    ],
+    "pivot": [
+      653,
+      823
+    ],
+    "phase": 0.64435,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 1565,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-070",
+    "ownerId": 70,
+    "bbox": [
+      675,
+      793,
+      718,
+      860
+    ],
+    "pivot": [
+      699,
+      860
+    ],
+    "phase": 0.26238,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 1223,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-071",
+    "ownerId": 71,
+    "bbox": [
+      736,
+      814,
+      772,
+      872
+    ],
+    "pivot": [
+      757,
+      872
+    ],
+    "phase": 0.88041,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 545,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-072",
+    "ownerId": 72,
+    "bbox": [
+      780,
+      803,
+      819,
+      870
+    ],
+    "pivot": [
+      796,
+      872
+    ],
+    "phase": 0.49845,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 814,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-073",
+    "ownerId": 73,
+    "bbox": [
+      822,
+      807,
+      865,
+      873
+    ],
+    "pivot": [
+      844,
+      873
+    ],
+    "phase": 0.11648,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 1065,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-074",
+    "ownerId": 74,
+    "bbox": [
+      873,
+      805,
+      913,
+      873
+    ],
+    "pivot": [
+      891,
+      873
+    ],
+    "phase": 0.73452,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 1211,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-075",
+    "ownerId": 75,
+    "bbox": [
+      909,
+      803,
+      955,
+      873
+    ],
+    "pivot": [
+      930,
+      873
+    ],
+    "phase": 0.35255,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 1379,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-076",
+    "ownerId": 76,
+    "bbox": [
+      956,
+      812,
+      998,
+      881
+    ],
+    "pivot": [
+      976,
+      881
+    ],
+    "phase": 0.97058,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 1296,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-077",
+    "ownerId": 77,
+    "bbox": [
+      995,
+      800,
+      1040,
+      879
+    ],
+    "pivot": [
+      1017,
+      879
+    ],
+    "phase": 0.58862,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 1777,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-078",
+    "ownerId": 78,
+    "bbox": [
+      1045,
+      817,
+      1088,
+      881
+    ],
+    "pivot": [
+      1067,
+      881
+    ],
+    "phase": 0.20665,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 1268,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-079",
+    "ownerId": 79,
+    "bbox": [
+      1089,
+      820,
+      1128,
+      881
+    ],
+    "pivot": [
+      1110,
+      881
+    ],
+    "phase": 0.82469,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 1112,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-080",
+    "ownerId": 80,
+    "bbox": [
+      1103,
+      742,
+      1160,
+      827
+    ],
+    "pivot": [
+      1131,
+      827
+    ],
+    "phase": 0.44272,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 1022,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-081",
+    "ownerId": 81,
+    "bbox": [
+      1150,
+      796,
+      1193,
+      847
+    ],
+    "pivot": [
+      1173,
+      847
+    ],
+    "phase": 0.06075,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 1148,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-082",
+    "ownerId": 82,
+    "bbox": [
+      1191,
+      772,
+      1240,
+      850
+    ],
+    "pivot": [
+      1214,
+      850
+    ],
+    "phase": 0.67879,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 1527,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-083",
+    "ownerId": 83,
+    "bbox": [
+      1233,
+      760,
+      1277,
+      841
+    ],
+    "pivot": [
+      1255,
+      841
+    ],
+    "phase": 0.29682,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 956,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-084",
+    "ownerId": 84,
+    "bbox": [
+      1285,
+      786,
+      1328,
+      846
+    ],
+    "pivot": [
+      1303,
+      846
+    ],
+    "phase": 0.91486,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 1053,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-085",
+    "ownerId": 85,
+    "bbox": [
+      1323,
+      756,
+      1372,
+      842
+    ],
+    "pivot": [
+      1346,
+      842
+    ],
+    "phase": 0.53289,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 800,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-086",
+    "ownerId": 86,
+    "bbox": [
+      1365,
+      747,
+      1416,
+      837
+    ],
+    "pivot": [
+      1388,
+      837
+    ],
+    "phase": 0.15092,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 1437,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-087",
+    "ownerId": 87,
+    "bbox": [
+      1410,
+      750,
+      1455,
+      826
+    ],
+    "pivot": [
+      1434,
+      826
+    ],
+    "phase": 0.76896,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 865,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-088",
+    "ownerId": 88,
+    "bbox": [
+      1469,
+      758,
+      1479,
+      766
+    ],
+    "pivot": [
+      1475,
+      812
+    ],
+    "phase": 0.38699,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 45,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-089",
+    "ownerId": 89,
+    "bbox": [
+      1515,
+      744,
+      1526,
+      759
+    ],
+    "pivot": [
+      1520,
+      803
+    ],
+    "phase": 0.00502,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 67,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-090",
+    "ownerId": 90,
+    "bbox": [
+      1564,
+      733,
+      1568,
+      738
+    ],
+    "pivot": [
+      1564,
+      791
+    ],
+    "phase": 0.62306,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 10,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-091",
+    "ownerId": 91,
+    "bbox": [
+      1684,
+      618,
+      1716,
+      688
+    ],
+    "pivot": [
+      1700,
+      688
+    ],
+    "phase": 0.24109,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 926,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-092",
+    "ownerId": 92,
+    "bbox": [
+      1711,
+      576,
+      1750,
+      669
+    ],
+    "pivot": [
+      1734,
+      670
+    ],
+    "phase": 0.85913,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 1406,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-093",
+    "ownerId": 93,
+    "bbox": [
+      1745,
+      566,
+      1774,
+      649
+    ],
+    "pivot": [
+      1761,
+      649
+    ],
+    "phase": 0.47716,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 453,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-094",
+    "ownerId": 94,
+    "bbox": [
+      7,
+      800,
+      64,
+      884
+    ],
+    "pivot": [
+      35,
+      884
+    ],
+    "phase": 0.09519,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 1780,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-095",
+    "ownerId": 95,
+    "bbox": [
+      59,
+      803,
+      108,
+      878
+    ],
+    "pivot": [
+      83,
+      878
+    ],
+    "phase": 0.71323,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 1751,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-096",
+    "ownerId": 96,
+    "bbox": [
+      106,
+      771,
+      160,
+      858
+    ],
+    "pivot": [
+      132,
+      858
+    ],
+    "phase": 0.33126,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 2251,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-097",
+    "ownerId": 97,
+    "bbox": [
+      148,
+      735,
+      200,
+      831
+    ],
+    "pivot": [
+      171,
+      831
+    ],
+    "phase": 0.9493,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 2359,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-098",
+    "ownerId": 98,
+    "bbox": [
+      193,
+      793,
+      243,
+      885
+    ],
+    "pivot": [
+      222,
+      885
+    ],
+    "phase": 0.56733,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 1806,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-099",
+    "ownerId": 99,
+    "bbox": [
+      234,
+      784,
+      279,
+      867
+    ],
+    "pivot": [
+      252,
+      871
+    ],
+    "phase": 0.18536,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 627,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-100",
+    "ownerId": 100,
+    "bbox": [
+      928,
+      160,
+      968,
+      201
+    ],
+    "pivot": [
+      948,
+      202
+    ],
+    "phase": 0.8034,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 564,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-101",
+    "ownerId": 101,
+    "bbox": [
+      965,
+      149,
+      1007,
+      209
+    ],
+    "pivot": [
+      986,
+      209
+    ],
+    "phase": 0.42143,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 1028,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-102",
+    "ownerId": 102,
+    "bbox": [
+      1010,
+      166,
+      1046,
+      216
+    ],
+    "pivot": [
+      1028,
+      216
+    ],
+    "phase": 0.03947,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 726,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-103",
+    "ownerId": 103,
+    "bbox": [
+      1047,
+      162,
+      1088,
+      224
+    ],
+    "pivot": [
+      1067,
+      224
+    ],
+    "phase": 0.6575,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 1091,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-104",
+    "ownerId": 104,
+    "bbox": [
+      1085,
+      171,
+      1118,
+      223
+    ],
+    "pivot": [
+      1100,
+      223
+    ],
+    "phase": 0.27553,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 830,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-105",
+    "ownerId": 105,
+    "bbox": [
+      1130,
+      200,
+      1169,
+      240
+    ],
+    "pivot": [
+      1148,
+      243
+    ],
+    "phase": 0.89357,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 437,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-106",
+    "ownerId": 106,
+    "bbox": [
+      1173,
+      192,
+      1215,
+      240
+    ],
+    "pivot": [
+      1192,
+      244
+    ],
+    "phase": 0.5116,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 688,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-107",
+    "ownerId": 107,
+    "bbox": [
+      1232,
+      200,
+      1264,
+      254
+    ],
+    "pivot": [
+      1247,
+      255
+    ],
+    "phase": 0.12964,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 419,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-108",
+    "ownerId": 108,
+    "bbox": [
+      1281,
+      211,
+      1305,
+      262
+    ],
+    "pivot": [
+      1292,
+      265
+    ],
+    "phase": 0.74767,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 338,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-109",
+    "ownerId": 109,
+    "bbox": [
+      1328,
+      163,
+      1385,
+      267
+    ],
+    "pivot": [
+      1354,
+      267
+    ],
+    "phase": 0.3657,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 1019,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-110",
+    "ownerId": 110,
+    "bbox": [
+      1384,
+      186,
+      1429,
+      275
+    ],
+    "pivot": [
+      1406,
+      275
+    ],
+    "phase": 0.98374,
+    "amp": 2,
+    "periodSec": 4.95,
+    "pixelCount": 1634,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-111",
+    "ownerId": 111,
+    "bbox": [
+      1433,
+      195,
+      1478,
+      274
+    ],
+    "pivot": [
+      1453,
+      274
+    ],
+    "phase": 0.60177,
+    "amp": 2,
+    "periodSec": 5.3,
+    "pixelCount": 1397,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-112",
+    "ownerId": 112,
+    "bbox": [
+      1515,
+      183,
+      1542,
+      246
+    ],
+    "pivot": [
+      1519,
+      247
+    ],
+    "phase": 0.21981,
+    "amp": 2,
+    "periodSec": 3.2,
+    "pixelCount": 310,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-113",
+    "ownerId": 113,
+    "bbox": [
+      1542,
+      186,
+      1584,
+      256
+    ],
+    "pivot": [
+      1562,
+      261
+    ],
+    "phase": 0.83784,
+    "amp": 2,
+    "periodSec": 3.5500000000000003,
+    "pixelCount": 940,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-114",
+    "ownerId": 114,
+    "bbox": [
+      1583,
+      151,
+      1651,
+      262
+    ],
+    "pivot": [
+      1616,
+      263
+    ],
+    "phase": 0.45587,
+    "amp": 2,
+    "periodSec": 3.9000000000000004,
+    "pixelCount": 2699,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-115",
+    "ownerId": 115,
+    "bbox": [
+      1645,
+      196,
+      1689,
+      267
+    ],
+    "pivot": [
+      1666,
+      267
+    ],
+    "phase": 0.07391,
+    "amp": 2,
+    "periodSec": 4.25,
+    "pixelCount": 982,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  },
+  {
+    "id": "tree-116",
+    "ownerId": 116,
+    "bbox": [
+      1734,
+      167,
+      1773,
+      252
+    ],
+    "pivot": [
+      1749,
+      252
+    ],
+    "phase": 0.69194,
+    "amp": 2,
+    "periodSec": 4.6,
+    "pixelCount": 1182,
+    "pivotSource": "manually located crown base; hidden trunk uses estimated base"
+  }
+]

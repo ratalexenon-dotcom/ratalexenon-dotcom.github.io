@@ -1,0 +1,110 @@
+[
+  {
+    "id": "rear-middle",
+    "bbox": [
+      724,
+      188,
+      735,
+      229
+    ],
+    "pole": "top",
+    "pivot": [
+      729.5,
+      188
+    ],
+    "phase": 0,
+    "amp": 2,
+    "periodSec": 3.8,
+    "pixelCount": 386
+  },
+  {
+    "id": "rear-east",
+    "bbox": [
+      1205,
+      245,
+      1214,
+      280
+    ],
+    "pole": "top",
+    "pivot": [
+      1209.5,
+      245
+    ],
+    "phase": 0.618,
+    "amp": 2,
+    "periodSec": 4.02,
+    "pixelCount": 261
+  },
+  {
+    "id": "gate-left",
+    "bbox": [
+      155,
+      534,
+      175,
+      608
+    ],
+    "pole": "top",
+    "pivot": [
+      165,
+      534
+    ],
+    "phase": 0.236,
+    "amp": 2,
+    "periodSec": 4.24,
+    "pixelCount": 1219
+  },
+  {
+    "id": "gate-right",
+    "bbox": [
+      331,
+      575,
+      353,
+      650
+    ],
+    "pole": "top",
+    "pivot": [
+      342,
+      575
+    ],
+    "phase": 0.854,
+    "amp": 2,
+    "periodSec": 4.46,
+    "pixelCount": 1374
+  },
+  {
+    "id": "front-middle",
+    "bbox": [
+      711,
+      717,
+      730,
+      783
+    ],
+    "pole": "top",
+    "pivot": [
+      720.5,
+      717
+    ],
+    "phase": 0.472,
+    "amp": 2,
+    "periodSec": 4.68,
+    "pixelCount": 1063
+  },
+  {
+    "id": "front-east",
+    "bbox": [
+      1694,
+      722,
+      1708,
+      784
+    ],
+    "pole": "top",
+    "pivot": [
+      1701,
+      722
+    ],
+    "phase": 0.09,
+    "amp": 2,
+    "periodSec": 4.9,
+    "pixelCount": 742
+  }
+]

@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "canvas": [
+    1024,
+    1536
+  ],
+  "offset": [
+    0,
+    0
+  ],
+  "anchor": [
+    703,
+    38
+  ],
+  "clip": [
+    24,
+    12,
+    1000,
+    1514
+  ],
+  "intervalSec": [
+    10,
+    16
+  ],
+  "durationSec": 2.8,
+  "quietMinSec": 7.2,
+  "frames": [
+    {
+      "file": "ch5-eruption-1.png",
+      "peakSec": 0.12
+    },
+    {
+      "file": "ch5-eruption-2.png",
+      "peakSec": 0.5
+    },
+    {
+      "file": "ch5-eruption-3.png",
+      "peakSec": 1.15
+    },
+    {
+      "file": "ch5-eruption-4.png",
+      "peakSec": 1.9
+    }
+  ],
+  "fadeInSec": 0.12,
+  "fadeOutStartSec": 1.9,
+  "blend": "ordinary straight-alpha crossfade; no displacement of map or volcano",
+  "craterFlash": {
+    "center": [
+      703,
+      38
+    ],
+    "radius": [
+      18,
+      8
+    ],
+    "peakSec": 0.18,
+    "brightnessMultiplier": 1.35
+  },
+  "embers": {
+    "sprite": "sprites/ch5-particle-2.png",
+    "count": 8,
+    "delaySec": 0.12,
+    "lifeSec": [
+      0.7,
+      1.6
+    ],
+    "velocityX": [
+      -18,
+      18
+    ],
+    "velocityY": [
+      -22,
+      -12
+    ],
+    "gravity": 22,
+    "displaySizePx": [
+      1.5,
+      3
+    ],
+    "clip": [
+      24,
+      12,
+      1000,
+      1514
+    ]
+  },
+  "pauseWithAtlas": true,
+  "reducedMotion": "disable eruption and burst particles",
+  "layer": "composite eruption after fog and before glow/particles, or in an extra quad of the existing canvas",
+  "originalPixelsChanged": 0,
+  "implementationStatus": "assets and offscreen compositing preview only; main game hookup by Claude"
+}

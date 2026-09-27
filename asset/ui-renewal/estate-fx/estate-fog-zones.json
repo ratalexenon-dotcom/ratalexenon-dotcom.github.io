@@ -1,0 +1,50 @@
+[
+  {
+    "bbox": [
+      948,
+      132,
+      1370,
+      219
+    ],
+    "tint": "#c6d6d8",
+    "opacity": 0.16,
+    "dir": [
+      1,
+      0
+    ],
+    "speed": 3,
+    "reason": "rear low water basin"
+  },
+  {
+    "bbox": [
+      260,
+      778,
+      563,
+      887
+    ],
+    "tint": "#c3d0ce",
+    "opacity": 0.15,
+    "dir": [
+      1,
+      0.1
+    ],
+    "speed": 3,
+    "reason": "foreground river ravine"
+  },
+  {
+    "bbox": [
+      1490,
+      175,
+      1774,
+      249
+    ],
+    "tint": "#d0dacb",
+    "opacity": 0.15,
+    "dir": [
+      -1,
+      0
+    ],
+    "speed": 3,
+    "reason": "eastern lakeside lowland"
+  }
+]

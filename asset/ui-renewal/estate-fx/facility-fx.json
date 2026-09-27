@@ -1,0 +1,299 @@
+{
+  "tier": 3,
+  "facilities": [
+    {
+      "facility": "brew",
+      "tier": 3,
+      "canvas": [
+        540,
+        540
+      ],
+      "sourceRect": {
+        "y": 16,
+        "width": 407.1470588235294,
+        "height": 508,
+        "x": 66.4264705882353
+      },
+      "drawRect": {
+        "y": 345,
+        "width": 117.01470588235294,
+        "height": 146,
+        "x": 440.99264705882354
+      },
+      "base": "facilities/brew-t3-base.png",
+      "coordinateSystem": "full sprite pixels; crop ALL layers with original sourceRect; anchors in estate-emitters are sourceRect-local",
+      "layers": [
+        {
+          "kind": "glow",
+          "file": "facilities/brew-t3-glow.png",
+          "brightnessAmplitude": 0.18,
+          "periodSec": 3.2,
+          "blend": "screen"
+        }
+      ],
+      "smokeRemoved": true,
+      "smokeReference": "facilities/brew-t3-smoke-reference.png"
+    },
+    {
+      "facility": "kitchen",
+      "tier": 3,
+      "canvas": [
+        540,
+        540
+      ],
+      "sourceRect": {
+        "y": 144.27347310847767,
+        "width": 507.99999999999994,
+        "height": 379.7265268915223,
+        "x": 16.00000000000003
+      },
+      "drawRect": {
+        "y": 245,
+        "width": 228.76463414634145,
+        "height": 171,
+        "x": 968
+      },
+      "base": "facilities/kitchen-t3-base.png",
+      "coordinateSystem": "full sprite pixels; crop ALL layers with original sourceRect; anchors in estate-emitters are sourceRect-local",
+      "layers": [
+        {
+          "kind": "glow",
+          "file": "facilities/kitchen-t3-glow.png",
+          "brightnessAmplitude": 0.18,
+          "periodSec": 3.2,
+          "blend": "screen"
+        }
+      ],
+      "smokeRemoved": true,
+      "smokeReference": "facilities/kitchen-t3-smoke-reference.png"
+    },
+    {
+      "facility": "lab",
+      "tier": 3,
+      "canvas": [
+        540,
+        540
+      ],
+      "sourceRect": {
+        "y": 16,
+        "width": 447.2659870250232,
+        "height": 508,
+        "x": 46.367006487488396
+      },
+      "drawRect": {
+        "y": 65,
+        "width": 212.18721037998145,
+        "height": 241,
+        "x": 73.90639481000927
+      },
+      "base": "facilities/lab-t3-base.png",
+      "coordinateSystem": "full sprite pixels; crop ALL layers with original sourceRect; anchors in estate-emitters are sourceRect-local",
+      "layers": [
+        {
+          "kind": "pivot-rotation",
+          "file": "facilities/lab-t3-telescope.png",
+          "pivot": [
+            171,
+            111
+          ],
+          "amplitudeDeg": 6,
+          "periodSec": 8,
+          "easing": "sin",
+          "note": "small in-plane aiming sweep, not a 3D yaw turn"
+        }
+      ],
+      "smokeRemoved": true,
+      "smokeReference": "facilities/lab-t3-smoke-reference.png"
+    },
+    {
+      "facility": "bath",
+      "tier": 3,
+      "canvas": [
+        540,
+        540
+      ],
+      "sourceRect": {
+        "y": 183.64,
+        "width": 508,
+        "height": 340.36,
+        "x": 16
+      },
+      "drawRect": {
+        "y": 475,
+        "width": 331,
+        "height": 221.77,
+        "x": 789
+      },
+      "base": "facilities/bath-t3-base.png",
+      "coordinateSystem": "full sprite pixels; crop ALL layers with original sourceRect; anchors in estate-emitters are sourceRect-local",
+      "layers": [
+        {
+          "kind": "water",
+          "file": "facilities/bath-t3-water.png",
+          "flow": "facilities/bath-t3-flow.png",
+          "surfaceSpeedPxSec": 1.6,
+          "fallSpeedPxSec": 7,
+          "uvAmplitudePx": 1.2,
+          "rgbPaddingPx": 12
+        }
+      ]
+    },
+    {
+      "facility": "clean",
+      "tier": 3,
+      "canvas": [
+        540,
+        540
+      ],
+      "sourceRect": {
+        "y": 137.79820179820177,
+        "width": 508,
+        "height": 386.2017982017982,
+        "x": 16
+      },
+      "drawRect": {
+        "y": 487,
+        "width": 222.2982917214192,
+        "height": 169,
+        "x": 518.3508541392904
+      },
+      "base": "facilities/clean-t3-base.png",
+      "coordinateSystem": "full sprite pixels; crop ALL layers with original sourceRect; anchors in estate-emitters are sourceRect-local",
+      "layers": [
+        {
+          "kind": "water",
+          "file": "facilities/clean-t3-water.png",
+          "flow": "facilities/clean-t3-flow.png",
+          "surfaceSpeedPxSec": 1.6,
+          "fallSpeedPxSec": 7,
+          "uvAmplitudePx": 1.2,
+          "rgbPaddingPx": 12
+        }
+      ]
+    },
+    {
+      "facility": "altar",
+      "tier": 3,
+      "canvas": [
+        540,
+        540
+      ],
+      "sourceRect": {
+        "y": 114.86881720430108,
+        "width": 508,
+        "height": 409.1311827956989,
+        "x": 16
+      },
+      "drawRect": {
+        "y": 310,
+        "width": 161.41522029372496,
+        "height": 130,
+        "x": 51.29238985313752
+      },
+      "base": "facilities/altar-t3-base.png",
+      "coordinateSystem": "full sprite pixels; crop ALL layers with original sourceRect; anchors in estate-emitters are sourceRect-local",
+      "layers": [
+        {
+          "kind": "glow",
+          "file": "facilities/altar-t3-glow.png",
+          "brightnessAmplitude": 0.18,
+          "periodSec": 3.2,
+          "blend": "screen"
+        }
+      ]
+    },
+    {
+      "facility": "forge",
+      "tier": 3,
+      "canvas": [
+        540,
+        540
+      ],
+      "sourceRect": {
+        "y": 130.91046182846372,
+        "width": 508,
+        "height": 393.0895381715363,
+        "x": 16
+      },
+      "drawRect": {
+        "y": 125,
+        "width": 224.864798,
+        "height": 174,
+        "x": 1497
+      },
+      "base": "facilities/forge-t3-base.png",
+      "coordinateSystem": "full sprite pixels; crop ALL layers with original sourceRect; anchors in estate-emitters are sourceRect-local",
+      "layers": [
+        {
+          "kind": "glow",
+          "file": "facilities/forge-t3-glow.png",
+          "brightnessAmplitude": 0.25,
+          "periodSec": 1.8,
+          "blend": "screen"
+        }
+      ]
+    },
+    {
+      "facility": "sleep",
+      "tier": 3,
+      "canvas": [
+        540,
+        540
+      ],
+      "sourceRect": {
+        "y": 164.58318425760285,
+        "width": 508,
+        "height": 359.41681574239715,
+        "x": 16
+      },
+      "drawRect": {
+        "y": 153.99999999999997,
+        "width": 310.94816687737045,
+        "height": 220.00000000000003,
+        "x": 637.5259165613147
+      },
+      "base": "facilities/sleep-t3-base.png",
+      "coordinateSystem": "full sprite pixels; crop ALL layers with original sourceRect; anchors in estate-emitters are sourceRect-local",
+      "layers": [
+        {
+          "kind": "glow",
+          "file": "facilities/sleep-t3-glow.png",
+          "brightnessAmplitude": 0.18,
+          "periodSec": 3.2,
+          "blend": "screen"
+        }
+      ]
+    },
+    {
+      "facility": "ward",
+      "tier": 3,
+      "canvas": [
+        540,
+        540
+      ],
+      "sourceRect": {
+        "y": 179.957671957672,
+        "width": 508,
+        "height": 344.042328042328,
+        "x": 16
+      },
+      "drawRect": {
+        "y": 581,
+        "width": 267.2578125,
+        "height": 181,
+        "x": 1128
+      },
+      "base": "facilities/ward-t3-base.png",
+      "coordinateSystem": "full sprite pixels; crop ALL layers with original sourceRect; anchors in estate-emitters are sourceRect-local",
+      "layers": [
+        {
+          "kind": "glow",
+          "file": "facilities/ward-t3-glow.png",
+          "brightnessAmplitude": 0.18,
+          "periodSec": 3.2,
+          "blend": "screen"
+        }
+      ]
+    }
+  ]
+}

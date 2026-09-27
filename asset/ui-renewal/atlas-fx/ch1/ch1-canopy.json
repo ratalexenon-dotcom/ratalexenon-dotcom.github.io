@@ -1,0 +1,1294 @@
+[
+  {
+    "id": "ch1-canopy-001",
+    "bbox": [
+      261,
+      25,
+      369,
+      128
+    ],
+    "pivot": [
+      315,
+      128
+    ],
+    "phase": 0,
+    "amp": 2,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 1,
+    "pixelCount": 1579
+  },
+  {
+    "id": "ch1-canopy-002",
+    "bbox": [
+      392,
+      26,
+      512,
+      128
+    ],
+    "pivot": [
+      452,
+      128
+    ],
+    "phase": 0.61803,
+    "amp": 2.25,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 2,
+    "pixelCount": 3431
+  },
+  {
+    "id": "ch1-canopy-003",
+    "bbox": [
+      18,
+      29,
+      128,
+      128
+    ],
+    "pivot": [
+      73,
+      128
+    ],
+    "phase": 0.23607,
+    "amp": 2.5,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 3,
+    "pixelCount": 5071
+  },
+  {
+    "id": "ch1-canopy-004",
+    "bbox": [
+      128,
+      49,
+      172,
+      104
+    ],
+    "pivot": [
+      150,
+      104
+    ],
+    "phase": 0.8541,
+    "amp": 2.75,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 4,
+    "pixelCount": 835
+  },
+  {
+    "id": "ch1-canopy-005",
+    "bbox": [
+      512,
+      57,
+      556,
+      121
+    ],
+    "pivot": [
+      534,
+      121
+    ],
+    "phase": 0.47214,
+    "amp": 3,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 5,
+    "pixelCount": 867
+  },
+  {
+    "id": "ch1-canopy-006",
+    "bbox": [
+      768,
+      71,
+      804,
+      128
+    ],
+    "pivot": [
+      786,
+      128
+    ],
+    "phase": 0.09017,
+    "amp": 2,
+    "periodSec": 5.25,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 6,
+    "pixelCount": 418
+  },
+  {
+    "id": "ch1-canopy-007",
+    "bbox": [
+      704,
+      84,
+      768,
+      128
+    ],
+    "pivot": [
+      736,
+      128
+    ],
+    "phase": 0.7082,
+    "amp": 2.25,
+    "periodSec": 5.7,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 7,
+    "pixelCount": 707
+  },
+  {
+    "id": "ch1-canopy-008",
+    "bbox": [
+      953,
+      108,
+      964,
+      128
+    ],
+    "pivot": [
+      959,
+      128
+    ],
+    "phase": 0.32624,
+    "amp": 2.5,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 8,
+    "pixelCount": 116
+  },
+  {
+    "id": "ch1-canopy-009",
+    "bbox": [
+      17,
+      128,
+      128,
+      220
+    ],
+    "pivot": [
+      73,
+      220
+    ],
+    "phase": 0.94427,
+    "amp": 2.75,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 9,
+    "pixelCount": 4301
+  },
+  {
+    "id": "ch1-canopy-010",
+    "bbox": [
+      319,
+      128,
+      355,
+      142
+    ],
+    "pivot": [
+      337,
+      142
+    ],
+    "phase": 0.56231,
+    "amp": 3,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 10,
+    "pixelCount": 266
+  },
+  {
+    "id": "ch1-canopy-011",
+    "bbox": [
+      401,
+      128,
+      448,
+      154
+    ],
+    "pivot": [
+      425,
+      154
+    ],
+    "phase": 0.18034,
+    "amp": 2,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 11,
+    "pixelCount": 239
+  },
+  {
+    "id": "ch1-canopy-012",
+    "bbox": [
+      640,
+      128,
+      768,
+      230
+    ],
+    "pivot": [
+      704,
+      230
+    ],
+    "phase": 0.79837,
+    "amp": 2.25,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 12,
+    "pixelCount": 1717
+  },
+  {
+    "id": "ch1-canopy-013",
+    "bbox": [
+      768,
+      128,
+      835,
+      204
+    ],
+    "pivot": [
+      802,
+      204
+    ],
+    "phase": 0.41641,
+    "amp": 2.5,
+    "periodSec": 5.25,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 13,
+    "pixelCount": 1320
+  },
+  {
+    "id": "ch1-canopy-014",
+    "bbox": [
+      929,
+      128,
+      991,
+      256
+    ],
+    "pivot": [
+      960,
+      256
+    ],
+    "phase": 0.03444,
+    "amp": 2.75,
+    "periodSec": 5.7,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 14,
+    "pixelCount": 1161
+  },
+  {
+    "id": "ch1-canopy-015",
+    "bbox": [
+      128,
+      190,
+      140,
+      222
+    ],
+    "pivot": [
+      134,
+      222
+    ],
+    "phase": 0.65248,
+    "amp": 3,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 15,
+    "pixelCount": 233
+  },
+  {
+    "id": "ch1-canopy-016",
+    "bbox": [
+      617,
+      210,
+      640,
+      245
+    ],
+    "pivot": [
+      629,
+      245
+    ],
+    "phase": 0.27051,
+    "amp": 2,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 16,
+    "pixelCount": 188
+  },
+  {
+    "id": "ch1-canopy-017",
+    "bbox": [
+      903,
+      256,
+      1007,
+      367
+    ],
+    "pivot": [
+      955,
+      367
+    ],
+    "phase": 0.88854,
+    "amp": 2.25,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 17,
+    "pixelCount": 2228
+  },
+  {
+    "id": "ch1-canopy-018",
+    "bbox": [
+      18,
+      308,
+      128,
+      384
+    ],
+    "pivot": [
+      73,
+      384
+    ],
+    "phase": 0.50658,
+    "amp": 2.5,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 18,
+    "pixelCount": 4221
+  },
+  {
+    "id": "ch1-canopy-019",
+    "bbox": [
+      128,
+      340,
+      256,
+      384
+    ],
+    "pivot": [
+      192,
+      384
+    ],
+    "phase": 0.12461,
+    "amp": 2.75,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 19,
+    "pixelCount": 991
+  },
+  {
+    "id": "ch1-canopy-020",
+    "bbox": [
+      256,
+      365,
+      308,
+      384
+    ],
+    "pivot": [
+      282,
+      384
+    ],
+    "phase": 0.74265,
+    "amp": 3,
+    "periodSec": 5.25,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 20,
+    "pixelCount": 263
+  },
+  {
+    "id": "ch1-canopy-021",
+    "bbox": [
+      17,
+      384,
+      128,
+      512
+    ],
+    "pivot": [
+      73,
+      512
+    ],
+    "phase": 0.36068,
+    "amp": 2,
+    "periodSec": 5.7,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 21,
+    "pixelCount": 11435
+  },
+  {
+    "id": "ch1-canopy-022",
+    "bbox": [
+      128,
+      384,
+      256,
+      512
+    ],
+    "pivot": [
+      192,
+      512
+    ],
+    "phase": 0.97871,
+    "amp": 2.25,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 22,
+    "pixelCount": 9717
+  },
+  {
+    "id": "ch1-canopy-023",
+    "bbox": [
+      256,
+      384,
+      379,
+      512
+    ],
+    "pivot": [
+      318,
+      512
+    ],
+    "phase": 0.59675,
+    "amp": 2.5,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 23,
+    "pixelCount": 6795
+  },
+  {
+    "id": "ch1-canopy-024",
+    "bbox": [
+      961,
+      401,
+      986,
+      471
+    ],
+    "pivot": [
+      974,
+      471
+    ],
+    "phase": 0.21478,
+    "amp": 2.75,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 24,
+    "pixelCount": 521
+  },
+  {
+    "id": "ch1-canopy-025",
+    "bbox": [
+      386,
+      431,
+      392,
+      454
+    ],
+    "pivot": [
+      389,
+      454
+    ],
+    "phase": 0.83282,
+    "amp": 3,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 25,
+    "pixelCount": 28
+  },
+  {
+    "id": "ch1-canopy-026",
+    "bbox": [
+      19,
+      512,
+      128,
+      640
+    ],
+    "pivot": [
+      74,
+      640
+    ],
+    "phase": 0.45085,
+    "amp": 2,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 26,
+    "pixelCount": 8935
+  },
+  {
+    "id": "ch1-canopy-027",
+    "bbox": [
+      128,
+      512,
+      220,
+      640
+    ],
+    "pivot": [
+      174,
+      640
+    ],
+    "phase": 0.06888,
+    "amp": 2.25,
+    "periodSec": 5.25,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 27,
+    "pixelCount": 5156
+  },
+  {
+    "id": "ch1-canopy-028",
+    "bbox": [
+      279,
+      512,
+      384,
+      591
+    ],
+    "pivot": [
+      332,
+      591
+    ],
+    "phase": 0.68692,
+    "amp": 2.5,
+    "periodSec": 5.7,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 28,
+    "pixelCount": 624
+  },
+  {
+    "id": "ch1-canopy-029",
+    "bbox": [
+      896,
+      516,
+      999,
+      640
+    ],
+    "pivot": [
+      948,
+      640
+    ],
+    "phase": 0.30495,
+    "amp": 2.75,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 29,
+    "pixelCount": 1846
+  },
+  {
+    "id": "ch1-canopy-030",
+    "bbox": [
+      552,
+      522,
+      640,
+      635
+    ],
+    "pivot": [
+      596,
+      635
+    ],
+    "phase": 0.92299,
+    "amp": 3,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 30,
+    "pixelCount": 1164
+  },
+  {
+    "id": "ch1-canopy-031",
+    "bbox": [
+      640,
+      523,
+      700,
+      640
+    ],
+    "pivot": [
+      670,
+      640
+    ],
+    "phase": 0.54102,
+    "amp": 2,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 31,
+    "pixelCount": 479
+  },
+  {
+    "id": "ch1-canopy-032",
+    "bbox": [
+      384,
+      545,
+      405,
+      572
+    ],
+    "pivot": [
+      395,
+      572
+    ],
+    "phase": 0.15905,
+    "amp": 2.25,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 32,
+    "pixelCount": 188
+  },
+  {
+    "id": "ch1-canopy-033",
+    "bbox": [
+      870,
+      574,
+      896,
+      640
+    ],
+    "pivot": [
+      883,
+      640
+    ],
+    "phase": 0.77709,
+    "amp": 2.5,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 33,
+    "pixelCount": 136
+  },
+  {
+    "id": "ch1-canopy-034",
+    "bbox": [
+      18,
+      640,
+      100,
+      768
+    ],
+    "pivot": [
+      59,
+      768
+    ],
+    "phase": 0.39512,
+    "amp": 2.75,
+    "periodSec": 5.25,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 34,
+    "pixelCount": 2595
+  },
+  {
+    "id": "ch1-canopy-035",
+    "bbox": [
+      139,
+      640,
+      230,
+      759
+    ],
+    "pivot": [
+      185,
+      759
+    ],
+    "phase": 0.01316,
+    "amp": 3,
+    "periodSec": 5.7,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 35,
+    "pixelCount": 2415
+  },
+  {
+    "id": "ch1-canopy-036",
+    "bbox": [
+      670,
+      640,
+      768,
+      767
+    ],
+    "pivot": [
+      719,
+      767
+    ],
+    "phase": 0.63119,
+    "amp": 2,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 36,
+    "pixelCount": 552
+  },
+  {
+    "id": "ch1-canopy-037",
+    "bbox": [
+      768,
+      640,
+      896,
+      752
+    ],
+    "pivot": [
+      832,
+      752
+    ],
+    "phase": 0.24922,
+    "amp": 2.25,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 37,
+    "pixelCount": 4930
+  },
+  {
+    "id": "ch1-canopy-038",
+    "bbox": [
+      896,
+      640,
+      950,
+      681
+    ],
+    "pivot": [
+      923,
+      681
+    ],
+    "phase": 0.86726,
+    "amp": 2.5,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 38,
+    "pixelCount": 1326
+  },
+  {
+    "id": "ch1-canopy-039",
+    "bbox": [
+      327,
+      715,
+      382,
+      768
+    ],
+    "pivot": [
+      355,
+      768
+    ],
+    "phase": 0.48529,
+    "amp": 2.75,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 39,
+    "pixelCount": 1027
+  },
+  {
+    "id": "ch1-canopy-040",
+    "bbox": [
+      385,
+      747,
+      430,
+      768
+    ],
+    "pivot": [
+      408,
+      768
+    ],
+    "phase": 0.10333,
+    "amp": 3,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 40,
+    "pixelCount": 224
+  },
+  {
+    "id": "ch1-canopy-041",
+    "bbox": [
+      17,
+      768,
+      88,
+      896
+    ],
+    "pivot": [
+      53,
+      896
+    ],
+    "phase": 0.72136,
+    "amp": 2,
+    "periodSec": 5.25,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 41,
+    "pixelCount": 4983
+  },
+  {
+    "id": "ch1-canopy-042",
+    "bbox": [
+      352,
+      768,
+      384,
+      802
+    ],
+    "pivot": [
+      368,
+      802
+    ],
+    "phase": 0.33939,
+    "amp": 2.25,
+    "periodSec": 5.7,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 42,
+    "pixelCount": 693
+  },
+  {
+    "id": "ch1-canopy-043",
+    "bbox": [
+      384,
+      768,
+      500,
+      896
+    ],
+    "pivot": [
+      442,
+      896
+    ],
+    "phase": 0.95743,
+    "amp": 2.5,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 43,
+    "pixelCount": 2266
+  },
+  {
+    "id": "ch1-canopy-044",
+    "bbox": [
+      129,
+      802,
+      164,
+      896
+    ],
+    "pivot": [
+      147,
+      896
+    ],
+    "phase": 0.57546,
+    "amp": 2.75,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 44,
+    "pixelCount": 130
+  },
+  {
+    "id": "ch1-canopy-045",
+    "bbox": [
+      17,
+      896,
+      128,
+      1024
+    ],
+    "pivot": [
+      73,
+      1024
+    ],
+    "phase": 0.1935,
+    "amp": 3,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 45,
+    "pixelCount": 7323
+  },
+  {
+    "id": "ch1-canopy-046",
+    "bbox": [
+      128,
+      896,
+      150,
+      1024
+    ],
+    "pivot": [
+      139,
+      1024
+    ],
+    "phase": 0.81153,
+    "amp": 2,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 46,
+    "pixelCount": 316
+  },
+  {
+    "id": "ch1-canopy-047",
+    "bbox": [
+      384,
+      896,
+      505,
+      1016
+    ],
+    "pivot": [
+      445,
+      1016
+    ],
+    "phase": 0.42956,
+    "amp": 2.25,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 47,
+    "pixelCount": 6486
+  },
+  {
+    "id": "ch1-canopy-048",
+    "bbox": [
+      640,
+      900,
+      714,
+      1024
+    ],
+    "pivot": [
+      677,
+      1024
+    ],
+    "phase": 0.0476,
+    "amp": 2.5,
+    "periodSec": 5.25,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 48,
+    "pixelCount": 1567
+  },
+  {
+    "id": "ch1-canopy-049",
+    "bbox": [
+      381,
+      925,
+      384,
+      931
+    ],
+    "pivot": [
+      383,
+      931
+    ],
+    "phase": 0.66563,
+    "amp": 2.75,
+    "periodSec": 5.7,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 49,
+    "pixelCount": 15
+  },
+  {
+    "id": "ch1-canopy-050",
+    "bbox": [
+      539,
+      947,
+      640,
+      1024
+    ],
+    "pivot": [
+      590,
+      1024
+    ],
+    "phase": 0.28367,
+    "amp": 3,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 50,
+    "pixelCount": 3514
+  },
+  {
+    "id": "ch1-canopy-051",
+    "bbox": [
+      17,
+      1024,
+      128,
+      1152
+    ],
+    "pivot": [
+      73,
+      1152
+    ],
+    "phase": 0.9017,
+    "amp": 2,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 51,
+    "pixelCount": 9210
+  },
+  {
+    "id": "ch1-canopy-052",
+    "bbox": [
+      512,
+      1024,
+      640,
+      1150
+    ],
+    "pivot": [
+      576,
+      1150
+    ],
+    "phase": 0.51973,
+    "amp": 2.25,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 52,
+    "pixelCount": 2293
+  },
+  {
+    "id": "ch1-canopy-053",
+    "bbox": [
+      640,
+      1024,
+      678,
+      1152
+    ],
+    "pivot": [
+      659,
+      1152
+    ],
+    "phase": 0.13777,
+    "amp": 2.5,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 53,
+    "pixelCount": 849
+  },
+  {
+    "id": "ch1-canopy-054",
+    "bbox": [
+      306,
+      1029,
+      351,
+      1071
+    ],
+    "pivot": [
+      329,
+      1071
+    ],
+    "phase": 0.7558,
+    "amp": 2.75,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 54,
+    "pixelCount": 389
+  },
+  {
+    "id": "ch1-canopy-055",
+    "bbox": [
+      128,
+      1047,
+      160,
+      1152
+    ],
+    "pivot": [
+      144,
+      1152
+    ],
+    "phase": 0.37384,
+    "amp": 3,
+    "periodSec": 5.25,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 55,
+    "pixelCount": 1187
+  },
+  {
+    "id": "ch1-canopy-056",
+    "bbox": [
+      409,
+      1057,
+      512,
+      1124
+    ],
+    "pivot": [
+      461,
+      1124
+    ],
+    "phase": 0.99187,
+    "amp": 2,
+    "periodSec": 5.7,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 56,
+    "pixelCount": 3186
+  },
+  {
+    "id": "ch1-canopy-057",
+    "bbox": [
+      21,
+      1152,
+      128,
+      1266
+    ],
+    "pivot": [
+      75,
+      1266
+    ],
+    "phase": 0.6099,
+    "amp": 2.25,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 57,
+    "pixelCount": 4964
+  },
+  {
+    "id": "ch1-canopy-058",
+    "bbox": [
+      128,
+      1152,
+      191,
+      1271
+    ],
+    "pivot": [
+      160,
+      1271
+    ],
+    "phase": 0.22794,
+    "amp": 2.5,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 58,
+    "pixelCount": 2466
+  },
+  {
+    "id": "ch1-canopy-059",
+    "bbox": [
+      645,
+      1152,
+      749,
+      1257
+    ],
+    "pivot": [
+      697,
+      1257
+    ],
+    "phase": 0.84597,
+    "amp": 2.75,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 59,
+    "pixelCount": 116
+  },
+  {
+    "id": "ch1-canopy-060",
+    "bbox": [
+      535,
+      1309,
+      635,
+      1408
+    ],
+    "pivot": [
+      585,
+      1408
+    ],
+    "phase": 0.46401,
+    "amp": 3,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 60,
+    "pixelCount": 2786
+  },
+  {
+    "id": "ch1-canopy-061",
+    "bbox": [
+      33,
+      1324,
+      81,
+      1408
+    ],
+    "pivot": [
+      57,
+      1408
+    ],
+    "phase": 0.08204,
+    "amp": 2,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 61,
+    "pixelCount": 741
+  },
+  {
+    "id": "ch1-canopy-062",
+    "bbox": [
+      501,
+      1400,
+      506,
+      1408
+    ],
+    "pivot": [
+      504,
+      1408
+    ],
+    "phase": 0.70007,
+    "amp": 2.25,
+    "periodSec": 5.25,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 62,
+    "pixelCount": 26
+  },
+  {
+    "id": "ch1-canopy-063",
+    "bbox": [
+      36,
+      1408,
+      91,
+      1476
+    ],
+    "pivot": [
+      64,
+      1476
+    ],
+    "phase": 0.31811,
+    "amp": 2.5,
+    "periodSec": 5.7,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 63,
+    "pixelCount": 532
+  },
+  {
+    "id": "ch1-canopy-064",
+    "bbox": [
+      407,
+      1408,
+      512,
+      1520
+    ],
+    "pivot": [
+      460,
+      1520
+    ],
+    "phase": 0.93614,
+    "amp": 2.75,
+    "periodSec": 3,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 64,
+    "pixelCount": 3358
+  },
+  {
+    "id": "ch1-canopy-065",
+    "bbox": [
+      512,
+      1408,
+      640,
+      1520
+    ],
+    "pivot": [
+      576,
+      1520
+    ],
+    "phase": 0.55418,
+    "amp": 3,
+    "periodSec": 3.45,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 65,
+    "pixelCount": 10076
+  },
+  {
+    "id": "ch1-canopy-066",
+    "bbox": [
+      640,
+      1435,
+      768,
+      1520
+    ],
+    "pivot": [
+      704,
+      1520
+    ],
+    "phase": 0.17221,
+    "amp": 2,
+    "periodSec": 3.9,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 66,
+    "pixelCount": 4317
+  },
+  {
+    "id": "ch1-canopy-067",
+    "bbox": [
+      136,
+      1464,
+      147,
+      1492
+    ],
+    "pivot": [
+      142,
+      1492
+    ],
+    "phase": 0.79024,
+    "amp": 2.25,
+    "periodSec": 4.35,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 67,
+    "pixelCount": 58
+  },
+  {
+    "id": "ch1-canopy-068",
+    "bbox": [
+      768,
+      1497,
+      782,
+      1518
+    ],
+    "pivot": [
+      775,
+      1518
+    ],
+    "phase": 0.40828,
+    "amp": 2.5,
+    "periodSec": 4.8,
+    "pivotSource": "bbox-bottom-center (obscured trunk)",
+    "ownerId": 68,
+    "pixelCount": 79
+  }
+]

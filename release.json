@@ -1,0 +1,18 @@
+{
+  "release": "20260928-four-heroes",
+  "characters": [
+    "rabbit-healer-combat.glb",
+    "orc-shaman-game-v3.glb",
+    "berserker-game-v2.glb",
+    "dragon-gladiator-game-v6.glb"
+  ],
+  "date": "2026-09-28",
+  "assetFiles": 2369,
+  "existingCharacters": [
+    "barbarian-pilot/barbarian.glb",
+    "tripo/orc-animated-v1.glb",
+    "tripo/elf-animated-v1.glb",
+    "tripo/dwarf-animated-v1.glb",
+    "tripo/dragonkin-animated-v1.glb"
+  ]
+}

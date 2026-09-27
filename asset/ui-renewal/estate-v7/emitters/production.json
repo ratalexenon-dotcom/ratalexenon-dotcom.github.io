@@ -1,0 +1,40 @@
+{
+ "_note": "⑩ 초안 — 굴뚝 위치 눈대중(bbox-local px). Codex 앵커 표 오면 교체",
+ "coordinateSystem": "bbox-local px of estate-v7 facility crop",
+ "emitters": [
+  {
+   "id": "brew-chimney",
+   "facility": "brew",
+   "kind": "smoke",
+   "at": [
+    88,
+    12
+   ],
+   "dir": [
+    0.1,
+    -1
+   ],
+   "strength": 0.7,
+   "color": "#d8dcdc",
+   "tier": 3,
+   "enabled": true
+  },
+  {
+   "id": "lab-chimney",
+   "facility": "lab",
+   "kind": "smoke",
+   "at": [
+    205,
+    95
+   ],
+   "dir": [
+    0.1,
+    -1
+   ],
+   "strength": 0.45,
+   "color": "#d8dcdc",
+   "tier": 3,
+   "enabled": true
+  }
+ ]
+}
