@@ -1,5 +1,5 @@
 {
-  "release": "20260928-golems-white-cat-antler",
+  "release": "20260928-amazon",
   "characters": [
     "rabbit-healer-combat.glb",
     "orc-shaman-game-v3.glb",
@@ -23,15 +23,18 @@
     "mob/geode-golem.glb"
   ],
   "sha256": {
-    "asset/char3d/crown-golem/crown-golem-game.glb": "1c1022d72f058f092d9b756a8d994efe1663b09dfce977e42d5fcef0618de6de",
-    "asset/char3d/crown-golem/concept.png": "6ea6f0a7bb1df65500a22f8203b41aa59a1a61eaeee9f2ed7e28a6308f21e85c",
-    "asset/char3d/antler-deity/antler-deity-game.glb": "90083c6375a433b4541f22f763db29794eed16b1eca4028d417fd8ba226e28ac",
-    "asset/char3d/antler-deity/concept.png": "31892dcafe7966fc32519629f057f285adde842a18a4102b6fee823db265ac9e",
-    "asset/char3d/white-cat/white-cat-game.glb": "063c964fc0e3db14d9ede8d32336ddf129a47a033fc0a80b4788e29b08698ca4",
-    "asset/char3d/white-cat/concept.png": "1512ffab893247c11fcd168d3dea6f6288abde34255166eee86b2daaf027a943",
-    "asset/mob/geode-golem.glb": "f82c54514c4b6c07051ce3b3be57a7ec99cfec077644a2d6616b1a3e00170846",
     "index.html": "e4ff45f3fec1794ac539550f9e86ea3347e69bcf3a648636794d5d6e90f1df9c",
-    "game.js": "88629f2728cd5c7b64fb467a98b7456026e1ca432e085bde69a232936b5b7867",
-    "style.css": "b4704b3d6387f7acfba2f844c5e23c5815bcc757ee5c74a9ce08b9164f767fc7"
+    "game.js": "a85e64f8eb25d0572aaadaa6b12390efa9013e47427f91f81dc64dd7a4511ffd",
+    "style.css": "b4704b3d6387f7acfba2f844c5e23c5815bcc757ee5c74a9ce08b9164f767fc7",
+    "asset/char3d/amazon/amazon-game.glb": "62df8e669262c557ff67573c27663a735b8c54367e46866884557fc44971ac4c",
+    "asset/char3d/amazon/concept.png": "42b88b163b8472a2a3929f926906cd984ff7087534a2f2d35753ee8208090849",
+    "asset/char3d/amazon/cutout.png": "42b88b163b8472a2a3929f926906cd984ff7087534a2f2d35753ee8208090849"
+  },
+  "previousRelease": "20260928-golems-white-cat-antler",
+  "amazon": {
+    "bones": 42,
+    "clips": 7,
+    "selection": "human female rogue lineage; equipped bow or spear/shield",
+    "source": "public-candidate: prior public source plus Amazon only"
   }
 }
