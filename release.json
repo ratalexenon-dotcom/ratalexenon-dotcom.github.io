@@ -1,5 +1,5 @@
 {
-  "release": "20260928-amazon",
+  "release": "20260928-darkelf-idle-v2",
   "characters": [
     "rabbit-healer-combat.glb",
     "orc-shaman-game-v3.glb",
@@ -24,17 +24,23 @@
   ],
   "sha256": {
     "index.html": "e4ff45f3fec1794ac539550f9e86ea3347e69bcf3a648636794d5d6e90f1df9c",
-    "game.js": "a85e64f8eb25d0572aaadaa6b12390efa9013e47427f91f81dc64dd7a4511ffd",
+    "game.js": "79c6f1935bd8a0a63515fb6ee2f4358ec627660273ce3c2c958a0b4cb6fe7730",
     "style.css": "b4704b3d6387f7acfba2f844c5e23c5815bcc757ee5c74a9ce08b9164f767fc7",
-    "asset/char3d/amazon/amazon-game.glb": "62df8e669262c557ff67573c27663a735b8c54367e46866884557fc44971ac4c",
-    "asset/char3d/amazon/concept.png": "42b88b163b8472a2a3929f926906cd984ff7087534a2f2d35753ee8208090849",
-    "asset/char3d/amazon/cutout.png": "42b88b163b8472a2a3929f926906cd984ff7087534a2f2d35753ee8208090849"
+    "asset/char3d/darkelf-assassin/darkelf-assassin-game.glb": "192d055814d5b463b737394a1f6619271eb5549fd3dcb99bb113217b8459fd7f",
+    "asset/char3d/darkelf-assassin/concept.png": "1b9cc461e900212daf52664f9b237da367f81a5e166135ec93364809344be5b0"
   },
-  "previousRelease": "20260928-golems-white-cat-antler",
+  "previousRelease": "20260928-amazon",
   "amazon": {
     "bones": 42,
     "clips": 7,
     "selection": "human female rogue lineage; equipped bow or spear/shield",
     "source": "public-candidate: prior public source plus Amazon only"
+  },
+  "darkelf": {
+    "bones": 41,
+    "clips": 5,
+    "idle": "straight legs",
+    "selection": "elf female rogue lineage or explicit darkelf-assassin slot",
+    "source": "deployed Amazon baseline plus darkelf only"
   }
 }
