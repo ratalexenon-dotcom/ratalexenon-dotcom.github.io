@@ -398,6 +398,15 @@
     max-height:48vh;overflow-y:auto;}  /* scroll-ok — 넘칠 때만 도는 안전망(위 주석) */
   /* 대사 속 강조(<b>탐험</b>)는 밝은 종이 위라 금색이 안 읽힌다 — 테와 같은 갈색으로 */
   #guide .gt b{color:var(--c-paper-line);}
+  /* ★ 2026-09-28 「한 줄 + 자세히」(사용자 결재 · 첫 플레이 소감 「글자가 너무 작고 말이 많다」) — 튜토리얼 줄은
+     `tutorial.js sayLine` 이 요약(.gt-short)·단추(.g-more)·원문(.gt-full)으로 짠다. 요약은 **20px**(본문 14px 의
+     1.4배 · 폰 390 폭에서 25자가 두 줄), 원문은 접혀 있다가 단추로 펼친다(.gt.open). 원문 크기는 본문 그대로 —
+     읽으러 펼친 사람이 스크롤 없이 읽게 48vh 안전망(.gt max-height)만 남긴다. */
+  #guide .gt .gt-short{display:block;font-size:20px;line-height:1.4;font-weight:600;letter-spacing:-.01em;}
+  #guide .gt .g-more{display:inline-block;margin-top:8px;padding:3px 12px;font-size:var(--fs-sub);font-weight:700;line-height:1.2;font-family:inherit;
+    color:var(--c-paper-line);background:transparent;border:1.5px solid var(--c-paper-line);border-radius:999px;cursor:pointer;}
+  #guide .gt .gt-full{display:none;margin-top:8px;padding-top:8px;border-top:1px dashed var(--c-paper-line);}
+  #guide .gt.open .gt-full{display:block;}
   /* 🔴 4c-5(2026-09-04) — padding-right 80px. 오른쪽 끝에 붙는 힌트인데 집사 흉상(.ga, 오른쪽
      12px · 폭 64px)이 그 자리에 겹쳐 「▼ 눌러서 계속」이 얼굴 밑에 숨었다. .gt 와 같은 여백을 준다.
      ⚠️ 80 은 12(right) + 64(폭) + 4(틈) 다 — .ga 의 폭이 바뀌면 여기도 같이 바꾼다.
