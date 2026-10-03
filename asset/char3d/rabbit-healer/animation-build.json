@@ -1,0 +1,44 @@
+{
+  "method": "local anatomical world-space retarget; preserved mesh, weights and textures",
+  "additionalCredits": 0,
+  "mapping": {
+    "mixamorigHips": "Hips",
+    "mixamorigSpine": "Spine",
+    "mixamorigSpine1": "Spine1",
+    "mixamorigSpine2": "Spine2",
+    "mixamorigNeck": "Neck",
+    "mixamorigHead": "Head",
+    "mixamorigLeftShoulder": "LeftShoulder",
+    "mixamorigLeftArm": "LeftArm",
+    "mixamorigLeftForeArm": "LeftForeArm",
+    "mixamorigLeftHand": "LeftHand",
+    "mixamorigRightShoulder": "RightShoulder",
+    "mixamorigRightArm": "RightArm",
+    "mixamorigRightForeArm": "RightForeArm",
+    "mixamorigRightHand": "RightHand",
+    "mixamorigLeftUpLeg": "LeftUpLeg",
+    "mixamorigLeftLeg": "LeftLeg",
+    "mixamorigLeftFoot": "LeftFoot",
+    "mixamorigLeftToeBase": "LeftToeBase",
+    "mixamorigRightUpLeg": "RightUpLeg",
+    "mixamorigRightLeg": "RightLeg",
+    "mixamorigRightFoot": "RightFoot",
+    "mixamorigRightToeBase": "RightToeBase"
+  },
+  "clips": [
+    {
+      "name": "hit",
+      "source": "전투_피격(머리)",
+      "duration": 1.2000000476837158,
+      "frames": 38,
+      "tracks": 23
+    },
+    {
+      "name": "death",
+      "source": "전투_사망",
+      "duration": 3.9000000953674316,
+      "frames": 119,
+      "tracks": 23
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "status": "awaiting-user-review",
+  "userApproval": "pending",
+  "model": "C:/Users/jenew/Documents/MPH-fox-fire-mage-20260929/revision-v3/fox-animated.glb",
+  "modelSHA256": "959f40587517e1a5c75625a3c96da8647100093c129a991ec97085b1664b3dcf",
+  "video": "C:/Users/jenew/Documents/MPH-fox-fire-mage-20260929/revision-v3/fox-motions-v3.mp4",
+  "videoSHA256": "b2774d10577513304ee4aee1d7a3d45213a6956786beeaf001dc82defe3c4f8c",
+  "poster": "C:/Users/jenew/Documents/MPH-fox-fire-mage-20260929/revision-v3/fox-preview-v3.jpg",
+  "segments": [
+    {
+      "clip": "idle",
+      "view": "front",
+      "start": 0,
+      "end": 4.8
+    },
+    {
+      "clip": "idle",
+      "view": "side",
+      "start": 4.8,
+      "end": 9.6
+    },
+    {
+      "clip": "walk",
+      "view": "front",
+      "start": 9.6,
+      "end": 13.2
+    },
+    {
+      "clip": "walk",
+      "view": "side",
+      "start": 13.2,
+      "end": 16.8
+    },
+    {
+      "clip": "slash",
+      "view": "front",
+      "start": 16.8,
+      "end": 18.4
+    },
+    {
+      "clip": "slash",
+      "view": "side",
+      "start": 18.4,
+      "end": 20
+    },
+    {
+      "clip": "hit",
+      "view": "front",
+      "start": 20,
+      "end": 21.2
+    },
+    {
+      "clip": "death",
+      "view": "front",
+      "start": 21.2,
+      "end": 24
+    }
+  ],
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 720,
+        "height": 960,
+        "pix_fmt": "yuv420p",
+        "nb_frames": "360"
+      }
+    ],
+    "format": {
+      "duration": "24.000000",
+      "size": "2839925"
+    }
+  },
+  "locomotionChecks": {
+    "legs": {
+      "L": [
+        0.2619786230013358,
+        0.28353533744215864
+      ],
+      "R": [
+        0.2619785661220268,
+        0.28353539902988883
+      ]
+    },
+    "clips": {
+      "death": {
+        "seam": 1.1184555848083229,
+        "duration": 2.2,
+        "minBodyZ": -0.0015365183353424072,
+        "legs": {
+          "L": {
+            "bend": [
+              12.663561863219172,
+              133.23290245097897
+            ],
+            "sole": [
+              -0.0005747228860855103,
+              0.20199093222618103
+            ],
+            "stride": 0.6529464423656464
+          },
+          "R": {
+            "bend": [
+              10.835215845055131,
+              109.98483730884483
+            ],
+            "sole": [
+              -0.00043858657591044903,
+              0.28417229652404785
+            ],
+            "stride": 0.3395383879542351
+          }
+        }
+      },
+      "hit": {
+        "seam": 8.582085728634554e-7,
+        "duration": 0.6,
+        "minBodyZ": -0.0004072114825248718,
+        "legs": {
+          "L": {
+            "bend": [
+              63.08787054294518,
+              74.94548192324835
+            ],
+            "sole": [
+              -0.0004072114825248718,
+              -0.00007099821232259274
+            ],
+            "stride": 0.0000896155834197998
+          },
+          "R": {
+            "bend": [
+              62.43945336427919,
+              72.19600976342723
+            ],
+            "sole": [
+              -0.00037500448524951935,
+              0.00005907006561756134
+            ],
+            "stride": 0.00027100369334220886
+          }
+        }
+      },
+      "idle": {
+        "seam": 0,
+        "duration": 2.4,
+        "minBodyZ": -0.000011815724064945243,
+        "legs": {
+          "L": {
+            "bend": [
+              9.573666244975442,
+              12.231511417080839
+            ],
+            "sole": [
+              -0.000008056738806772046,
+              -2.752994987531565e-8
+            ],
+            "stride": 0.00004176795482635498
+          },
+          "R": {
+            "bend": [
+              9.57408971670398,
+              12.231402134054122
+            ],
+            "sole": [
+              -0.000011815724064945243,
+              -1.7698617682526674e-7
+            ],
+            "stride": 0.00004731118679046631
+          }
+        }
+      },
+      "slash": {
+        "seam": 7.651369019153715e-7,
+        "duration": 1.6,
+        "minBodyZ": -0.0037933457642793655,
+        "legs": {
+          "L": {
+            "bend": [
+              0.6769487000619563,
+              78.344798771272
+            ],
+            "sole": [
+              -0.0027444304432719946,
+              0.004310861229896545
+            ],
+            "stride": 0.0018948912620544434
+          },
+          "R": {
+            "bend": [
+              0.5921587317054389,
+              69.95428703631568
+            ],
+            "sole": [
+              -0.0037933457642793655,
+              0.1122794896364212
+            ],
+            "stride": 0.11173055786639452
+          }
+        }
+      },
+      "walk": {
+        "seam": 0,
+        "duration": 1.2,
+        "minBodyZ": -0.00002840616798494011,
+        "legs": {
+          "L": {
+            "bend": [
+              22.400501959070937,
+              56.68840676237177
+            ],
+            "sole": [
+              -0.000025421568352612667,
+              0.044600799679756165
+            ],
+            "stride": 0.17914056777954102
+          },
+          "R": {
+            "bend": [
+              22.401116676096223,
+              56.68816087556165
+            ],
+            "sole": [
+              -0.00002840616798494011,
+              0.0445992574095726
+            ],
+            "stride": 0.17912773042917252
+          }
+        }
+      }
+    },
+    "glbSHA256": "959f40587517e1a5c75625a3c96da8647100093c129a991ec97085b1664b3dcf",
+    "locomotionPassed": true,
+    "userApproval": "pending"
+  },
+  "scope": "Opposite arm-leg gait; 4.07 degree forward torso; animated magic orb flames and rising embers. Bilateral leg correction preserved. Not game integrated.",
+  "remaining": "Casting right foot lift remains from the earlier motion draft."
+}

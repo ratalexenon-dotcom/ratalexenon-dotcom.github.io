@@ -1,0 +1,11 @@
+# 오크 주술사 게임용 v3 — 2026-09-28
+- 최종: `orc-shaman-game-v3.glb` (4,420,604 bytes), 원본 `orc-shaman-unarmed.glb` 보존.
+- 원본 메시·텍스처·재질·대기/왼손시전 클립은 원본 GLB에서 직접 보존. 지팡이 없음, 42뼈, 몸 skin 유지.
+- 보행: 보유 `MPH-berserker-20260927/berserker-walk-source.glb`, 41개 동일명 뼈의 rest 공간 회전 차이로 리타깃. 수평 전진량 제거.
+- 피격/사망: 기존 프로젝트 `asset/mixamo/전투_피격(몸통).fbx`, `전투_사망.fbx`. 발 rest 축 보존, 프레임별 접지 보정. 유료 API 사용 없음.
+- 제작: build-game-walk.py → build-game-reactions.py → merge-game-v3.mjs. 병합은 모든 대상 뼈 bind translation/rotation/scale 일치 검증.
+- 전용 로더: char3d.orc-shaman.js, 남성 orc + wizard 또는 warlock. needsUnarmed:true로 기본 무기 중복 부착 차단.
+- 클립: idle/cast 2.0417초(승인 원본), walk 1.8667초, hit .6333초, death 2.5333초. 실제 피격·사망, 강체 fallback 없음.
+- Node Three.js 실제 AnimationMixer 검증 통과: 대기 손0.043, 보행 발0.239, 시전 왼손0.453, 피격 손0.396, 사망 머리0.769 world units. clone별 손뼈 분리, no staff, source skin도 검사.
+- 숨김 Blender 재수입 렌더 5장: game-v3-idle/walk/cast/hit/death.png. 보행/시전/사망 이미지 확인. 긴 옷자락의 모든 중간 프레임 관통은 전수 검수하지 않음.
+- 본편 battle3d 통합 및 라이브 업로드는 부모 작업에서 수행.
