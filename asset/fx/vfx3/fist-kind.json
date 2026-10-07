@@ -1,0 +1,27 @@
+{
+  "status": "sidecar-spec-not-runtime-patch",
+  "note": "Existing battle3d.fx uses a single atlas; Claude must load this secondary texture for fist or mechanically append its6frames to a copied legacy atlas. Existing original stays intact.",
+  "sheet": {
+    "file": "asset/fx/vfx3/fist-impact.png",
+    "frame": 128,
+    "cols": 6,
+    "rows": 1,
+    "smooth": true
+  },
+  "kind": {
+    "id": "fist",
+    "row": 0,
+    "frames": 6,
+    "fps": 30,
+    "loop": false,
+    "anchor": "target-center",
+    "scale": 1.1,
+    "hitFrame": 1,
+    "shake": {
+      "px": 2,
+      "ms": 60
+    },
+    "hitstop": 40
+  },
+  "mapping": "weaponOf(u.classId) === fist -> fist for basic attacks; support fist-compatible physical skills explicitly"
+}

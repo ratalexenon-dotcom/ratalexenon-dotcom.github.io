@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14161b">
+<title>모션 뷰어</title>
+<!-- ⟦MOTION-VIEWER-1007⟧ 전 캐릭터 모션 보기(폰 우선) — 게임과 같은 로더·조명·방패 몸짓. 코드 src/lab/motion-viewer.js · 빌드 tools/motion-viewer-build.mjs -->
+<style>
+:root{--bg:#14161b;--panel:#1c1f26;--line:#2c313b;--txt:#e8ecf2;--sub:#9aa3b0;--acc:#ffd166;--on:#3b82f6;--bad:#ff6b6b}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--txt);font:15px/1.35 system-ui,-apple-system,'Malgun Gothic','Apple SD Gothic Neo',sans-serif}
+button,select{font:inherit;color:inherit}
+#app{display:flex;flex-direction:column;height:100dvh;height:100vh}
+@supports(height:100dvh){#app{height:100dvh}}
+header{display:flex;gap:8px;align-items:center;padding:8px 16px;background:var(--panel);border-bottom:1px solid var(--line)}
+.tabs{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:none}
+.tabs button{border:0;background:none;padding:0 12px;min-height:40px}
+.tabs button.on{background:var(--on);color:#fff}
+#pick{flex:1;min-width:0;min-height:40px;background:#262a33;border:1px solid var(--line);border-radius:10px;padding:0 8px}
+.ib{flex:none;min-width:40px;min-height:40px;border:1px solid var(--line);background:#262a33;border-radius:10px;padding:0 10px}
+#stage{position:relative;flex:0 0 46%;min-height:240px;background:#2a2e36;overflow:hidden}
+#stage canvas{display:block;width:100%;height:100%;touch-action:none}
+#hud{position:absolute;left:12px;top:10px;right:12px;pointer-events:none;text-shadow:0 1px 2px #000a}
+#hud .n{font-weight:700;font-size:17px}
+#hud .s{font-size:13px;color:#d6dbe3}
+#hud .s b.bad{color:var(--bad)}
+#stage.light #hud{color:#14161b;text-shadow:0 1px 1px #fff8}#stage.light #hud .s{color:#3a4250}#stage.light #hud .s b.bad{color:#c62828}
+#msg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;background:#0006;pointer-events:none}
+#msg[hidden]{display:none}
+#views{position:absolute;left:8px;right:8px;bottom:8px;display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+#views button{min-height:36px;min-width:44px;padding:0 10px;border:1px solid #0004;border-radius:9px;background:#ffffffd9;color:#14161b;font-weight:600}
+#views button.on{background:var(--acc)}
+#ctl{flex:1;overflow:auto;padding:10px 16px 24px;-webkit-overflow-scrolling:touch}
+.row{display:flex;gap:8px;align-items:center;margin:6px 0}
+.row .lab{flex:none;width:44px;color:var(--sub);font-size:13px}
+#scrub{flex:1;min-width:0;height:36px;accent-color:var(--acc)}
+#time{flex:none;width:92px;text-align:right;font-variant-numeric:tabular-nums;color:var(--sub);font-size:13px}
+.btn{min-height:44px;flex:1;border:1px solid var(--line);background:#262a33;border-radius:10px;padding:0 6px}
+.btn.on{background:var(--on);border-color:var(--on);color:#fff}
+.seg{display:flex;flex:1;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{flex:1;min-height:40px;border:0;border-left:1px solid var(--line);background:#262a33}
+.seg button:first-child{border-left:0}
+.seg button.on{background:var(--on);color:#fff}
+.grp{margin-top:14px}
+.grp h3{margin:0 0 6px;font-size:13px;color:var(--sub);font-weight:600}
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:6px}
+.chip{min-height:44px;border:1px solid var(--line);background:#20242c;border-radius:10px;padding:4px 6px;text-align:left;overflow:hidden}
+.chip .k{display:block;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip .r{display:block;font-size:11px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip.on{border-color:var(--acc);background:#3a3420}
+#info{margin-top:16px;font-size:12px;color:var(--sub)}
+@media (min-width:900px){#app{display:grid;grid-template-columns:1fr 420px;grid-template-rows:auto 1fr}header{grid-column:1/3}#stage{flex:none;height:auto}#ctl{border-left:1px solid var(--line)}}
+</style>
+  <script type="module" crossorigin src="/motion-viewer.js"></script>
+</head><body>
+<div id="app">
+  <header>
+    <div class="tabs"><button id="tabHero" class="on">영웅</button><button id="tabMob">몬스터</button></div>
+    <button class="ib" id="prevBody" aria-label="이전 캐릭터">‹</button>
+    <select id="pick" aria-label="캐릭터"></select>
+    <button class="ib" id="nextBody" aria-label="다음 캐릭터">›</button>
+  </header>
+  <div id="stage">
+    <canvas id="cv"></canvas>
+    <div id="hud"><div class="n" id="hudName"></div><div class="s" id="hudSub"></div></div>
+    <div id="msg">불러오는 중…</div>
+    <div id="views">
+      <button data-view="front">정면</button><button data-view="q34">3/4</button><button data-view="side">측면</button><button data-view="back">뒤</button>
+      <button id="bgBtn">밝게</button>
+    </div>
+  </div>
+  <div id="ctl">
+    <div class="row"><input id="scrub" type="range" min="0" max="1000" value="0" aria-label="재생 위치"><span id="time">0.00 / 0.00s</span></div>
+    <div class="row">
+      <button class="btn" id="prevClip">‹ 이전</button>
+      <button class="btn" id="playBtn">일시정지</button>
+      <button class="btn" id="nextClip">다음 ›</button>
+    </div>
+    <div class="row">
+      <button class="btn" id="loopBtn">반복</button>
+      <button class="btn" id="autoBtn">전체 자동재생</button>
+      <button class="btn" id="linkBtn">링크 복사</button>
+    </div>
+    <div class="row"><span class="lab">속도</span><div class="seg" id="spdSeg"><button data-v="0.25">0.25×</button><button data-v="0.5">0.5×</button><button data-v="1">1×</button></div></div>
+    <div class="row" id="shRow"><span class="lab">방패</span><div class="seg" id="shSeg"><button data-v="auto">자동</button><button data-v="small">소</button><button data-v="medium">중</button><button data-v="tower">대</button></div></div>
+    <div id="groups"></div>
+    <div id="info"></div>
+  </div>
+</div>
+</body></html>
