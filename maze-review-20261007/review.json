@@ -1,1 +1,1 @@
-{"version":"terrain-v5","scope":"1-1","fixture":"seed7, six heroes","mobilePerformance":"pending","source":"2026-10-07 reviewed terrain-v5"}
+{"version":"movement-v2","scope":"1-1","fixture":"seed7, six heroes","mobilePerformance":"v2 pending; terrain-v5 user measured 16.8ms median / 19.4ms p95","source":"2026-10-07 phone feedback: movement, walkability, opaque scenery"}
