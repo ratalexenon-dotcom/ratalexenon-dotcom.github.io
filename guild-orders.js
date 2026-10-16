@@ -54418,7 +54418,7 @@ var SAVE_KEY = "jby.save.v3";
 var OLD_SAVE_KEYS = ["jby.save.v1", "jby.save.v2"];
 var store = (() => {
   try {
-    return typeof localStorage !== "undefined" ? localStorage : null;
+    return null; // Isolated phone test: never connect to production browser storage.
   } catch {
     return null;
   }
