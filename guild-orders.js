@@ -54659,7 +54659,7 @@ var GuildMelee = class extends Battle {
   place() {
     for (const u of this.all()) {
       const angle = u.guild / (u.guildTotal || 5) * Math.PI * 2 - Math.PI / 2;
-      const cols = u.heroesPerGuild === 20 ? 5 : 6, i = u.meleeIndex, tangent = (i % cols - (cols - 1) / 2) * 0.85, rad = 11 + Math.floor(i / cols) * 0.85;
+      const cols = (u.heroesPerGuild === 20 || u.heroesPerGuild === 25) ? 5 : 6, i = u.meleeIndex, tangent = (i % cols - (cols - 1) / 2) * 0.85, rad = 11 + Math.floor(i / cols) * 0.85;
       u.gx = Math.cos(angle) * rad - Math.sin(angle) * tangent;
       u.gy = Math.sin(angle) * rad + Math.cos(angle) * tangent;
       u.homeGx = u.gx;
@@ -54923,7 +54923,7 @@ var GuildOrders = class extends GuildMelee {
   }
 };
 function createOrdersBattle({ seed: seed2 = 1016, ai = true, heroesPerGuild: heroesPerGuild2 = 20 } = {}) {
-  if (![20, 30].includes(heroesPerGuild2)) throw Error("Expected 20 or 30 heroes per guild");
+  if (![20, 25, 30].includes(heroesPerGuild2)) throw Error("Expected 20, 25 or 30 heroes per guild");
   return createMelee({ seed: seed2, guildCount: 5, heroesPerGuild: heroesPerGuild2, BattleClass: GuildOrders }).initOrders({ ai, seed: seed2 });
 }
 
@@ -59710,7 +59710,7 @@ var $ = (id) => document.getElementById(id);
 var names = ["\uC801\uC6D4", "\uCCAD\uD574", "\uD669\uAE08", "\uB179\uB9BC", "\uC790\uC6B4"];
 var colors = ["#ff777f", "#64c6ff", "#f4c767", "#7bd7a3", "#bb95f2"];
 var query = new URLSearchParams(location.search);
-var heroesPerGuild = query.get("total") === "150" ? 30 : 20;
+var heroesPerGuild = query.get("total") === "125" ? 25 : query.get("total") === "150" ? 30 : 20;
 var total = heroesPerGuild * 5;
 var parsedSeed = Number(query.get("seed"));
 var seed = query.has("seed") && Number.isInteger(parsedSeed) && parsedSeed >= 0 && parsedSeed <= 4294967295 ? parsedSeed : 1016;
@@ -59722,7 +59722,7 @@ function loadBoard(nextTotal, nextSeed) {
   const url = new URL(location.href);
   url.searchParams.set("total", nextTotal);
   url.searchParams.set("seed", nextSeed);
-  url.searchParams.set("v", "150-2");
+  url.searchParams.set("v", "125-1");
   location.assign(url.href);
 }
 $("size").onchange = () => loadBoard($("size").value, seed);
